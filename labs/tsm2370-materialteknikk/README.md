@@ -20,7 +20,7 @@ Two labs, run as one guided 1-hour session per group, led by the lab supervisors
 
 ## Lab 1 – Axial tensile testing and strain measurement accuracy
 
-Pull an aluminium dog-bone specimen (6061-T6 or 5052-H32, 1 mm thick, 12.5 mm wide) to fracture. Compare the strain from the machine's crosshead travel with the strain from a camera extensometer, and work out the yield strength, UTS and Young's modulus from both.
+Pull an aluminium dog-bone specimen of an **unknown alloy** (1 mm thick, 12.5 mm wide) to fracture. Compare the strain from the machine's crosshead travel with the strain from a camera extensometer, work out the yield strength, UTS and Young's modulus from both, and use the results to identify the alloy.
 
 | Equipment | Guide |
 | --- | --- |
@@ -30,18 +30,18 @@ Pull an aluminium dog-bone specimen (6061-T6 or 5052-H32, 1 mm thick, 12.5 mm wi
 
 ## Lab 2 – Thermal processing and quench severity
 
-Four AISI 1045 steel samples per group, each with a different heat treatment. Measure the Vickers hardness of each and explain the differences.
+Four prepared samples of **Sølvstål 2210** (1.2210 / 115CrV3, a high-carbon tool steel) per group, each with a different heat treatment. Measure the Vickers hardness (HV1) of each and explain the differences.
 
-| Sample | Treatment |
-| --- | --- |
-| A | Untreated (baseline) |
-| B | Austenitize at 1000 °C, quench in 20 °C water |
-| C | Austenitize at 1000 °C, quench in 70 °C water or oil |
-| D | As B, then tempered and air cooled |
+| Sample | Treatment | Expected microstructure |
+| --- | --- | --- |
+| A | Untreated (baseline) | As delivered |
+| B | 1000 °C → quench in 20 °C water | Martensite (most severe quench) |
+| C | 1000 °C → quench in 70 °C water or oil | Martensite (less severe quench) |
+| D | 1000 °C → 600 °C oven for 15–30 min → air cool to ~20 °C | Pearlite |
 
 | Equipment | Guide |
 | --- | --- |
-| Lab furnaces (up to 1000 °C) and quenching stations | [Equipment page](../../equipment/furnace-heat-treatment/README.md) (guide in progress) |
+| Primary furnace (1000 °C), secondary oven (600 °C) and quenching stations | [Equipment page](../../equipment/furnace-heat-treatment/README.md) (guide in progress) |
 | Polishing equipment | [Equipment page](../../equipment/polisher-metallographic/README.md) (guide in progress) |
 | Matsuzawa MXT50 Vickers hardness tester | [Guide (EN)](../../equipment/hardness-vickers-matsuzawa-mxt50/README.md) · [Veiledning (NO)](../../equipment/hardness-vickers-matsuzawa-mxt50/README.no.md) · [quick card](../../equipment/hardness-vickers-matsuzawa-mxt50/quick-card-no.pdf) |
 

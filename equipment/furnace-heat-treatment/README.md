@@ -8,7 +8,7 @@
 
 ## What is known so far
 
-- Furnaces for austenitizing at up to **1000 °C**, and a lower-temperature furnace for tempering.
+- A primary furnace for austenitizing at **1000 °C**, and a secondary oven at **600 °C** for isothermal annealing.
 - Quenching stations with **20 °C water**, **70 °C water** and **quenching oil**.
 
 ## Safety (short version)
