@@ -8,13 +8,15 @@
 
 ## What is known so far
 
-- A primary furnace for austenitizing at **1000 °C**, and a secondary oven at **600 °C** for isothermal annealing.
+- A primary furnace for austenitizing (TSM2370 Lab 2 uses **810 °C** for Sølvstål 2210), and a secondary oven at **600 °C** for isothermal annealing.
 - Quenching stations with **20 °C water**, **70 °C water** and **quenching oil**.
 
 ## Safety (short version)
 
 - Hazards: extreme heat, hot steel, burns, quenching vapours and splashes.
 - PPE: heat-resistant gloves, tongs, face shield, lab coat, closed-toe shoes.
+- High-carbon steel can crack in a severe water quench.
+- Hot quenching oil can catch fire: keep the lid within reach, never use water on an oil fire.
 - Handle quenching fluids according to the lab's environmental guidelines.
 
 <!-- TODO: make/model and serial number, photos of the controller, step-by-step use, quenching technique. -->

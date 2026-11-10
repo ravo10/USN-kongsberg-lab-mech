@@ -52,15 +52,19 @@ L2_OBJ = ("Measure the local resistance to plastic deformation (Vickers hardness
           "(cold water vs. warm water or oil) and the thermal processing route decide the final mechanical properties.")
 L2_THEORY_INTRO = "Hardness correlates strongly with a material's yield strength. The experiment uses two separate thermal units:"
 L2_THEORY = [
-    "**Primary austenitizing furnace (1000 °C):** Samples B, C and D are all first placed in the primary furnace at 1000 °C, "
-    "well above the upper critical temperature. The steel matrix transforms fully into single-phase austenite (γ, FCC), "
-    "and the carbon dissolves in the iron lattice.",
-    "**Quenching (cold water vs. warm water or oil):** Samples B and C are cooled rapidly, directly from 1000 °C. Rapid "
+    "**Primary austenitizing furnace (810 °C):** Samples B, C and D are all first placed in the primary furnace at 810 °C, "
+    "inside the hardening range given in the datasheets for 1.2210 (780–840 °C), and held for 15–30 minutes. The matrix "
+    "transforms to austenite (γ, FCC) and most of the carbon dissolves in the iron lattice. Because this steel has about "
+    "1.15 % carbon, a small amount of carbide stays undissolved. That is normal for a high-carbon tool steel and gives "
+    "wear resistance; heating much higher would cause grain growth and a higher risk of cracking.",
+    "**Quenching (cold water vs. warm water or oil):** Samples B and C are cooled rapidly, directly from 810 °C. Rapid "
     "quenching prevents carbon diffusion and forces the FCC austenite into a body-centred tetragonal (BCT) lattice: "
     "martensite, the hardest and most brittle microstructure. A 20 °C cold-water quench (Sample B) is more severe than "
-    "70 °C warm water or oil (Sample C).",
+    "70 °C warm water or oil (Sample C). 1.2210 is a shallow-hardening steel, so in the slower quench of Sample C part of "
+    "the austenite may transform to softer pearlite or bainite before martensite can form. Expect Sample C to be clearly "
+    "softer than Sample B.",
     "**Isothermal annealing and air cooling (600 °C oven → ~20 °C air):** Sample D is NOT quenched in liquid. After "
-    "austenitizing at 1000 °C it is moved directly to a secondary oven at 600 °C and held for 15–30 minutes. Because "
+    "austenitizing at 810 °C it is moved directly to a secondary oven at 600 °C and held for 15–30 minutes. Because "
     "600 °C is well above the martensite start temperature (Ms), carbon diffuses quickly and the austenite transforms "
     "fully into soft, ductile pearlite (ferrite + cementite). When the transformation is complete, the sample is taken "
     "out and air-cooled on a heat-resistant surface to room temperature (~20 °C) for handling and hardness testing.",
@@ -68,40 +72,43 @@ L2_THEORY = [
 L2_FORMULAS = ["Vickers hardness: HV = 1.8544 · F / d²", "Mean diagonal: d = (d₁ + d₂) / 2", "Units: F in kgf, d in mm. This lab uses HV1 (F = 1 kgf)."]
 L2_EQUIP = (["Device / material", "Amount / specification", "Manufacturer / grade", "Notes"], [
     ["High-carbon steel blocks", "Prepared pieces (Sølvstål 2210)", "1.2210 / 115CrV3", "4 prepared samples per group"],
-    ["Lab furnaces and ovens", "Primary furnace (1000 °C) and secondary oven (600 °C)", "Tinius Olsen / lab", "Austenitizing (1000 °C) and isothermal anneal (600 °C)"],
+    ["Lab furnaces and ovens", "Primary furnace (810 °C) and secondary oven (600 °C)", "–", "Austenitizing (810 °C) and isothermal anneal (600 °C)"],
     ["Quench media stations", "20 °C water, 70 °C water, oil", "–", "Different quench severity"],
     ["Vickers hardness tester", "1 unit", "Matsuzawa (MXT50)", "HV1 (1 kgf), 15 s dwell"],
     ["Polishing equipment", "As needed", "–", "Prepare surfaces for indentation"],
 ], [4.0, 4.6, 3.6, 4.4])
-L2_SETUP = ("Four prepared Sølvstål 2210 blocks (A, B, C, D) are handed out. The primary furnace is preheated to 1000 °C for "
+L2_SETUP = ("Four prepared Sølvstål 2210 blocks (A, B, C, D) are handed out. The primary furnace is preheated to 810 °C for "
             "austenitizing Samples B, C and D. The quench baths are brought to their temperatures (20 °C water and 70 °C warm "
             "water or oil). A secondary oven is preheated to 600 °C for the isothermal anneal of Sample D. Hardness is measured "
             f"on the Matsuzawa MXT50; see the equipment guide at {REPO}.")
 L2_STEPS = [
-    "Take safety precautions and put on heat-resistant protective equipment (gloves, tongs, face shield).",
+    "Take safety precautions and put on heat-resistant protective equipment (gloves, tongs, face shield). Keep the lid "
+    "for the oil bath within reach.",
     "**Sample A (baseline):** Measure the baseline Vickers hardness of the prepared, untreated steel block.",
-    "**Sample B (cold-water quench):** Place in the 1000 °C primary furnace for full austenitization. Quench rapidly in "
-    "20 °C cold water. Polish and measure the Vickers hardness.",
-    "**Sample C (reduced-severity quench):** Place in the 1000 °C primary furnace for full austenitization. Quench in 70 °C "
+    "**Sample B (cold-water quench):** Place in the 810 °C primary furnace and hold for 15–30 minutes. Quench rapidly in "
+    "20 °C cold water, moving the sample around in the bath with tongs. Polish and measure the Vickers hardness.",
+    "**Sample C (reduced-severity quench):** Place in the 810 °C primary furnace and hold for 15–30 minutes. Quench in 70 °C "
     "warm water OR quenching oil. Polish and measure the Vickers hardness.",
-    "**Sample D (600 °C isothermal anneal and air cooling):** Place in the 1000 °C primary furnace for full austenitization. "
+    "**Sample D (600 °C isothermal anneal and air cooling):** Place in the 810 °C primary furnace and hold for 15–30 minutes. "
     "Move it directly to the secondary oven at 600 °C and hold for 15–30 minutes for complete pearlite transformation. Take "
     "it out and let it air-cool on a heat-resistant surface to room temperature (~20 °C). Polish and measure the Vickers hardness.",
     "Record all hardness indentations and clear the testing equipment.",
 ]
 L2_RESULTS = (["Parameter / measurement", "Value", "Unit"], [
     ["Sample A hardness (baseline, untreated)", "", "HV1"],
-    ["Sample B hardness (1000 °C → 20 °C water quench)", "", "HV1"],
-    ["Sample C hardness (1000 °C → 70 °C water / oil quench)", "", "HV1"],
-    ["Sample D hardness (1000 °C → 600 °C anneal → 20 °C air)", "", "HV1"],
+    ["Sample B hardness (810 °C → 20 °C water quench)", "", "HV1"],
+    ["Sample C hardness (810 °C → 70 °C water / oil quench)", "", "HV1"],
+    ["Sample D hardness (810 °C → 600 °C anneal → 20 °C air)", "", "HV1"],
 ], [10.6, 3, 3])
 L2_CALC = ("Record the Vickers hardness of all four samples in the table. If you make several indentations per sample, "
            "give the mean value.")
 L2_DISC = ("Compare Sample B (cold water) and Sample C (warm water or oil) to explain quench severity and cooling rate in "
-           "high-carbon tool steel. Compare Sample B (martensite) and Sample D (1000 °C → 600 °C for 15–30 min, then "
-           "air-cooled) to explain how the cooling route controls the phase transformation (BCT martensite vs. pearlite) "
+           "high-carbon tool steel, and whether Sample C hardened fully. Compare Sample B (martensite) and Sample D "
+           "(810 °C → 600 °C for 15–30 min, then air-cooled) to explain how the cooling route controls the phase transformation (BCT martensite vs. pearlite) "
            "and the final hardness.")
-L2_HAZ = "Extreme heat (1000 °C furnace, 600 °C oven), hot steel blocks, burns, quenching vapours and splashes."
+L2_HAZ = ("Extreme heat (810 °C furnace, 600 °C oven), hot steel blocks, burns, quenching vapours and splashes. High-carbon "
+          "steel can crack during a severe water quench. Hot quenching oil can catch fire if a hot sample is lowered in too slowly "
+          "or the oil is too shallow: keep the lid within reach and never use water on an oil fire.")
 L2_PPE = "Heat-resistant gloves, tongs, face shield, lab coat, closed-toe shoes."
 L2_WASTE = "Dispose of polishing waste properly. Handle quenching fluids according to the lab's environmental guidelines."
 
@@ -252,44 +259,49 @@ PROTOCOL_NO = protocol_no(
     "behandlingen bestemmer de endelige mekaniske egenskapene.",
     [("p", "Hardhet korrelerer sterkt med et materiales flytegrense. Forsøket bruker to adskilte termiske enheter:"),
      ("ul", [
-         "**Hovedovn for austenitisering (1000 °C):** Prøve B, C og D plasseres alle først i hovedovnen på 1000 °C, godt over øvre kritiske "
-         "temperatur. Stålmatrisen omdannes helt til én-fase austenitt (γ, FCC), og karbonet løses opp i jerngitteret.",
-         "**Bråkjøling (kaldt vann vs. varmt vann eller olje):** Prøve B og C kjøles raskt, direkte fra 1000 °C. Rask bråkjøling hindrer "
+         "**Hovedovn for austenitisering (810 °C):** Prøve B, C og D plasseres alle først i hovedovnen på 810 °C, innenfor herdeområdet "
+         "i databladene for 1.2210 (780–840 °C), og holdes der i 15–30 minutter. Matrisen omdannes til austenitt (γ, FCC), og det meste "
+         "av karbonet løses opp i jerngitteret. Fordi stålet har ca. 1,15 % karbon, blir litt karbid igjen uoppløst. Det er normalt for et "
+         "høykarbon verktøystål og gir slitestyrke; mye høyere temperatur ville gitt kornvekst og større fare for sprekker.",
+         "**Bråkjøling (kaldt vann vs. varmt vann eller olje):** Prøve B og C kjøles raskt, direkte fra 810 °C. Rask bråkjøling hindrer "
          "karbondiffusjon og tvinger FCC-austenitten over i et romsentrert tetragonalt (BCT) gitter: martensitt, den hardeste og mest "
-         "sprø mikrostrukturen. Et 20 °C kaldtvannsbad (prøve B) gir kraftigere bråkjøling enn 70 °C varmt vann eller olje (prøve C).",
+         "sprø mikrostrukturen. Et 20 °C kaldtvannsbad (prøve B) gir kraftigere bråkjøling enn 70 °C varmt vann eller olje (prøve C). 1.2210 er et "
+         "stål med liten herdedybde, så ved den langsommere bråkjølingen av prøve C kan en del av austenitten omdannes til mykere perlitt "
+         "eller bainitt før martensitt rekker å dannes. Forvent at prøve C er klart mykere enn prøve B.",
          "**Isoterm gløding og luftavkjøling (600 °C-ovn → ~20 °C luft):** Prøve D bråkjøles IKKE i væske. Etter austenitisering ved "
-         "1000 °C flyttes den direkte til en sekundærovn på 600 °C og holdes der i 15–30 minutter. Fordi 600 °C er godt over "
+         "810 °C flyttes den direkte til en sekundærovn på 600 °C og holdes der i 15–30 minutter. Fordi 600 °C er godt over "
          "martensitt-starttemperaturen (Ms), diffunderer karbonet raskt, og austenitten omdannes helt til myk, duktil perlitt "
          "(ferritt + sementitt). Når omdanningen er ferdig, tas prøven ut og luftavkjøles på et varmebestandig underlag til "
          "romtemperatur (~20 °C) for håndtering og hardhetsmåling."])],
     ["Vickers-hardhet: HV = 1,8544 · F / d²", "Middeldiagonal: d = (d₁ + d₂) / 2", "Enheter: F i kgf, d i mm. Denne laben bruker HV1 (F = 1 kgf)."],
     (["Utstyr / materiale", "Mengde / spesifikasjon", "Produsent / kvalitet", "Merknader"], [
         ["Høykarbon stålblokker", "Klargjorte biter (Sølvstål 2210)", "1.2210 / 115CrV3", "4 klargjorte prøver per gruppe"],
-        ["Laboratorieovner", "Hovedovn (1000 °C) og sekundærovn (600 °C)", "Tinius Olsen / lab", "Austenitisering (1000 °C) og isoterm gløding (600 °C)"],
+        ["Laboratorieovner", "Hovedovn (810 °C) og sekundærovn (600 °C)", "–", "Austenitisering (810 °C) og isoterm gløding (600 °C)"],
         ["Stasjoner for bråkjøling", "20 °C vann, 70 °C vann, olje", "–", "Ulik bråkjølingsgrad"],
         ["Vickers hardhetsmåler", "1 stk.", "Matsuzawa (MXT50)", "HV1 (1 kgf), 15 s holdetid"],
         ["Poleringsutstyr", "Etter behov", "–", "Klargjøre overflaten for inntrykk"]], [4.0, 4.6, 3.6, 4.4]),
-    "Fire klargjorte blokker av Sølvstål 2210 (A, B, C, D) deles ut. Hovedovnen forvarmes til 1000 °C for austenitisering av prøve B, C "
+    "Fire klargjorte blokker av Sølvstål 2210 (A, B, C, D) deles ut. Hovedovnen forvarmes til 810 °C for austenitisering av prøve B, C "
     "og D. Bråkjølingsbadene bringes til riktig temperatur (20 °C vann og 70 °C varmt vann eller olje). En sekundærovn forvarmes til "
     f"600 °C for isoterm gløding av prøve D. Hardheten måles på Matsuzawa MXT50; se utstyrsveiledningen på {REPO}.",
-    ["Ta sikkerhetsforholdsregler og ta på varmebestandig verneutstyr (hansker, tenger, ansiktsskjerm).",
+    ["Ta sikkerhetsforholdsregler og ta på varmebestandig verneutstyr (hansker, tenger, ansiktsskjerm). Ha lokket til oljebadet "
+     "innen rekkevidde.",
      "**Prøve A (referanse):** Mål referansehardheten (Vickers) på den klargjorte, ubehandlede stålblokken.",
-     "**Prøve B (bråkjøling i kaldt vann):** Plasser prøven i hovedovnen på 1000 °C for full austenitisering. Bråkjøl raskt i 20 °C kaldt "
-     "vann. Poler og mål Vickers-hardheten.",
-     "**Prøve C (redusert bråkjøling):** Plasser prøven i hovedovnen på 1000 °C for full austenitisering. Bråkjøl i 70 °C varmt vann ELLER "
+     "**Prøve B (bråkjøling i kaldt vann):** Plasser prøven i hovedovnen på 810 °C og hold i 15–30 minutter. Bråkjøl raskt i 20 °C kaldt "
+     "vann, og beveg prøven rundt i badet med tangen. Poler og mål Vickers-hardheten.",
+     "**Prøve C (redusert bråkjøling):** Plasser prøven i hovedovnen på 810 °C og hold i 15–30 minutter. Bråkjøl i 70 °C varmt vann ELLER "
      "bråkjølingsolje. Poler og mål Vickers-hardheten.",
-     "**Prøve D (isoterm gløding ved 600 °C og luftavkjøling):** Plasser prøven i hovedovnen på 1000 °C for full austenitisering. Flytt den "
+     "**Prøve D (isoterm gløding ved 600 °C og luftavkjøling):** Plasser prøven i hovedovnen på 810 °C og hold i 15–30 minutter. Flytt den "
      "direkte til sekundærovnen på 600 °C og hold i 15–30 minutter for fullstendig perlittomdanning. Ta den ut og la den luftavkjøles på et "
      "varmebestandig underlag til romtemperatur (~20 °C). Poler og mål Vickers-hardheten.",
      "Noter alle hardhetsmålinger og rydd testutstyret."],
     (["Parameter / måling", "Verdi", "Enhet"], [
         ["Prøve A hardhet (referanse, ubehandlet)", "", "HV1"],
-        ["Prøve B hardhet (1000 °C → 20 °C vann)", "", "HV1"],
-        ["Prøve C hardhet (1000 °C → 70 °C vann / olje)", "", "HV1"],
-        ["Prøve D hardhet (1000 °C → 600 °C gløding → 20 °C luft)", "", "HV1"]], [10.6, 3, 3]),
+        ["Prøve B hardhet (810 °C → 20 °C vann)", "", "HV1"],
+        ["Prøve C hardhet (810 °C → 70 °C vann / olje)", "", "HV1"],
+        ["Prøve D hardhet (810 °C → 600 °C gløding → 20 °C luft)", "", "HV1"]], [10.6, 3, 3]),
     "Noter Vickers-hardheten for alle fire prøvene i tabellen. Lager du flere inntrykk per prøve, oppgi middelverdien.",
     "Sammenlign prøve B (kaldt vann) og prøve C (varmt vann eller olje) for å forklare bråkjølingsgrad og kjølehastighet i høykarbon "
-    "verktøystål. Sammenlign prøve B (martensitt) og prøve D (1000 °C → 600 °C i 15–30 min, så luftavkjølt) for å forklare hvordan "
+    "verktøystål, og om prøve C ble fullt herdet. Sammenlign prøve B (martensitt) og prøve D (810 °C → 600 °C i 15–30 min, så luftavkjølt) for å forklare hvordan "
     "kjøleveien styrer faseomdanningen (BCT-martensitt vs. perlitt) og den endelige hardheten.",
 )
 
@@ -301,3 +313,76 @@ DOCS = {
     "lab-report-template-2026-en": dict(title="TSM2370 Lab report template 2026", header="TSM2370 Materialteknikk · Lab report · Fall 2026",
                                         page="Page", of="of", blocks=REPORT_EN),
 }
+
+
+# ---------------------------------------------------------------- Norwegian report template (reuses the NO protocol text)
+def _section(blocks, start, stop):
+    """Blocks after heading `start` up to (not incl.) the next h1/h2 heading or `stop`."""
+    out, on = [], False
+    for b in blocks:
+        if b[0] in ("h1", "h2"):
+            if on:
+                break
+            on = b[1] == start
+            continue
+        if on:
+            out.append(b)
+    return out
+
+
+def report_no(proto, title, exp_no, haz, ppe, waste, disc_extra=""):
+    th = _section(proto, "2. Teoretisk bakgrunn", None)
+    formulas = _section(proto, "2.1 Relevante formler", None)[0][1]
+    obj = _section(proto, "1. Hensikt", None)[0][1]
+    equip = _section(proto, "3. Materialer og utstyr", None)[0][1:]
+    steps = _section(proto, "4.2 Trinnvis gjennomføring", None)[0][1]
+    results = _section(proto, "5. Resultater og målinger", None)[0][1:]
+    disc = _section(proto, "6.1 Tolkning av resultater", None)[0][1] + disc_extra
+    refs = _section(proto, "8. Referanser", None)[0][1]
+    return [("label", "Laboratorierapport · TSM2370 Materialteknikk"), ("title", title),
+            ("info", [("Tittel på forsøket", title), ("Emne", "TSM2370 Materialteknikk"), ("Forsøk nr.", exp_no),
+                      ("Dato utført", "[DD/MM/ÅÅÅÅ]"), ("Dato levert", "[DD/MM/ÅÅÅÅ]"), ("Forfatter / student", "[Fornavn Etternavn]"),
+                      ("Studentnummer", "[Studentnummer]"), ("Lab-partner(e)", "[Navn på lab-partnere]"), ("Faglærer / veileder", SUP)]),
+            ("h1", "1. Sammendrag"),
+            ("p", "[Et kort sammendrag (150–250 ord) av hele rapporten: hensikt, metode, de viktigste resultatene med tallverdier, og "
+                  "hovedkonklusjonen. Skriv sammendraget sist, når resten av rapporten er ferdig.]"),
+            ("h1", "2. Innledning"), ("h2", "2.1 Bakgrunn og teori")] + th + [
+            ("p", "**Relevante formler:**"), ("formula", formulas),
+            ("h2", "2.2 Hensikt"), ("p", obj),
+            ("h2", "2.3 Hypotese"), ("p", "[Skriv hypotesen eller forventet resultat, basert på teorien.]"),
+            ("h1", "3. Materialer og utstyr"), ("table", *equip),
+            ("h1", "4. Sikkerhet"), ("h2", "4.1 Farer"), ("p", haz),
+            ("h2", "4.2 Personlig verneutstyr"), ("p", ppe),
+            ("h2", "4.3 Avfallshåndtering"), ("p", waste),
+            ("h1", "5. Metode / fremgangsmåte"), ("ol", steps),
+            ("h1", "6. Resultater"), ("h2", "6.1 Observasjoner"), ("p", "[Beskriv kvalitative observasjoner fra forsøket.]"),
+            ("h2", "6.2 Datatabell"), ("table", *results),
+            ("h2", "6.3 Beregninger"),
+            ("p", "[Vis én fullstendig eksempelberegning for hver type beregning: likningen, innsatte verdier og resultatet med riktige enheter.]"),
+            ("h2", "6.4 Figurer / grafer"), ("p", "[Sett inn figurer eller grafer her. Gi aksene navn og enheter.]"),
+            ("h1", "7. Diskusjon"), ("h2", "7.1 Tolkning av resultater"), ("p", disc),
+            ("h2", "7.2 Sammenligning med teoretiske verdier"), ("p", "[Diskuter hvordan verdiene dine stemmer med teoretiske verdier eller litteraturverdier.]"),
+            ("h2", "7.3 Feilkilder"), ("p", "**Systematiske feil:** [Kalibrerings- eller metodefeil]"),
+            ("p", "**Tilfeldige feil:** [Miljøpåvirkning eller spredning i målingene]"),
+            ("h1", "8. Konklusjon"), ("p", "[Oppsummer de viktigste funnene og svar på spørsmålet i hensikten.]"),
+            ("h1", "9. Referanser"), ("ul", refs),
+            ("h1", "10. Vedlegg"), ("h2", "Vedlegg A – Rådata"), ("p", "[Sett inn rådata eller utskrifter her.]"),
+            ("h2", "Vedlegg B – Ekstra figurer"), ("p", "[Sett inn flere bilder eller grafer her.]")]
+
+
+_i = PROTOCOL_NO.index(("pagebreak",))
+REPORT_NO = (report_no(PROTOCOL_NO[:_i], N1_TITLE, "1",
+                       "Klempunkter i klemmene på strekkmaskinen; skarpe kanter på brukne aluminiumsprøver.",
+                       "Vernebriller, lukkede sko, vanlige labklær.",
+                       "Legg de brukne aluminiumsbitene i anvist beholder for metallgjenvinning.",
+                       " [Sammenlign verdiene med litteraturverdier for vanlige legeringer, f.eks. 6061-T6 og 5052-H32.]")
+             + [("pagebreak",)]
+             + report_no(PROTOCOL_NO[_i + 1:], N2_TITLE, "2",
+                         "Ekstrem varme (810 °C ovn, 600 °C ovn), varme stålblokker, brannskader, damp og sprut fra bråkjøling. Høykarbonstål "
+                         "kan sprekke ved kraftig bråkjøling i vann. Varm bråkjølingsolje kan ta fyr hvis en varm prøve senkes for sakte ned "
+                         "eller oljen er for grunn: ha lokket innen rekkevidde, og bruk aldri vann på oljebrann.",
+                         "Varmebestandige hansker, tenger, ansiktsskjerm, labfrakk, lukkede sko.",
+                         "Kast poleringsavfall riktig. Håndter bråkjølingsvæsker etter labens miljøretningslinjer."))
+
+DOCS["lab-report-template-2026-no"] = dict(title="TSM2370 Mal for labrapport 2026", header="TSM2370 Materialteknikk · Labrapport · Høst 2026",
+                                           page="Side", of="av", blocks=REPORT_NO)
