@@ -2,7 +2,7 @@
 
 TSM2370 Materialteknikk · USN Kongsberg · Oppdatert 10. nov. 2026
 
-> **English version:** [README.md](README.md) · **PDF:** [guide-no.pdf](guide-no.pdf) · **Hurtigkort (A4):** [quick-card-no.pdf](quick-card-no.pdf)
+> **English version:** [README.md](README.md) · **PDF:** [guide-no.pdf](guide-no.pdf) · **Word:** [guide-no.docx](guide-no.docx) · **Hurtigkort (A4):** [quick-card-no.pdf](quick-card-no.pdf)
 
 Du skal måle Vickers-hardhet ved HV1 (1 kgf). Først kontrollerer du maskinen på referanseblokken, deretter tester du dine egne prøver. Ett inntrykk tar ca. 2 minutter når du kan rutinen.
 

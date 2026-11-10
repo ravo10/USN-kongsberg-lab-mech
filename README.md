@@ -8,7 +8,7 @@ Instructions for the lab equipment used in mechanical engineering courses at the
 
 | Equipment | Used in | Guide | Quick card |
 | --- | --- | --- | --- |
-| **Matsuzawa MXT50** Vickers microhardness tester | TSM2370 Lab 2 (heat treatment of AISI 1045) | [English](equipment/hardness-vickers-matsuzawa-mxt50/README.md) · [Norsk](equipment/hardness-vickers-matsuzawa-mxt50/README.no.md) · PDF: [EN](equipment/hardness-vickers-matsuzawa-mxt50/guide-en.pdf), [NO](equipment/hardness-vickers-matsuzawa-mxt50/guide-no.pdf) | [A4, norsk](equipment/hardness-vickers-matsuzawa-mxt50/quick-card-no.pdf) |
+| **Matsuzawa MXT50** Vickers microhardness tester | TSM2370 Lab 2 (heat treatment of AISI 1045) | [English](equipment/hardness-vickers-matsuzawa-mxt50/README.md) · [Norsk](equipment/hardness-vickers-matsuzawa-mxt50/README.no.md) · PDF: [EN](equipment/hardness-vickers-matsuzawa-mxt50/guide-en.pdf), [NO](equipment/hardness-vickers-matsuzawa-mxt50/guide-no.pdf) · Word: [EN](equipment/hardness-vickers-matsuzawa-mxt50/guide-en.docx), [NO](equipment/hardness-vickers-matsuzawa-mxt50/guide-no.docx) | [A4, norsk](equipment/hardness-vickers-matsuzawa-mxt50/quick-card-no.pdf) |
 | **Lloyd LR 10K** universal testing machine (tensile, compression, 3-point bending) | TSM2370 Lab 1 (tensile testing) | [Overview and links](equipment/tensile-lloyd-lr10k/README.md) · software and user guide in [ravo10/lr10k-2027](https://github.com/ravo10/lr10k-2027) | – |
 
 ## Before any lab
@@ -26,6 +26,8 @@ equipment/
 │   ├── README.no.md       guide (Norwegian)
 │   ├── guide-en.pdf       printable guide
 │   ├── guide-no.pdf
+│   ├── guide-en.docx      editable Word versions
+│   ├── guide-no.docx
 │   ├── quick-card-no.pdf  one-page card to laminate and keep at the machine
 │   └── images/            labelled photos used in the guides
 ├── tensile-lloyd-lr10k/
@@ -41,7 +43,7 @@ equipment/
 3. Put photos in `images/`, numbered in the order they appear (`01-front-view.jpg`, …). Label buttons with numbers that match a parts table in the guide.
 4. Add the machine to the **Equipment** table above.
 
-The Markdown files are the master copies. The PDFs are exported from them, so update the Markdown first and export the PDFs again.
+The Markdown files are the master copies. The PDF and Word files are exported from them, so update the Markdown first and export them again.
 
 ## Contact
 

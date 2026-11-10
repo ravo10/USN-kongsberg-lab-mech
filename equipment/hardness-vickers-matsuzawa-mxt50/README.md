@@ -2,7 +2,7 @@
 
 TSM2370 Materialteknikk · USN Kongsberg · Updated 10 Nov 2026
 
-> **Norsk versjon:** [README.no.md](README.no.md) · **PDF:** [guide-en.pdf](guide-en.pdf) · **Quick card (A4, Norwegian):** [quick-card-no.pdf](quick-card-no.pdf)
+> **Norsk versjon:** [README.no.md](README.no.md) · **PDF:** [guide-en.pdf](guide-en.pdf) · **Word:** [guide-en.docx](guide-en.docx) · **Quick card (A4, Norwegian):** [quick-card-no.pdf](quick-card-no.pdf)
 
 You will measure Vickers hardness at HV1 (1 kgf). First you check the machine on the reference block, then you test your own samples. One indent takes about 2 minutes once you know the routine.
 
