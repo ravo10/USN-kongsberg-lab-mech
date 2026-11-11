@@ -32,12 +32,16 @@ Pull an aluminium dog-bone specimen of an **unknown alloy** (1 mm thick, 12.5 mm
 
 Four prepared samples of **Sølvstål 2210** (1.2210 / 115CrV3, a high-carbon tool steel) per group, each with a different heat treatment. Measure the Vickers hardness (HV1) of each and explain the differences.
 
-| Sample | Treatment | Expected microstructure |
-| --- | --- | --- |
-| A | Untreated (baseline) | As delivered |
-| B | 810 °C → quench in 20 °C water | Martensite (most severe quench) |
-| C | 810 °C → quench in 70 °C water or oil | Martensite, possibly mixed with softer pearlite/bainite (slower quench) |
-| D | 810 °C → 600 °C oven for 15–30 min → air cool to ~20 °C | Pearlite |
+| Sample | Treatment | Expected microstructure | Expected hardness (approx.) |
+| --- | --- | --- | --- |
+| A | Untreated (baseline) | As delivered (soft-annealed: carbides in ferrite) | **220–240 HV1** |
+| B | 810 °C → quench in 20 °C water | Martensite (most severe quench) | **750–850 HV1** |
+| C | 810 °C → quench in 70 °C water or oil | Martensite, possibly mixed with softer pearlite/bainite (slower quench) | **450–750 HV1**, below B |
+| D | 810 °C → 600 °C oven for 15–30 min → air cool to ~20 °C | Pearlite | **250–350 HV1**, above A |
+
+**About the expected values.** They are guide values for checking that your results make sense, not targets. A comes from the delivery condition in the datasheets (max. about 220 HB, roughly 230 HV); a test on an untreated sample in the lab gave 236 HV1. B comes from the datasheet hardness after hardening (64–66 HRC, roughly 800–865 HV), a little lower here because the samples are small, not tempered and measured near the surface. C depends strongly on the medium and on how fast the sample gets into the bath, so a wide range is normal; it should still be clearly harder than A and D. D forms pearlite, which is harder than the soft-annealed state of A but far softer than martensite. Conversions between HB, HRC and HV follow ISO 18265 and are approximate.
+
+If a result is far outside its range, check the measurement first (green objective, 1 Kgf, lines zeroed, see the [MXT50 guide](../../equipment/hardness-vickers-matsuzawa-mxt50/README.md#6-results-troubleshooting-and-shutdown)), then the sample: wrong letter, decarburized or scaled surface not ground off, or a delay before the quench.
 
 ![The four Lab 2 samples marked A, B, C and D](images/lab2-samples-a-b-c-d.jpg)
 
