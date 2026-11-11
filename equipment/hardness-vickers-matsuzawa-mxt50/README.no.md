@@ -188,8 +188,12 @@ For en HMV700-blokk ved HV1 skal hver diagonal være ca. **51 µm**. Leser du no
 
 Rutinen er den samme som på blokken: fokuser, lag inntrykk, mål. Lag **minst 3 inntrykk per prøve** og oppgi snittet.
 
+![Figur 9: prøven i V-blokk-holderen under objektivet med oransje ring](images/09-sample-in-v-block.jpg)
+
+*Figur 9. En prøve av Sølvstål 2210 i V-blokk-holderen (6), polert side opp, under objektivet med oransje ring. Slik skal det se ut før du fokuserer.*
+
 1. Senk bordet og ta ut referanseblokken. Legg den tilbake i esken.
-2. Rengjør prøveoverflaten med etanol og papir. Legg én eller to **støtteklosser** i V-blokk-holderen (6) og prøven oppå, polert side opp og i vater.
+2. Rengjør prøveoverflaten med etanol og papir. Legg én eller to **støtteklosser** i V-blokk-holderen (6) og prøven oppå, polert side opp og i vater (figur 9).
 3. Sjekk **HV**-lampen, **1 Kgf** på lastvelgeren og holdetiden. Disse må være de samme som ved blokkontrollen.
 4. Drei revolveren til **objektivet med oransje ring**. Hev bordet sakte til overflaten er skarp.
 5. Velg et sted med **X- og Y-mikrometrene**, minst 0,5 mm fra kanten.

@@ -188,8 +188,12 @@ For an HMV700 block at HV1, each diagonal should be about **51 µm**. If you rea
 
 The routine is the same as on the block: focus, indent, measure. Make **at least 3 indents per sample** and report the mean.
 
+![Figure 9: sample in the V-block holder under the orange-ring objective](images/09-sample-in-v-block.jpg)
+
+*Figure 9. A Sølvstål 2210 sample in the V-block holder (6), polished face up, under the orange-ring objective. This is how it should look before you focus.*
+
 1. Lower the stage and take the reference block out. Put it back in its box.
-2. Clean the sample surface with ethanol and tissue. Put one or two **support blocks** in the V-block holder (6) and place the sample on top, polished face up and level.
+2. Clean the sample surface with ethanol and tissue. Put one or two **support blocks** in the V-block holder (6) and place the sample on top, polished face up and level (Figure 9).
 3. Check the **HV** lamp, **1 Kgf** on the load dial and the dwell time. These must be the same as for the block check.
 4. Turn the turret to the **orange-ring objective**. Raise the stage slowly until the surface is sharp.
 5. Choose a spot with the **X and Y micrometers**, at least 0.5 mm from the edge.
