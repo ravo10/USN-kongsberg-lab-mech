@@ -1,5 +1,14 @@
 <!doctype html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+{%- assign is_no = false -%}
+{%- if page.name contains ".no." -%}{%- assign is_no = true -%}{%- endif -%}
+{%- comment -%} The other-language version of this page, if there is one {%- endcomment -%}
+{%- assign dir = page.path | split: "/" | pop | join: "/" -%}
+{%- if dir != "" -%}{%- assign dir = dir | append: "/" -%}{%- endif -%}
+{%- if page.name == "README.md" -%}{%- assign other_path = dir | append: "README.no.md" -%}
+{%- elsif page.name == "README.no.md" -%}{%- assign other_path = dir | append: "README.md" -%}
+{%- else -%}{%- assign other_path = "" -%}{%- endif -%}
+{%- assign other = site.pages | where: "path", other_path | first -%}
+<html lang="{% if is_no %}nb{% else %}{{ page.lang | default: site.lang | default: 'en' }}{% endif %}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,37 +16,110 @@
   <title>{% if page_title != site.title %}{{ page_title }} · {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <script src="{{ '/assets/js/wiki.js' | relative_url }}" defer></script>
 </head>
-<body>
-  <header class="site-header">
-    <div class="wrap header-row">
-      <a class="brand" href="{{ '/' | relative_url }}">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span>USN Kongsberg <span class="brand-sub">Mechanical Engineering Lab</span></span>
-      </a>
-      <nav aria-label="Main">
-        <a href="{{ '/labs/' | relative_url }}">Labs</a>
-        <a href="{{ '/#equipment' | relative_url }}">Equipment</a>
-        <a href="https://github.com/{{ site.repository }}">GitHub</a>
-      </nav>
+<body class="{% if page.url == "/" %}is-home{% endif %}">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <button class="icon-btn menu-btn" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Menu">{% include icon.html name="menu" %}</button>
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text"><b>USN Lab Wiki</b><span>Mechanical engineering · Kongsberg</span></span>
+    </a>
+    <div class="search" role="search" data-index="{{ '/search.json' | relative_url }}" data-base="{{ '/' | relative_url }}">
+      {% include icon.html name="search" %}
+      <input type="search" placeholder="Search guides and labs…  ( / )" aria-label="Search" autocomplete="off">
+      <div class="search-results" hidden></div>
     </div>
+    <nav class="top-links" aria-label="Main">
+      <a href="{{ '/labs/' | relative_url }}">Labs</a>
+      <a href="{{ '/equipment/' | relative_url }}">Equipment</a>
+      <a href="https://github.com/{{ site.repository }}">GitHub</a>
+    </nav>
   </header>
 
-  <main class="wrap content">
-    {% unless page.url == "/" %}
-    <p class="crumbs"><a href="{{ '/' | relative_url }}">Home</a>
-      {% assign parts = page.url | split: "/" %}{% assign acc = "" %}
-      {% for part in parts %}{% if part != "" and forloop.last == false %}{% assign acc = acc | append: "/" | append: part %} › <a href="{{ acc | append: '/' | relative_url }}">{{ part }}</a>{% endif %}{% endfor %}
-    </p>
-    {% endunless %}
-    {{ content }}
-  </main>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <nav aria-label="Wiki">
+        <a class="side-home{% if page.url == '/' %} is-current{% endif %}" href="{{ '/' | relative_url }}">Home</a>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>University of South-Eastern Norway, campus Kongsberg · Lab supervisor: Rasmus Ullestad Relling</p>
-      <p>Found a mistake? <a href="https://github.com/{{ site.repository }}/issues">Report it on GitHub</a> or tell the lab supervisor. · <a href="https://github.com/{{ site.repository }}/blob/main/{{ page.path }}">View source of this page</a></p>
-    </div>
-  </footer>
+        <p class="side-head"><a href="{{ '/labs/' | relative_url }}"{% if page.url == '/labs/' %} class="is-current"{% endif %}>Labs</a></p>
+        <ul>
+          {%- for item in site.data.wiki.labs %}
+          <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="is-current"{% endif %}>{{ item.title }}</a>
+            {%- if item.children and page.url contains item.url %}
+            <ul>{% for c in item.children %}<li><a href="{{ c.url | relative_url }}">{{ c.title }}</a></li>{% endfor %}</ul>
+            {%- endif %}
+          </li>
+          {%- endfor %}
+        </ul>
+
+        <p class="side-head"><a href="{{ '/equipment/' | relative_url }}"{% if page.url == '/equipment/' %} class="is-current"{% endif %}>Equipment</a></p>
+        <ul>
+          {%- for item in site.data.wiki.equipment %}
+          {%- assign here = false -%}{%- if page.url contains item.url -%}{%- assign here = true -%}{%- endif %}
+          <li><a href="{{ item.url | relative_url }}"{% if here %} class="is-current"{% endif %}>{{ item.title }}{% if item.status == "in-progress" %} <span class="dot" title="Guide in progress"></span>{% endif %}</a>
+            {%- if here and item.url_no %}
+            <ul>
+              <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="is-current"{% endif %}>English</a></li>
+              <li><a href="{{ item.url_no | relative_url }}"{% if page.url == item.url_no %} class="is-current"{% endif %}>Norsk</a></li>
+            </ul>
+            {%- endif %}
+          </li>
+          {%- endfor %}
+        </ul>
+
+        <p class="side-head">Contribute</p>
+        <ul>
+          {%- for item in site.data.wiki.contribute %}
+          {%- assign u = item.url -%}{%- unless u contains "://" -%}{%- assign u = u | relative_url -%}{%- endunless %}
+          <li><a href="{{ u }}"{% if page.url == item.url %} class="is-current"{% endif %}>{{ item.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main" id="main">
+      {%- unless page.url == "/" %}
+      <div class="page-bar">
+        <p class="crumbs"><a href="{{ '/' | relative_url }}">Home</a>
+          {%- assign parts = page.url | split: "/" -%}{%- assign acc = "" -%}
+          {%- for part in parts -%}{%- if part != "" and forloop.last == false -%}
+          {%- assign acc = acc | append: "/" | append: part -%}
+          {%- assign key = acc | append: "/" -%}
+          {%- assign label = part -%}
+          {%- if key == "/labs/" -%}{%- assign label = "Labs" -%}{%- elsif key == "/equipment/" -%}{%- assign label = "Equipment" -%}{%- else -%}
+            {%- assign hit = site.data.wiki.equipment | where: "url", key | first -%}{%- unless hit -%}{%- assign hit = site.data.wiki.labs | where: "url", key | first -%}{%- endunless -%}
+            {%- if hit -%}{%- assign label = hit.title -%}{%- endif -%}
+          {%- endif %}
+          {%- assign target = site.pages | where: "url", key | first %}
+          <span aria-hidden="true">›</span> {% if target %}<a href="{{ key | relative_url }}">{{ label }}</a>{% else %}{{ label }}{% endif %}
+          {%- endif -%}{%- endfor %}
+        </p>
+        <p class="page-tools">
+          {%- if other %}
+          <a class="pill" href="{{ other.url | relative_url }}" hreflang="{% if is_no %}en{% else %}nb{% endif %}">{% include icon.html name="globe" %}{% if is_no %}English{% else %}Norsk{% endif %}</a>
+          {%- endif %}
+          <a class="pill" href="https://github.com/{{ site.repository }}/edit/main/{{ page.path }}">{% include icon.html name="edit" %}{% if is_no %}Rediger{% else %}Edit{% endif %}</a>
+        </p>
+      </div>
+      {%- endunless %}
+      <article class="content">
+        {{ content }}
+      </article>
+      <footer class="site-footer">
+        <p>University of South-Eastern Norway, campus Kongsberg · Lab supervisor: Rasmus Ullestad Relling</p>
+        <p>Found a mistake? <a href="https://github.com/{{ site.repository }}/issues">Report it on GitHub</a> or tell the lab supervisor. · <a href="https://github.com/{{ site.repository }}/blob/main/{{ page.path }}">View source of this page</a></p>
+      </footer>
+    </main>
+
+    {%- unless page.toc == false %}
+    <aside class="toc" aria-label="On this page" hidden>
+      <p class="toc-head">{% if is_no %}På denne siden{% else %}On this page{% endif %}</p>
+      <ol></ol>
+    </aside>
+    {%- endunless %}
+  </div>
+  <div class="scrim" hidden></div>
 </body>
 </html>

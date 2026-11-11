@@ -11,4 +11,4 @@ One folder per machine. A full guide has a step-by-step guide in English and Nor
 | **Lab furnaces** (up to 1000 °C) and quenching stations | [TSM2370 Lab 2](../labs/tsm2370-materialteknikk/README.md#lab-2--thermal-processing-and-quench-severity) | [Overview](furnace-heat-treatment/README.md), full guide in progress | – |
 | **Sample polisher** (metallographic grinding and polishing) | [TSM2370 Lab 2](../labs/tsm2370-materialteknikk/README.md#lab-2--thermal-processing-and-quench-severity) | [Overview](polisher-metallographic/README.md), full guide in progress | – |
 
-To add a machine, start from [`_template`](_template/README.md) and follow [Adding a new machine](../README.md#adding-a-new-machine).
+To add a machine, start from [`_template`](_template/README.md) and follow [Adding a new machine](https://github.com/ravo10/USN-kongsberg-lab-mech#adding-a-new-machine).

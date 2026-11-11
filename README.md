@@ -70,6 +70,7 @@ tools/
 2. Fill in `README.md` (English) and `README.no.md` (Norwegian). Keep the same section order as the existing guides so students know where to look.
 3. Put photos in `images/`, numbered in the order they appear (`01-front-view.jpg`, …). Label buttons with numbers that match a parts table in the guide.
 4. Add the machine to the **Equipment** table above and to the table in [`equipment/README.md`](equipment/README.md).
+5. Add it to [`_data/wiki.yml`](_data/wiki.yml), which builds the website's sidebar and the cards on the website's home page.
 
 The Markdown files are the master copies. The PDF and Word files are exported from them, so update the Markdown first and export them again with [`tools/export-guide`](tools/export-guide/README.md):
 

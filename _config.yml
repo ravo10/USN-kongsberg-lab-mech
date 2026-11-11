@@ -41,5 +41,6 @@ exclude:
   - "**/source/*.py"
   - "tools/**/*.py"
   - "tools/**/*.css"
+  - README.md   # the GitHub front page; the website uses index.html
   - Gemfile
   - Gemfile.lock

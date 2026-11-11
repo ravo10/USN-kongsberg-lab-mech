@@ -1,0 +1,66 @@
+---
+layout: default
+title: USN Kongsberg – Mechanical Engineering Lab
+toc: false
+---
+{%- comment -%}
+Website home page. The cards come from _data/wiki.yml.
+README.md is the home page on GitHub; keep the two in step when you add a lab or a machine.
+{%- endcomment -%}
+<section class="hero">
+  <p class="eyebrow">USN Kongsberg · Mechanical engineering labs</p>
+  <h1>Lab Wiki</h1>
+  <p class="lead">What to do in each lab session, and how to use each machine: step-by-step guides with labelled photos, quick cards, protocols and report templates. In English and Norwegian.</p>
+  <p class="lead lead-no" lang="nb">Labøvinger og utstyrsveiledninger for maskinfagene ved USN Kongsberg, på engelsk og norsk.</p>
+  <button class="hero-search" type="button" data-focus-search>{% include icon.html name="search" %}<span>Search guides and labs…</span><kbd>/</kbd></button>
+</section>
+
+<section class="home-section">
+  <div class="section-head"><h2 id="labs">Labs</h2><a href="{{ '/labs/' | relative_url }}">All courses →</a></div>
+  <div class="cards">
+    {%- for item in site.data.wiki.labs %}
+    <a class="card card-wide" href="{{ item.url | relative_url }}">
+      <span class="card-icon">{% include icon.html name=item.icon %}</span>
+      <span class="card-body">
+        <span class="card-title">{{ item.title }}</span>
+        <span class="card-meta">{{ item.meta }}</span>
+        <span class="card-links">Protocol · Report template · Equipment guides</span>
+      </span>
+    </a>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="section-head"><h2 id="equipment">Equipment</h2><a href="{{ '/equipment/' | relative_url }}">All machines →</a></div>
+  <div class="cards">
+    {%- for item in site.data.wiki.equipment %}
+    <a class="card" href="{{ item.url | relative_url }}">
+      <span class="card-media{% unless item.image %} card-media-icon{% endunless %}">
+        {%- if item.image -%}<img src="{{ item.image | relative_url }}" alt="" loading="lazy">{%- else -%}{% include icon.html name=item.icon %}{%- endif -%}
+      </span>
+      <span class="card-body">
+        <span class="badge badge-{{ item.status }}">{{ site.data.wiki.status_labels[item.status] }}</span>
+        <span class="card-title">{{ item.title }}</span>
+        <span class="card-meta">{{ item.kind }}</span>
+        <span class="card-used">Used in {{ item.used_in }}</span>
+      </span>
+    </a>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="home-section notes">
+  <div class="note">
+    <h2 id="before-any-lab">Before any lab</h2>
+    <ul>
+      <li>Read the guide for the machine <strong>before</strong> the lab session, and bring it (on paper or a screen).</li>
+      <li>Follow the safety rules at the top of each guide. If something looks wrong or broken, <strong>stop and tell the lab supervisor</strong>. Do not try to repair equipment yourself.</li>
+      <li>Leave the machine as you found it: switched off, cleaned, batteries and lights on charge.</li>
+    </ul>
+  </div>
+  <div class="note note-soft">
+    <h2 id="about">About this wiki</h2>
+    <p>An experimental knowledge base: every page is a Markdown file in a <a href="https://github.com/{{ site.repository }}">Git repository</a>, so guides can be corrected and improved like code. Found a mistake? Use <b>Edit</b> on any page, <a href="https://github.com/{{ site.repository }}/issues">open an issue</a>, or tell the lab supervisor.</p>
+  </div>
+</section>

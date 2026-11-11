@@ -1,0 +1,59 @@
+# Navigation for the website: the left sidebar and the cards on the home page.
+# Add a line here when you add a course or a machine.
+#
+# status: ready | in-progress | external  (shown as a small label)
+# image:  photo used on the home-page card (optional)
+# icon:   used on the card when there is no photo: tensile | hardness | furnace | polisher | lab
+
+labs:
+  - title: TSM2370 Materialteknikk
+    url: /labs/tsm2370-materialteknikk/
+    meta: Fall 2026 · Lab 1 tensile testing · Lab 2 heat treatment
+    icon: lab
+    status: ready
+    children:
+      - title: Lab 1 – Tensile testing
+        url: /labs/tsm2370-materialteknikk/#lab-1--axial-tensile-testing-and-strain-measurement-accuracy
+      - title: Lab 2 – Heat treatment
+        url: /labs/tsm2370-materialteknikk/#lab-2--thermal-processing-and-quench-severity
+
+equipment:
+  - title: Matsuzawa MXT50
+    kind: Vickers microhardness tester
+    url: /equipment/hardness-vickers-matsuzawa-mxt50/
+    url_no: /equipment/hardness-vickers-matsuzawa-mxt50/README.no.html
+    image: /equipment/hardness-vickers-matsuzawa-mxt50/images/01-front-view.jpg
+    icon: hardness
+    status: ready
+    used_in: TSM2370 Lab 2
+  - title: Lloyd LR 10K
+    kind: Universal testing machine
+    url: /equipment/tensile-lloyd-lr10k/
+    icon: tensile
+    status: external
+    used_in: TSM2370 Lab 1
+  - title: Lab furnaces
+    kind: Furnaces and quenching stations
+    url: /equipment/furnace-heat-treatment/
+    icon: furnace
+    status: in-progress
+    used_in: TSM2370 Lab 2
+  - title: Sample polisher
+    kind: Metallographic grinding and polishing
+    url: /equipment/polisher-metallographic/
+    icon: polisher
+    status: in-progress
+    used_in: TSM2370 Lab 2
+
+contribute:
+  - title: Guide template
+    url: /equipment/_template/
+  - title: Export to PDF and Word
+    url: /tools/export-guide/
+  - title: Source on GitHub
+    url: https://github.com/ravo10/USN-kongsberg-lab-mech
+
+status_labels:
+  ready: Guide
+  in-progress: In progress
+  external: Linked docs
