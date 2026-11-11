@@ -330,7 +330,7 @@ def _section(blocks, start, stop):
     return out
 
 
-def report_no(proto, title, exp_no, haz, ppe, waste, disc_extra=""):
+def report_no(proto, title, exp_no, haz, ppe, waste, disc_extra="", expected=None, comparison=None):
     th = _section(proto, "2. Teoretisk bakgrunn", None)
     formulas = _section(proto, "2.1 Relevante formler", None)[0][1]
     obj = _section(proto, "1. Hensikt", None)[0][1]
@@ -339,6 +339,11 @@ def report_no(proto, title, exp_no, haz, ppe, waste, disc_extra=""):
     results = _section(proto, "5. Resultater og målinger", None)[0][1:]
     disc = _section(proto, "6.1 Tolkning av resultater", None)[0][1] + disc_extra
     refs = _section(proto, "8. Referanser", None)[0][1]
+    if expected:  # extra column with expected values in the data table
+        header, rows, _ = results
+        results = (header[:2] + ["Forventet (ca.)"] + header[2:],
+                   [r[:2] + [e] + r[2:] for r, e in zip(rows, expected)], [8.1, 2.6, 3.4, 2.5])
+    comparison = comparison or "[Diskuter hvordan verdiene dine stemmer med teoretiske verdier eller litteraturverdier.]"
     return [("label", "Laboratorierapport · TSM2370 Materialteknikk"), ("title", title),
             ("info", [("Tittel på forsøket", title), ("Emne", "TSM2370 Materialteknikk"), ("Forsøk nr.", exp_no),
                       ("Dato utført", "[DD/MM/ÅÅÅÅ]"), ("Dato levert", "[DD/MM/ÅÅÅÅ]"), ("Forfatter / student", "[Fornavn Etternavn]"),
@@ -361,7 +366,7 @@ def report_no(proto, title, exp_no, haz, ppe, waste, disc_extra=""):
             ("p", "[Vis én fullstendig eksempelberegning for hver type beregning: likningen, innsatte verdier og resultatet med riktige enheter.]"),
             ("h2", "6.4 Figurer / grafer"), ("p", "[Sett inn figurer eller grafer her. Gi aksene navn og enheter.]"),
             ("h1", "7. Diskusjon"), ("h2", "7.1 Tolkning av resultater"), ("p", disc),
-            ("h2", "7.2 Sammenligning med teoretiske verdier"), ("p", "[Diskuter hvordan verdiene dine stemmer med teoretiske verdier eller litteraturverdier.]"),
+            ("h2", "7.2 Sammenligning med teoretiske verdier"), ("p", comparison),
             ("h2", "7.3 Feilkilder"), ("p", "**Systematiske feil:** [Kalibrerings- eller metodefeil]"),
             ("p", "**Tilfeldige feil:** [Miljøpåvirkning eller spredning i målingene]"),
             ("h1", "8. Konklusjon"), ("p", "[Oppsummer de viktigste funnene og svar på spørsmålet i hensikten.]"),
@@ -382,7 +387,14 @@ REPORT_NO = (report_no(PROTOCOL_NO[:_i], N1_TITLE, "1",
                          "kan sprekke ved kraftig bråkjøling i vann. Varm bråkjølingsolje kan ta fyr hvis en varm prøve senkes for sakte ned "
                          "eller oljen er for grunn: ha lokket innen rekkevidde, og bruk aldri vann på oljebrann.",
                          "Varmebestandige hansker, tenger, ansiktsskjerm, labfrakk, lukkede sko.",
-                         "Kast poleringsavfall riktig. Håndter bråkjølingsvæsker etter labens miljøretningslinjer."))
+                         "Kast poleringsavfall riktig. Håndter bråkjølingsvæsker etter labens miljøretningslinjer.",
+                         expected=["220–240", "750–850", "450–750", "250–350"],
+                         comparison="**Forventede verdier (veiledende):** prøve A 220–240 HV1, prøve B 750–850 HV1, prøve C 450–750 HV1 "
+                                    "(under B), prøve D 250–350 HV1 (over A). A bygger på leveringstilstanden i databladene (maks. ca. 220 HB, "
+                                    "ca. 230 HV) og en måling på en ubehandlet prøve i laben (236 HV1). B bygger på hardheten etter herding i "
+                                    "databladene (64–66 HRC, ca. 800–865 HV), litt lavere her fordi prøvene er små, ikke anløpt og måles nær "
+                                    "overflaten. C avhenger mye av kjølemediet og hvor raskt prøven kommer i badet. Omregning mellom HB, HRC og "
+                                    "HV følger ISO 18265 og er omtrentlig. [Diskuter hvordan dine verdier stemmer med disse, og forklar avvik.]"))
 
 DOCS["lab-report-template-2026-no"] = dict(title="TSM2370 Mal for labrapport 2026", header="TSM2370 Materialteknikk · Labrapport · Høst 2026",
                                            page="Side", of="av", blocks=REPORT_NO)
