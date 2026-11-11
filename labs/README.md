@@ -1,8 +1,8 @@
 # Lab sessions
 
-Each course has a folder with its lab sessions: what you will do, which equipment you will use, and the protocol and report template you need. The equipment guides themselves live in [`equipment/`](../equipment/) and are linked from each lab.
+Each course has a folder with its lab sessions: what you will do, which equipment you will use, and the protocol and report template you need. The equipment guides themselves live in [`equipment/`](../equipment/README.md) and are linked from each lab.
 
-*Norsk:* Hvert emne har en mappe med labøvingene sine: hva dere skal gjøre, hvilket utstyr dere bruker, og protokollen og rapportmalen dere trenger. Veiledningene for utstyret ligger i [`equipment/`](../equipment/) og er lenket fra hver lab.
+*Norsk:* Hvert emne har en mappe med labøvingene sine: hva dere skal gjøre, hvilket utstyr dere bruker, og protokollen og rapportmalen dere trenger. Veiledningene for utstyret ligger i [`equipment/`](../equipment/README.md) og er lenket fra hver lab.
 
 | Course | Semester | Labs |
 | --- | --- | --- |
