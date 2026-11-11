@@ -1,0 +1,43 @@
+title: USN Kongsberg – Mechanical Engineering Lab
+description: Lab sessions and equipment guides for mechanical engineering at USN Kongsberg (English and Norwegian).
+lang: en
+repository: ravo10/USN-kongsberg-lab-mech
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+
+# README.md files become the index page of their folder, and links between
+# .md files are rewritten to the generated pages.
+plugins:
+  - jekyll-relative-links
+  - jekyll-readme-index
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+  - jekyll-default-layout
+
+relative_links:
+  enabled: true
+  collections: false
+
+titles_from_headings:
+  enabled: true
+  strip_title: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Folders starting with "_" are skipped by Jekyll unless listed here.
+include:
+  - _template
+  - _templates
+
+exclude:
+  - "**/source/*.py"
+  - Gemfile
+  - Gemfile.lock

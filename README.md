@@ -4,6 +4,8 @@ Lab sessions and equipment instructions for mechanical engineering courses at th
 
 *Norsk:* Labøvinger og utstyrsveiledninger for maskinfagene ved USN Kongsberg. Under **Labs** finner dere hva dere skal gjøre i hver labøving, med protokoller og rapportmaler. Under **Equipment** har hver maskin sin egen mappe med veiledning, bilder og hurtigkort. Veiledningene finnes på både engelsk og norsk.
 
+> **Website:** [ravo10.github.io/USN-kongsberg-lab-mech](https://ravo10.github.io/USN-kongsberg-lab-mech/) · **Source:** [github.com/ravo10/USN-kongsberg-lab-mech](https://github.com/ravo10/USN-kongsberg-lab-mech)
+
 ## Labs
 
 | Course | Semester | Labs | Protocol and template |

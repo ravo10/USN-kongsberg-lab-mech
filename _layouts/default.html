@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% assign page_title = page.title | default: site.title %}
+  <title>{% if page_title != site.title %}{{ page_title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>USN Kongsberg <span class="brand-sub">Mechanical Engineering Lab</span></span>
+      </a>
+      <nav aria-label="Main">
+        <a href="{{ '/labs/' | relative_url }}">Labs</a>
+        <a href="{{ '/#equipment' | relative_url }}">Equipment</a>
+        <a href="https://github.com/{{ site.repository }}">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap content">
+    {% unless page.url == "/" %}
+    <p class="crumbs"><a href="{{ '/' | relative_url }}">Home</a>
+      {% assign parts = page.url | split: "/" %}{% assign acc = "" %}
+      {% for part in parts %}{% if part != "" and forloop.last == false %}{% assign acc = acc | append: "/" | append: part %} › <a href="{{ acc | append: '/' | relative_url }}">{{ part }}</a>{% endif %}{% endfor %}
+    </p>
+    {% endunless %}
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>University of South-Eastern Norway, campus Kongsberg · Lab supervisor: Rasmus Ullestad Relling</p>
+      <p>Found a mistake? <a href="https://github.com/{{ site.repository }}/issues">Report it on GitHub</a> or tell the lab supervisor. · <a href="https://github.com/{{ site.repository }}/blob/main/{{ page.path }}">View source of this page</a></p>
+    </div>
+  </footer>
+</body>
+</html>
