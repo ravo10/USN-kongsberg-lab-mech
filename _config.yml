@@ -39,5 +39,7 @@ include:
 
 exclude:
   - "**/source/*.py"
+  - "tools/**/*.py"
+  - "tools/**/*.css"
   - Gemfile
   - Gemfile.lock

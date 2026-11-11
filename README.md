@@ -59,6 +59,9 @@ equipment/
 ├── polisher-metallographic/   placeholder, guide in progress
 └── _template/
     └── README.md          starting point for a new machine
+
+tools/
+└── export-guide/          script that exports a guide's Markdown to PDF and Word
 ```
 
 ## Adding a new machine
@@ -68,7 +71,11 @@ equipment/
 3. Put photos in `images/`, numbered in the order they appear (`01-front-view.jpg`, …). Label buttons with numbers that match a parts table in the guide.
 4. Add the machine to the **Equipment** table above and to the table in [`equipment/README.md`](equipment/README.md).
 
-The Markdown files are the master copies. The PDF and Word files are exported from them, so update the Markdown first and export them again.
+The Markdown files are the master copies. The PDF and Word files are exported from them, so update the Markdown first and export them again with [`tools/export-guide`](tools/export-guide/README.md):
+
+```bash
+python tools/export-guide/export.py equipment/<folder>
+```
 
 ## Contact
 
