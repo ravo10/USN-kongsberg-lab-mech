@@ -38,9 +38,11 @@ equipment:
     icon: furnace
     status: in-progress
     used_in: TSM2370 Lab 2
-  - title: Sample polisher
-    kind: Metallographic grinding and polishing
+  - title: Grinding and polishing
+    kind: Buehler MetaServ 250, Metaserv and Ecomet I
     url: /equipment/polisher-metallographic/
+    url_no: /equipment/polisher-metallographic/README.no.html
+    image: /equipment/polisher-metallographic/images/01-metaserv-250-overview.jpg
     icon: polisher
     status: in-progress
     used_in: TSM2370 Lab 2
