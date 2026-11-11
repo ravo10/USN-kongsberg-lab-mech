@@ -50,6 +50,8 @@ equipment:
     used_in: TSM2370 Lab 2
 
 contribute:
+  - title: How this website works
+    url: /contribute/
   - title: Guide template
     url: /equipment/_template/
   - title: Export to PDF and Word

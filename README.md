@@ -61,10 +61,16 @@ equipment/
     └── README.md          starting point for a new machine
 
 tools/
-└── export-guide/          script that exports a guide's Markdown to PDF and Word
+├── export-guide/          script that exports a guide's Markdown to PDF and Word
+└── photo/                 script that prepares and labels photos
+
+contribute/README.md       how the website is built and how to change it
 ```
 
 ## Adding a new machine
+
+See [How this website works](contribute/README.md) for how the website is built, how to add photos and how to preview changes.
+
 
 1. Copy `equipment/_template/` to `equipment/<type>-<make>-<model>/` (lower case, hyphens), for example `equipment/impact-charpy-<make>-<model>/`.
 2. Fill in `README.md` (English) and `README.no.md` (Norwegian). Keep the same section order as the existing guides so students know where to look.
