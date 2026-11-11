@@ -4,6 +4,8 @@ TSM2370 Materialteknikk · USN Kongsberg · Updated 10 Nov 2026
 
 > **Norsk versjon:** [README.no.md](README.no.md) · **PDF:** [guide-en.pdf](guide-en.pdf) · **Word:** [guide-en.docx](guide-en.docx) · **Quick card (A4, Norwegian):** [quick-card-no.pdf](quick-card-no.pdf)
 
+**Used in:** [TSM2370 Lab 2 – Thermal processing and quench severity](../../labs/tsm2370-materialteknikk/README.md#lab-2--thermal-processing-and-quench-severity)
+
 You will measure Vickers hardness at HV1 (1 kgf). First you check the machine on the reference block, then you test your own samples. One indent takes about 2 minutes once you know the routine.
 
 ## 1. Before you start

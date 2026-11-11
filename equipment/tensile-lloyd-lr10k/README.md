@@ -6,6 +6,8 @@ The Lloyd LR 10K (1990s, 10 kN) is used for tensile, compression and 3-point ben
 
 The machine is run from a PC with the **LR 10K Control Software**, which has its own repository and documentation: [ravo10/lr10k-2027](https://github.com/ravo10/lr10k-2027).
 
+**Used in:** [TSM2370 Lab 1 – Axial tensile testing and strain measurement accuracy](../../labs/tsm2370-materialteknikk/README.md#lab-1--axial-tensile-testing-and-strain-measurement-accuracy)
+
 ## Where to find what
 
 | You want to… | Read |

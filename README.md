@@ -16,6 +16,8 @@ All courses: [labs/](labs/README.md)
 
 ## Equipment
 
+All machines: [equipment/](equipment/README.md)
+
 | Equipment | Used in | Guide | Quick card |
 | --- | --- | --- | --- |
 | **Matsuzawa MXT50** Vickers microhardness tester | TSM2370 Lab 2 (heat treatment of Sølvstål 2210) | [English](equipment/hardness-vickers-matsuzawa-mxt50/README.md) · [Norsk](equipment/hardness-vickers-matsuzawa-mxt50/README.no.md) · PDF: [EN](equipment/hardness-vickers-matsuzawa-mxt50/guide-en.pdf), [NO](equipment/hardness-vickers-matsuzawa-mxt50/guide-no.pdf) · Word: [EN](equipment/hardness-vickers-matsuzawa-mxt50/guide-en.docx), [NO](equipment/hardness-vickers-matsuzawa-mxt50/guide-no.docx) | [A4, norsk](equipment/hardness-vickers-matsuzawa-mxt50/quick-card-no.pdf) |
@@ -40,6 +42,7 @@ labs/
     └── protocols/         protocol and report template (Word + PDF)
 
 equipment/
+├── README.md              list of all machines
 ├── hardness-vickers-matsuzawa-mxt50/
 │   ├── README.md          guide (English)
 │   ├── README.no.md       guide (Norwegian)
@@ -48,6 +51,7 @@ equipment/
 │   ├── guide-en.docx      editable Word versions
 │   ├── guide-no.docx
 │   ├── quick-card-no.pdf  one-page card to laminate and keep at the machine
+│   ├── quick-card-no.html source of the quick card (print to A4 PDF, no margins)
 │   └── images/            labelled photos used in the guides
 ├── tensile-lloyd-lr10k/
 │   └── README.md          overview, links to the LR 10K software documentation
@@ -62,7 +66,7 @@ equipment/
 1. Copy `equipment/_template/` to `equipment/<type>-<make>-<model>/` (lower case, hyphens), for example `equipment/impact-charpy-<make>-<model>/`.
 2. Fill in `README.md` (English) and `README.no.md` (Norwegian). Keep the same section order as the existing guides so students know where to look.
 3. Put photos in `images/`, numbered in the order they appear (`01-front-view.jpg`, …). Label buttons with numbers that match a parts table in the guide.
-4. Add the machine to the **Equipment** table above.
+4. Add the machine to the **Equipment** table above and to the table in [`equipment/README.md`](equipment/README.md).
 
 The Markdown files are the master copies. The PDF and Word files are exported from them, so update the Markdown first and export them again.
 
