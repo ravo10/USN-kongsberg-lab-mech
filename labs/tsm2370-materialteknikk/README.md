@@ -39,14 +39,18 @@ Four prepared samples of **Sølvstål 2210** (1.2210 / 115CrV3, a high-carbon to
 | C | 810 °C → quench in 70 °C water or oil | Martensite, possibly mixed with softer pearlite/bainite (slower quench) |
 | D | 810 °C → 600 °C oven for 15–30 min → air cool to ~20 °C | Pearlite |
 
+![The four Lab 2 samples marked A, B, C and D](images/lab2-samples-a-b-c-d.jpg)
+
+*The four samples after heat treatment, marked A–D with a permanent marker. A (untreated) is still bright. B and C have coloured oxide from the quench, and D is covered in dark scale. Mark each sample as soon as it is cold, and keep track of which is which while they are in the furnace.*
+
 | Equipment | Guide |
 | --- | --- |
-| Primary furnace (810 °C), secondary oven (600 °C) and quenching stations | [Equipment page](../../equipment/furnace-heat-treatment/README.md) (guide in progress) |
-| Polishing equipment | [Equipment page](../../equipment/polisher-metallographic/README.md) (guide in progress) |
+| Primary furnace (810 °C), secondary oven (600 °C) and quenching stations | [Guide (EN)](../../equipment/furnace-heat-treatment/README.md) · [Veiledning (NO)](../../equipment/furnace-heat-treatment/README.no.md) |
+| Grinding and polishing machines | [Guide (EN)](../../equipment/polisher-metallographic/README.md) · [Veiledning (NO)](../../equipment/polisher-metallographic/README.no.md) (procedure in progress) |
 | Matsuzawa MXT50 Vickers hardness tester | [Guide (EN)](../../equipment/hardness-vickers-matsuzawa-mxt50/README.md) · [Veiledning (NO)](../../equipment/hardness-vickers-matsuzawa-mxt50/README.no.md) · [quick card](../../equipment/hardness-vickers-matsuzawa-mxt50/quick-card-no.pdf) |
 
 Samples B, C and D are held at 810 °C for 15–30 minutes before quenching or transfer. 810 °C is inside the hardening range in the datasheets for 1.2210 (780–840 °C).
 
-**PPE for Lab 2:** heat-resistant gloves, tongs, face shield, lab coat, closed-toe shoes.
+**PPE for Lab 2:** safety glasses, heat-resistant gloves, tongs, face shield, lab coat, closed-toe shoes. Hot samples go on the insulating brick, and scale from the quench is wiped up with paper, not rinsed down the drain (see the [furnace guide](../../equipment/furnace-heat-treatment/README.md)).
 
 **Extra hazards:** high-carbon steel can crack in a severe water quench, and hot quenching oil can catch fire. Keep the oil-bath lid within reach and never use water on an oil fire.

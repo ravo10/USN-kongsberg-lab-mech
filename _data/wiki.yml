@@ -33,10 +33,12 @@ equipment:
     status: external
     used_in: TSM2370 Lab 1
   - title: Lab furnaces
-    kind: Furnaces and quenching stations
+    kind: Nabertherm furnaces and quenching
     url: /equipment/furnace-heat-treatment/
+    url_no: /equipment/furnace-heat-treatment/README.no.html
+    image: /equipment/furnace-heat-treatment/images/01-nabertherm-s27.jpg
     icon: furnace
-    status: in-progress
+    status: ready
     used_in: TSM2370 Lab 2
   - title: Grinding and polishing
     kind: Buehler MetaServ 250, Metaserv and Ecomet I
