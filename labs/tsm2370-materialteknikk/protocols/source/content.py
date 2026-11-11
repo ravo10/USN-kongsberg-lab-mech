@@ -144,7 +144,13 @@ def protocol_en(title, obj, theory, formulas, equip, setup, steps, results, calc
     return b
 
 
-def report_en(title, exp_no, theory_blocks, formulas, obj, equip, haz, ppe, waste, steps, results, disc):
+def report_en(title, exp_no, theory_blocks, formulas, obj, equip, haz, ppe, waste, steps, results, disc,
+              expected=None, comparison=None):
+    if expected:  # extra column with expected values in the data table
+        header, rows, _ = results
+        results = (header[:2] + ["Expected (approx.)"] + header[2:],
+                   [r[:2] + [e] + r[2:] for r, e in zip(rows, expected)], [8.1, 2.6, 3.4, 2.5])
+    comparison = comparison or "[Discuss how your values compare with theoretical or literature values.]"
     b = [("label", "Laboratory report · TSM2370 Materialteknikk"), ("title", title),
          ("info", [("Experiment title", title), ("Course / subject", "TSM2370 Materialteknikk"), ("Experiment no.", exp_no),
                    ("Date performed", "[DD/MM/YYYY]"), ("Date submitted", "[DD/MM/YYYY]"), ("Author / student name", "[First Last Name]"),
@@ -169,7 +175,7 @@ def report_en(title, exp_no, theory_blocks, formulas, obj, equip, haz, ppe, wast
                 "result with correct units.]"),
           ("h2", "6.4 Figures / graphs"), ("p", "[Insert figures or graphs here. Label the axes and give the units.]"),
           ("h1", "7. Discussion"), ("h2", "7.1 Interpretation of results"), ("p", disc),
-          ("h2", "7.2 Comparison with theoretical values"), ("p", "[Discuss how your values compare with theoretical or literature values.]"),
+          ("h2", "7.2 Comparison with theoretical values"), ("p", comparison),
           ("h2", "7.3 Sources of error"), ("p", "**Systematic errors:** [Identify calibration or method errors]"),
           ("p", "**Random errors:** [Identify environmental or measurement scatter errors]"),
           ("h1", "8. Conclusion"), ("p", "[Summarise the most important findings and answer the question posed in the objectives.]"),
@@ -188,7 +194,15 @@ PROTOCOL_EN = (protocol_en(L1_TITLE, L1_OBJ, [("p", L1_THEORY)], L1_FORMULAS, L1
 REPORT_EN = (report_en(L1_TITLE, "1", [("p", L1_THEORY)], L1_FORMULAS, L1_OBJ, L1_EQUIP, L1_HAZ, L1_PPE, L1_WASTE, L1_STEPS, L1_RESULTS,
                        L1_DISC + " [Compare your values with literature values for common alloys, e.g. 6061-T6 and 5052-H32.]")
              + [("pagebreak",)]
-             + report_en(L2_TITLE, "2", L2_THEORY_BLOCKS, L2_FORMULAS, L2_OBJ, L2_EQUIP, L2_HAZ, L2_PPE, L2_WASTE, L2_STEPS, L2_RESULTS, L2_DISC))
+             + report_en(L2_TITLE, "2", L2_THEORY_BLOCKS, L2_FORMULAS, L2_OBJ, L2_EQUIP, L2_HAZ, L2_PPE, L2_WASTE, L2_STEPS, L2_RESULTS, L2_DISC,
+                         expected=["220–240", "750–850", "450–750", "250–350"],
+                         comparison="**Expected values (guide only):** Sample A 220–240 HV1, Sample B 750–850 HV1, Sample C 450–750 HV1 "
+                                    "(below B), Sample D 250–350 HV1 (above A). A is based on the delivery condition in the datasheets (max. "
+                                    "about 220 HB, roughly 230 HV) and a measurement on an untreated sample in the lab (236 HV1). B is based on "
+                                    "the datasheet hardness after hardening (64–66 HRC, roughly 800–865 HV), a little lower here because the "
+                                    "samples are small, not tempered and measured near the surface. C depends strongly on the quench medium and "
+                                    "on how fast the sample gets into the bath. Conversions between HB, HRC and HV follow ISO 18265 and are "
+                                    "approximate. [Discuss how your values compare with these, and explain any differences.]"))
 
 # ---------------------------------------------------------------- Norwegian protocol
 N1_TITLE = "Lab 1: Aksial strekktesting og nøyaktighet i tøyningsmåling"
