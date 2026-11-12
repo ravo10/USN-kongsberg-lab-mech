@@ -25,6 +25,7 @@ All machines: [equipment/](equipment/README.md)
 | **Nabertherm lab furnaces** (up to 1000 °C) and quenching stations | TSM2370 Lab 2 | [English](equipment/furnace-heat-treatment/README.md) · [Norsk](equipment/furnace-heat-treatment/README.no.md) | – |
 | **Grinding and polishing machines** (Buehler MetaServ 250, Metaserv, Ecomet I) | TSM2370 Lab 2 | [English](equipment/polisher-metallographic/README.md) · [Norsk](equipment/polisher-metallographic/README.no.md), machines and controls; procedure in progress | – |
 | **Stepcraft M700** CNC mill (UCCNC, SolidWorks CAM, 3D Touch Probe) | Student projects (Komposittlabben) | [Norsk](equipment/cnc-stepcraft-m700/README.no.md) · [English](equipment/cnc-stepcraft-m700/README.md) · PDF: [NO](equipment/cnc-stepcraft-m700/guide-no.pdf), [EN](equipment/cnc-stepcraft-m700/guide-en.pdf) · Word: [NO](equipment/cnc-stepcraft-m700/guide-no.docx), [EN](equipment/cnc-stepcraft-m700/guide-en.docx), original: [manual](equipment/cnc-stepcraft-m700/brukermanual-original.docx), [coordinates](equipment/cnc-stepcraft-m700/machine-coordinates-original.docx) | A4: [NO](equipment/cnc-stepcraft-m700/quick-card-no.pdf), [EN](equipment/cnc-stepcraft-m700/quick-card-en.pdf) |
+| **Modix BIG-60** 3D printer (Duet 2 WiFi, RepRapFirmware 3) | Måleteknisk lab | [Norsk](equipment/3d-printer-modix-big60/README.no.md) · [English](equipment/3d-printer-modix-big60/README.md) · PDF: [NO](equipment/3d-printer-modix-big60/guide-no.pdf), [EN](equipment/3d-printer-modix-big60/guide-en.pdf) · Word: [NO](equipment/3d-printer-modix-big60/guide-no.docx), [EN](equipment/3d-printer-modix-big60/guide-en.docx) · firmware: [Modix GitHub v3.4.5.c](https://github.com/Modix3D/Modix-V3-configuration-and-Macro-files/releases/tag/v3.4.5.c) | – |
 
 ## Before any lab
 
@@ -60,6 +61,7 @@ equipment/
 │   ├── README.no.md       the same in Norwegian, with the test steps and hotkeys
 │   └── quick-card-*.pdf   one-page cards (EN/NO) with QR code, source in quick-card-*.html
 ├── furnace-heat-treatment/    Nabertherm furnaces and quenching (EN/NO)
+├── 3d-printer-modix-big60/   Modix BIG-60: Duet connection, network, web interface, macros (NO/EN)
 ├── cnc-stepcraft-m700/       CNC mill: SolidWorks CAM, UCCNC, probe (NO master, EN translation,
 │                              plus the author's original Word document)
 ├── polisher-metallographic/   grinding and polishing machines (EN/NO), procedure in progress

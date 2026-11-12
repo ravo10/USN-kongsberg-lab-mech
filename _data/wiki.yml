@@ -57,6 +57,14 @@ equipment:
     icon: cnc
     status: ready
     used_in: student projects (Komposittlabben)
+  - title: Modix BIG-60 3D printer
+    kind: Large FDM printer · Duet 2 WiFi, RRF3
+    url: /equipment/3d-printer-modix-big60/
+    url_no: /equipment/3d-printer-modix-big60/README.no.html
+    image: /equipment/3d-printer-modix-big60/images/01-modix-big60-front.jpg
+    icon: printer
+    status: ready
+    used_in: the metrology lab (Måleteknisk lab)
 
 contribute:
   - title: How this website works
