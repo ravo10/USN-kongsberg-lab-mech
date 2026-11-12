@@ -78,8 +78,8 @@ Jekyll and a few standard GitHub Pages plugins do the work. You only write norma
 
 ### Add a new machine
 
-1. Copy `equipment/_template/` to `equipment/<type>-<make>-<model>/` (lower case, hyphens).
-2. Write `README.md` and `README.no.md`, keeping the section order of the existing guides.
+1. Copy `equipment/_template/` to `equipment/<type>-<make>-<model>/` (lower case, hyphens). The template has both `README.md` (English) and `README.no.md` (Norwegian).
+2. Fill in both files and replace everything in [square brackets]. Do not use angle brackets like `<Model>` for placeholders: Markdown reads them as HTML and the page breaks.
 3. Add the photos (see above).
 4. Add the machine to `_data/wiki.yml` (sidebar and home page), to the table in `equipment/README.md` and to the table in the top-level `README.md`.
 5. Export PDF and Word with `tools/export-guide` if the guide is finished.
