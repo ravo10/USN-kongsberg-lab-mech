@@ -637,9 +637,14 @@ To set a new Z zero point from a datum, put the simple probe calibration tool on
 
 ## 7. External documentation (Stepcraft)
 
-These manuals are made by **STEPCRAFT**, not by USN, and are © STEPCRAFT. Download the latest versions from Stepcraft's manuals page: **[stepcraft-systems.com/en/services/manuals](https://stepcraft-systems.com/en/services/manuals)**.
+These manuals are made by **STEPCRAFT**, not by USN, and are © STEPCRAFT, so they are not stored on this site. Download them, in their latest versions, from Stepcraft's manuals page: **[stepcraft-systems.com/en/services/manuals](https://stepcraft-systems.com/en/services/manuals)**.
 
 | Document | What it covers |
 | --- | --- |
 | *Quick Start Guide – UCCNC STEPCRAFT OEM Version 3.6* (06/23, English) | Installing UCCNC, licence and machine profile, troubleshooting, and the M6 macro for tool magazines (page 11), used in [chapter 6](#6-machine-coordinates-and-calibration-of-our-m700--teachers) |
 | *First Steps – Tool Magazine M-Series, UCCNC v3.4* (English) | Setting up the tool magazine in UCCNC: preparing the tool changer and editing the macros |
+| *Operating Manual – Tool Magazine incl. pneumatic lifting function, M-Series* (01/22, English) | The tool magazine itself: safety, installation (piston in the Z axis, magazine, electrical connection), operation (tool changer switch, software setup, tool length sensor, tool offsets in UCCNC) and technical data |
+| *Operating Manual – Tool Length Sensor TS-32 and TS-39* (English) | Safety, assembly and connection of the tool length sensor (TLS), and setup in UCCNC; the sensor is used to set the Z zero point ([4.07](#407-setting-the-z-zero-point-with-the-tool-length-sensor-tls), [6.05](#605-tool-length-sensor-and-probe)) |
+| *User's manual – UCR200 USB wireless jog pendant* (plug-in V1.032, English) | The wireless hand control (jog pendant). Note: this manual describes the pendant with Mach3 software |
+| *Milling parameters* (English) | How to calculate spindle speed and feed rate (n = v<sub>c</sub> · 1000 / (π · d), v<sub>f</sub> = n · z · f<sub>z</sub>) with a worked example, and a speed and feed benchmark by material and cutter diameter |
+| *Milling* (English) | Cutter types (2-flute, diamond, single flute, spiral, radius, V-bit) and what each is for, and cutting data (infeed depth, rpm, feed) for Ø1–3 mm cutters in wood, plastics, composites, aluminium and brass |

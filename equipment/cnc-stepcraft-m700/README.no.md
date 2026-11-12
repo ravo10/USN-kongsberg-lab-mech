@@ -637,9 +637,14 @@ For å sette et nytt Z-nullpunkt fra et referansepunkt legger du kalibreringsver
 
 ## 7. Ekstern dokumentasjon (Stepcraft)
 
-Disse manualene er laget av **STEPCRAFT**, ikke av USN, og er © STEPCRAFT. Last ned nyeste versjon fra Stepcrafts side for manualer: **[stepcraft-systems.com/en/services/manuals](https://stepcraft-systems.com/en/services/manuals)**.
+Disse manualene er laget av **STEPCRAFT**, ikke av USN, og er © STEPCRAFT, så de ligger ikke på denne siden. Last dem ned i nyeste versjon fra Stepcrafts side for manualer: **[stepcraft-systems.com/en/services/manuals](https://stepcraft-systems.com/en/services/manuals)**.
 
 | Dokument | Innhold |
 | --- | --- |
 | *Quick Start Guide – UCCNC STEPCRAFT OEM Version 3.6* (06/23, engelsk) | Installasjon av UCCNC, lisens og maskinprofil, feilsøking, og M6-macroen for verktøymagasiner (side 11), brukt i [kapittel 6](#6-maskinkoordinater-og-kalibrering-av-vår-m700--lærere) |
 | *First Steps – Tool Magazine M-Series, UCCNC v3.4* (engelsk) | Oppsett av verktøymagasinet i UCCNC: klargjøring av verktøyveksleren og redigering av macroene |
+| *Operating Manual – Tool Magazine incl. pneumatic lifting function, M-Series* (01/22, engelsk) | Selve verktøymagasinet: sikkerhet, installasjon (stempel i Z-aksen, magasin, elektrisk tilkobling), bruk (bryter for verktøyveksler, programoppsett, verktøylengdesensor, verktøyoffset i UCCNC) og tekniske data |
+| *Operating Manual – Tool Length Sensor TS-32 and TS-39* (engelsk) | Sikkerhet, montering og tilkobling av verktøylengdesensoren (TLS), og oppsett i UCCNC; sensoren brukes til å sette nullpunkt i Z ([4.07](#407-sette-nullpunkt-i-z-med-verktøylengdesensor-tls), [6.05](#605-verktøylengdesensor-og-probe)) |
+| *User's manual – UCR200 USB wireless jog pendant* (plugin V1.032, engelsk) | Den trådløse håndkontrollen (jog pendant). Merk: manualen beskriver håndkontrollen sammen med programmet Mach3 |
+| *Milling parameters* (engelsk) | Hvordan regne ut turtall og matehastighet (n = v<sub>c</sub> · 1000 / (π · d), v<sub>f</sub> = n · z · f<sub>z</sub>) med et regneeksempel, og veiledende turtall og mating etter materiale og freesdiameter |
+| *Milling* (engelsk) | Fresetyper (2-skjærs, diamant, ettskjærs, spiral, radius, V-fres) og hva de brukes til, og skjæredata (inndybde, turtall, mating) for Ø1–3 mm fres i tre, plast, kompositt, aluminium og messing |
