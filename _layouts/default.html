@@ -52,6 +52,7 @@
             {%- endif %}
           </li>
           {%- endfor %}
+          <li><a href="{{ '/labs/map/' | relative_url }}"{% if page.url == '/labs/map/' %} class="is-current"{% endif %}>Lab map</a></li>
         </ul>
 
         <p class="side-head"><a href="{{ '/equipment/' | relative_url }}"{% if page.url == '/equipment/' %} class="is-current"{% endif %}>Equipment</a></p>

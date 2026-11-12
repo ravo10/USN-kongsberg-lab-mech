@@ -22,7 +22,7 @@ Maskiningeniør, produktutvikling · USN Kongsberg · Forfatter: Rasmus Ullestad
 
 **Målgruppe.** Studenter og lærere ved USN Kongsberg.
 
-**Plassering.** Stepcraft M700 står i **Komposittlabben**.
+**Plassering.** Stepcraft M700 står i **Komposittlabben** (se [labkartet](../../labs/map/README.md)).
 
 **Begrensninger.**
 

@@ -4,7 +4,7 @@ USN Kongsberg · Måleteknisk lab · Oppdatert 12. nov. 2026
 
 > **English version:** [README.md](README.md) · **PDF:** [guide-no.pdf](guide-no.pdf) · **Word:** [guide-no.docx](guide-no.docx) · **Hurtigkort (A4):** [norsk](quick-card-no.pdf), [engelsk](quick-card-en.pdf)
 
-**Plassering:** Måleteknisk lab.
+**Plassering:** Måleteknisk lab, 2. etasje (se [labkartet](../../labs/map/README.md)).
 
 > **HMS er ikke dekket fullt ut her.** Følg instruksene fra labansvarlig, og ikke bruk printeren uten opplæring.
 

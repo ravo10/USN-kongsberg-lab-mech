@@ -12,7 +12,7 @@ Lab sessions and equipment instructions for mechanical engineering courses at th
 | --- | --- | --- | --- |
 | [TSM2370 Materialteknikk](labs/tsm2370-materialteknikk/README.md) | Fall 2026 | [Lab 1: Axial tensile testing](labs/tsm2370-materialteknikk/README.md#lab-1--axial-tensile-testing-and-strain-measurement-accuracy) · [Lab 2: Thermal processing and quench severity](labs/tsm2370-materialteknikk/README.md#lab-2--thermal-processing-and-quench-severity) | Protocol: [EN](labs/tsm2370-materialteknikk/protocols/lab-protocol-2026-en.pdf), [NO](labs/tsm2370-materialteknikk/protocols/lab-protocol-2026-no.pdf) · Report template: [EN](labs/tsm2370-materialteknikk/protocols/lab-report-template-2026-en.docx), [NO](labs/tsm2370-materialteknikk/protocols/lab-report-template-2026-no.docx) |
 
-All courses: [labs/](labs/README.md)
+All courses: [labs/](labs/README.md) · Where the labs are: [lab map](labs/map/README.md)
 
 ## Equipment
 

@@ -4,6 +4,8 @@ Each course has a folder with its lab sessions: what you will do, which equipmen
 
 *Norsk:* Hvert emne har en mappe med labøvingene sine: hva dere skal gjøre, hvilket utstyr dere bruker, og protokollen og rapportmalen dere trenger. Veiledningene for utstyret ligger i [`equipment/`](../equipment/README.md) og er lenket fra hver lab.
 
+Where the labs are: [lab map](map/README.md).
+
 | Course | Semester | Labs |
 | --- | --- | --- |
 | [TSM2370 Materialteknikk](tsm2370-materialteknikk/README.md) | Fall 2026 | Lab 1: Axial tensile testing · Lab 2: Thermal processing and quench severity |

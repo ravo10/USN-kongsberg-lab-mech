@@ -4,7 +4,7 @@ USN Kongsberg · Metrology lab (Måleteknisk lab) · Updated 12 Nov 2026
 
 > **Norsk versjon:** [README.no.md](README.no.md) · **PDF:** [guide-en.pdf](guide-en.pdf) · **Word:** [guide-en.docx](guide-en.docx) · **Quick card (A4):** [English](quick-card-en.pdf), [Norsk](quick-card-no.pdf)
 
-**Location:** the metrology lab (*Måleteknisk lab*).
+**Location:** the metrology lab (*Måleteknisk lab*), 2nd floor (see the [lab map](../../labs/map/README.md)).
 
 > **Health and safety is not fully covered here.** Follow the lab supervisor's instructions, and do not use the printer without training.
 

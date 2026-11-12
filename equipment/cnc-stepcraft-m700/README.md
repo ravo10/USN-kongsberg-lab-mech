@@ -24,7 +24,7 @@ Mechanical engineering, product development · USN Kongsberg · Author: Rasmus U
 
 **Audience.** Students and teachers at USN Kongsberg.
 
-**Location.** The Stepcraft M700 is in the **composites lab** (*Komposittlabben*).
+**Location.** The Stepcraft M700 is in the **composites lab** (*Komposittlabben*; see the [lab map](../../labs/map/README.md)).
 
 **Limitations.**
 

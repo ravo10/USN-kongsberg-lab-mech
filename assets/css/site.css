@@ -223,6 +223,9 @@ kbd { font: 600 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; padding: 
 .badge-in-progress { background: var(--mark-soft); color: var(--mark-ink); }
 .badge-external { background: var(--soft); color: var(--muted); border: 1px solid var(--line); }
 
+.map-link { display: block; max-width: 900px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; }
+.map-link:hover { border-color: var(--accent); box-shadow: var(--shadow); }
+.content .map-link img { margin: 0; border: 0; border-radius: 0; width: 100%; max-height: none; }
 .notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
 .note { padding: 4px 22px 10px; border: 1px solid var(--line); border-left: 4px solid var(--mark); border-radius: 12px; }
 .note-soft { background: var(--soft); border-left-color: var(--accent); }
