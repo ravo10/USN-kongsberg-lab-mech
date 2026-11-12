@@ -1,5 +1,7 @@
 # Lloyd LR 10K – Universal Testing Machine
 
+> **Quick card (A4, to laminate and keep at the machine):** [English](quick-card-en.pdf) · [Norsk](quick-card-no.pdf)
+
 The Lloyd LR 10K (1990s, 10 kN) is used for tensile, compression and 3-point bending tests, for example in TSM2370 Lab 1 (axial tensile testing of aluminium with an optical extensometer).
 
 *Norsk:* Lloyd LR 10K brukes til strekk-, trykk- og trepunkts bøyeprøving, blant annet i TSM2370 Lab 1. Programvaren og brukerveiledningen ligger i et eget repository (lenker under).
@@ -17,6 +19,7 @@ The machine is run from a PC with the **LR 10K Control Software**, which has its
 | Make and place the extensometer markers on the specimen | [Marker guide](https://github.com/ravo10/lr10k-2027/blob/main/docs/extensometer-markers.md) |
 | Set up the webcam extensometer and its 3D-printed holder | [Suggested extensometer setup](https://github.com/ravo10/lr10k-2027/blob/main/docs/extensometer-setup.md) |
 | Understand the Excel report | [User guide – Saving](https://github.com/ravo10/lr10k-2027/blob/main/docs/index.md#saving-a-successfully-completed-test--excel) |
+| Get the whole test on one printable page (hotkeys, extensometer, safety) | Quick card: [English](quick-card-en.pdf) · [Norsk](quick-card-no.pdf) |
 | Practise without the machine | In the software: *GUI Settings* › *LR 10K Simulation* › *Activate* |
 
 ## Safety (short version)

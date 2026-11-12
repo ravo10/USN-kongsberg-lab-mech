@@ -24,7 +24,7 @@ Pull an aluminium dog-bone specimen of an **unknown alloy** (1 mm thick, 12.5 mm
 
 | Equipment | Guide |
 | --- | --- |
-| Lloyd LR 10K universal testing machine | [Equipment page](../../equipment/tensile-lloyd-lr10k/README.md) · [software user guide](https://github.com/ravo10/lr10k-2027/blob/main/docs/index.md) |
+| Lloyd LR 10K universal testing machine | [Equipment page](../../equipment/tensile-lloyd-lr10k/README.md) · [software user guide](https://github.com/ravo10/lr10k-2027/blob/main/docs/index.md) · quick card [EN](../../equipment/tensile-lloyd-lr10k/quick-card-en.pdf), [NO](../../equipment/tensile-lloyd-lr10k/quick-card-no.pdf) |
 | Camera extensometer and markers | [Marker guide](https://github.com/ravo10/lr10k-2027/blob/main/docs/extensometer-markers.md) · [setup](https://github.com/ravo10/lr10k-2027/blob/main/docs/extensometer-setup.md) |
 | Digital calipers (for L₀, width, thickness) | – |
 
