@@ -19,7 +19,8 @@ Mechanical engineering, product development · USN Kongsberg · Author: Rasmus U
 - **teachers and students** export a DXF file from SolidWorks for use in UCCNC CAM ([3.05](#305-making-a-toolpath-in-uccnc-cam-from-a-dxf-file));
 - **teachers** start the Stepcraft M700, set it up for normal use and shut it down ([3.01](#301-starting-up-the-cnc), [3.08](#308-shutting-down-the-cnc), [chapter 4](#4-getting-the-stepcraft-ready--teachers));
 - **teachers** use a 3D Touch Probe with the Stepcraft M700 and UCCNC ([4.03](#403-calibrating-the-3d-touch-probe-in-the-tool-magazine-z));
-- **teachers** edit a post-processor for the Stepcraft M700 in SolidWorks ([chapter 5](#5-editing-the-post-processor--teachers)).
+- **teachers** edit a post-processor for the Stepcraft M700 in SolidWorks ([chapter 5](#5-editing-the-post-processor--teachers));
+- **teachers** find the machine coordinates and calibration values of our M700 ([chapter 6](#6-machine-coordinates-and-calibration-of-our-m700--teachers)) and Stepcraft's own manuals ([chapter 7](#7-external-documentation-stepcraft)).
 
 **Audience.** Students and teachers at USN Kongsberg.
 
@@ -480,3 +481,165 @@ Before you update SolidWorks, for example from the 2021 to the 2025 version, the
 ### 5.01 Universal Post Generator (CAMWorks)
 
 *Coming soon.*
+
+## 6. Machine coordinates and calibration of our M700 | Teachers
+
+The settings below were found when the tool magazine (automatic tool changer, ATC) was calibrated on the USN Stepcraft M700. Keep them, so the machine can be set up again after a software update or a reinstall. They follow Stepcraft's procedure in *Quick Start Guide UCCNC v3.6*, page 11, "M6 Macro: A New Way of Changing Tools in UCCNC" (see [chapter 7](#7-external-documentation-stepcraft)). The calibration means editing the **M6** and **M20204** macro files.
+
+### 6.01 Summary of the calibration
+
+| Step | Question / setting | Value on our M700 |
+| --- | --- | --- |
+| 1 | Which automatic tool changer is used? | **SK15 pneumatic lifting function** |
+| 2 | How long does the spindle take to stop completely? | **7 seconds** |
+| 3 | Where is the magazine mounted (1–4)? | **1 (rear)** |
+| 4 | Which tool is T1? | **The one furthest to the left, next to the tool length sensor (WLS)** |
+| 5 | Find the coordinates of T1. | Done (see [6.02](#602-t1-position-and-the-sk15-adapter)) |
+| 6 | Calculate the coordinates of the other tools. | Done: **+45 mm per tool** in X (see [6.03](#603-tool-positions-in-the-magazine)) |
+| 7 | Define the Z offset. | Done |
+| 8 | Open `M6.txt` and set the variables: | |
+| | `WaitSpin` | **7000** |
+| | `Xtooloffset` | **50** |
+| | `Ytooloffset` | **50** |
+| | `Ztooloffset` | **70.5** |
+| | `ToolRackHeight` | **-84.3156** |
+| | `ToolRackPosition` | **1** |
+| | `ToolRackType` | **1** |
+| | `ToolX` (T1) | **60.2281** |
+| | `ToolY` (T1) | **742.850** |
+| | `UsedToolRack` | **1** |
+
+`WaitSpin` is the spindle stop time in milliseconds (7 s × 1000).
+
+### 6.02 T1 position and the SK15 adapter
+
+**Use machine coordinates** when you measure. T1 is the first tool holder to the left, next to the tool length sensor (WLS) in the magazine. Find it as Stepcraft describes: home the machine, move the tool holder (without a tool) slowly into the centre of the T1 retaining ring from above, and use a sheet of paper to find the Z height where the holder meets it. With the SK15 adapter there are about **6 mm** of travel left from there until the holder is seated.
+
+![The SK15 adapter lowered onto a sheet of paper to find the Z height](images/70-sk15-adapter-paper.jpg)
+
+`Ztooloffset` is easiest to see with normal (work) coordinates after setting the zero point. On our machine, lowering the Z position by a further 1.5 mm and increasing the offset by 1.5 mm made sure the SK15 went all the way down.
+
+| Measured value | Value |
+| --- | --- |
+| `ToolX[1]` | 60.2281 |
+| `ToolY[1]` | 742.850 |
+| `ToolRackHeight[1]` | -84.3156 |
+| `Ztooloffset` | 70.5 |
+| `WaitSpin` | 7000 |
+
+### 6.03 Tool positions in the magazine
+
+The holders of the SK15 pneumatic tool magazine (in-table) are **45 mm** apart, so X increases by 45 mm per tool while Y stays the same.
+
+| Tool | X (machine) | Y (machine) |
+| --- | --- | --- |
+| T1 | 60.2281 | 742.850 |
+| T2 | 105.2281 | 742.850 |
+| T3 | 150.2281 | 742.850 |
+| T4 | 195.2281 | 742.850 |
+| T5 | 240.2281 | 742.850 |
+| T6 | 285.2281 | 742.850 |
+| T7 | 330.2281 | 742.850 |
+| T8 | 375.2281 | 742.850 |
+| T9 | 420.2281 | 742.850 |
+| T10 | 465.2281 | 742.850 |
+
+In UCCNC, tool 9 is disabled in our M6 macro and tool 10 is the 3D Touch Probe (see [4.02](#402-calibrating-the-offsets-of-the-tools-in-the-tool-magazine)).
+
+### 6.04 Testing the tool changer
+
+Click **M6** and enter **0** (no tool). Then type **`m6t1`** in the **MDI** field and press **Enter** for tool 1. Repeat for tool 2 (**`m6t2`**), tool 3 (**`m6t3`**) and so on, as needed.
+
+### 6.05 Tool length sensor and probe
+
+Under **TOOLS** → **DIGITIZE**, check that the tool length sensor height is set. Default values:
+
+- Probe radius: **2**
+- Tool length sensor height: **32.5 mm**
+- Accuracy: **0.07 mm**
+
+![TOOLS > DIGITIZE with the probe radius and the tool length sensor height](images/71-tls-height-probe-radius.png)
+
+### 6.06 Spindle
+
+**Starting the spindle (MM-1000 DI):** click **"Single Line"** to start the spindle at the set speed (**Sset**). With G-code, `M03 S5000` starts the spindle clockwise at 5000 rpm, and `M05` stops it.
+
+For the MM-1000 DI, Stepcraft gives these speeds for the dial settings on the spindle:
+
+| Dial setting | 1 | 2 | 3 | 4 | 5 | 6 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Speed (rpm) | 4,000 | 8,200 | 12,400 | 16,600 | 20,800 | 25,000 |
+
+**Spindle settings in UCCNC:** under **CONFIGURATION** → **AXIS SETUP** → **SPINDLE**, set the spindle speed to **min. 4000** and **max. 25000** rpm.
+
+![The SPINDLE tab under AXIS SETUP](images/75-axis-setup-spindle-tab.png)
+
+![Spindle settings: PWM spindle and spindle velocity min/max](images/72-spindle-settings.png)
+
+### 6.07 Warming up
+
+To warm up the stepper motors, click **Warmup** on the RUN screen.
+
+![The Warmup button below LOAD FILE, EDIT FILE, REWIND FILE and CLOSE FILE](images/73-warmup-button.png)
+
+To warm up the spindle, run it at about **10,000 rpm** for a little while if it has not been used for a long time.
+
+### 6.08 The M6 macro while calibrating
+
+Under **CONFIGURATION** → **GENERAL SETTINGS**, "On tool change code (M6) do the following" must be set to **Run the tool change macro (M6)**. Then every change you save to the M6 file during calibration is used by the software straight away.
+
+![GENERAL SETTINGS with Run the tool change macro (M6) selected](images/74-m6-file-mode.png)
+
+### 6.09 Diagnostics, supported codes and hotkeys
+
+**Diagnostics:** the **DIAGNOSTICS** tab shows whether everything works, for example the limit sensors.
+
+![The DIAGNOSTICS tab with the I/O and status monitors](images/76-diagnostics.png)
+
+**Supported G- and M-codes:** an overview is under the **HELP** tab.
+
+![The HELP tab with SUPPORTED G-CODES and SUPPORTED M-CODES](images/77-help-supported-codes.png)
+
+**Hotkeys:** custom hotkeys are added under **CONFIGURATION** → **I/O TRIGGER** → **HOTKEYS**. The usual keys for moving the machine are the **arrow keys** for X and Y and **Page Up/Down** for Z. Hold **Shift** for fast movement or **Ctrl** to move in steps. **Tab** switches between mouse and keyboard operation.
+
+![The HOTKEYS tab under I/O TRIGGER](images/78-hotkeys-tab.png)
+
+### 6.10 Tool offsets for the tool changer
+
+When you add new tools, update the Z offset of each tool. The **OFFSETS** button does this automatically and applies the result temporarily or permanently, as you choose (see [4.02](#402-calibrating-the-offsets-of-the-tools-in-the-tool-magazine)).
+
+### 6.11 Plugins
+
+Plugins such as a webcam, an Xbox 360 controller or AutoLevelerCA can be turned on under **CONFIGURATION** → **GENERAL SETTINGS** → **Configure plugins**. There you can enable and show plugins and have them start with UCCNC.
+
+![The GENERAL SETTINGS tab](images/79-general-settings-tab.png)
+
+![The Configure plugins and Config macroloops buttons](images/80-configure-plugins.png)
+
+### 6.12 Z offset from a datum on the part
+
+To add a fixed offset when the Z zero point is set from a datum, edit the **M31** macro:
+
+1. Make a copy of `M31.txt` as a backup, and edit the original.
+2. Add these lines **below line 28**:
+
+   ```text
+   // Add an offset (mm). Positive is up, negative is down:
+   double ZOffset = 0.335;
+   newZ = newZ-ZOffset;
+   ```
+
+3. **Adjust `ZOffset`** to suit, save the file and test. Repeat until it is right.
+
+![The edited M31 macro with ZOffset = 0.335](images/81-m31-zoffset.png)
+
+To set a new Z zero point from a datum, put the simple probe calibration tool on the datum, right under the tool, and click the **TLS** button. **GOTO ZERO** then moves to the new Z zero point.
+
+## 7. External documentation (Stepcraft)
+
+These manuals are made by **STEPCRAFT**, not by USN, and are © STEPCRAFT. Download the latest versions from Stepcraft's manuals page: **[stepcraft-systems.com/en/services/manuals](https://stepcraft-systems.com/en/services/manuals)**.
+
+| Document | What it covers |
+| --- | --- |
+| *Quick Start Guide – UCCNC STEPCRAFT OEM Version 3.6* (06/23, English) | Installing UCCNC, licence and machine profile, troubleshooting, and the M6 macro for tool magazines (page 11), used in [chapter 6](#6-machine-coordinates-and-calibration-of-our-m700--teachers) |
+| *First Steps – Tool Magazine M-Series, UCCNC v3.4* (English) | Setting up the tool magazine in UCCNC: preparing the tool changer and editing the macros |

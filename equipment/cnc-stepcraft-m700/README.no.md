@@ -17,7 +17,8 @@ Maskiningeniør, produktutvikling · USN Kongsberg · Forfatter: Rasmus Ullestad
 - **lærere og studenter** eksporterer en DXF-fil fra SolidWorks til bruk i UCCNC CAM ([3.05](#305-lage-verktøybane-i-uccnc-cam-fra-en-dxf-fil));
 - **lærere** starter, setter opp og slår av Stepcraft M700 for vanlig bruk ([3.01](#301-koble-opp-cnc), [3.08](#308-slå-av-cnc), [kapittel 4](#4-gjøre-stepcraft-klar-for-bruk--lærere));
 - **lærere** bruker en 3D Touch Probe sammen med Stepcraft M700 og UCCNC ([4.03](#403-kalibrere-3d-touch-probe-i-verktøymagasinet-z));
-- **lærere** redigerer en post-prosessor for Stepcraft M700 i SolidWorks ([kapittel 5](#5-redigere-post-prosessor--lærere)).
+- **lærere** redigerer en post-prosessor for Stepcraft M700 i SolidWorks ([kapittel 5](#5-redigere-post-prosessor--lærere));
+- **lærere** finner maskinkoordinatene og kalibreringsverdiene til vår M700 ([kapittel 6](#6-maskinkoordinater-og-kalibrering-av-vår-m700--lærere)) og Stepcrafts egne manualer ([kapittel 7](#7-ekstern-dokumentasjon-stepcraft)).
 
 **Målgruppe.** Studenter og lærere ved USN Kongsberg.
 
@@ -478,3 +479,167 @@ Før du oppdaterer SolidWorks, for eksempel fra 2021- til 2025-versjonen, må Te
 ### 5.01 Universal Post Generator (CAMWorks)
 
 *Kommer.*
+
+## 6. Maskinkoordinater og kalibrering av vår M700 | Lærere
+
+Verdiene under ble funnet da verktøymagasinet (automatisk verktøyveksler, ATC) ble kalibrert på Stepcraft M700 ved USN. Ta vare på dem, så maskinen kan settes opp igjen etter en programvareoppdatering eller ny installasjon. De følger Stepcrafts fremgangsmåte i *Quick Start Guide UCCNC v3.6*, side 11, «M6 Macro: A New Way of Changing Tools in UCCNC» (se [kapittel 7](#7-ekstern-dokumentasjon-stepcraft)). Kalibreringen gjøres ved å redigere macro-filene **M6** og **M20204**.
+
+*Oversatt fra det engelske notatet «Stepcraft CNC Machine Coordinates».*
+
+### 6.01 Oppsummering av kalibreringen
+
+| Trinn | Spørsmål / innstilling | Verdi på vår M700 |
+| --- | --- | --- |
+| 1 | Hvilken automatisk verktøyveksler brukes? | **SK15 med pneumatisk løft** |
+| 2 | Hvor lang tid bruker spindelen på å stoppe helt? | **7 sekunder** |
+| 3 | Hvor er magasinet montert (1–4)? | **1 (bak)** |
+| 4 | Hvilket verktøy er T1? | **Det lengst til venstre, ved siden av verktøylengdesensoren (WLS)** |
+| 5 | Finn koordinatene til T1. | OK (se [6.02](#602-plasseringen-av-t1-og-sk15-adapteren)) |
+| 6 | Regn ut koordinatene til de andre verktøyene. | OK: **+45 mm per verktøy** i X (se [6.03](#603-verktøyposisjoner-i-magasinet)) |
+| 7 | Bestem Z-offset. | OK |
+| 8 | Åpne `M6.txt` og sett variablene: | |
+| | `WaitSpin` | **7000** |
+| | `Xtooloffset` | **50** |
+| | `Ytooloffset` | **50** |
+| | `Ztooloffset` | **70.5** |
+| | `ToolRackHeight` | **-84.3156** |
+| | `ToolRackPosition` | **1** |
+| | `ToolRackType` | **1** |
+| | `ToolX` (T1) | **60.2281** |
+| | `ToolY` (T1) | **742.850** |
+| | `UsedToolRack` | **1** |
+
+`WaitSpin` er stopptiden til spindelen i millisekunder (7 s × 1000).
+
+### 6.02 Plasseringen av T1 og SK15-adapteren
+
+**Bruk maskinkoordinater** når du måler. T1 er den første verktøyholderen til venstre, ved siden av verktøylengdesensoren (WLS) i magasinet. Finn den slik Stepcraft beskriver: kjør maskinen hjem, før verktøyholderen (uten verktøy) sakte ned i senter av holderingen til T1 ovenfra, og bruk et papirark for å finne Z-høyden der holderen treffer det. Med SK15-adapteren er det derfra ca. **6 mm** igjen til holderen sitter riktig.
+
+![SK15-adapteren senket ned mot et papirark for å finne Z-høyden](images/70-sk15-adapter-paper.jpg)
+
+`Ztooloffset` ses lettest med vanlige koordinater (arbeidskoordinater) etter at nullpunktet er satt. På vår maskin måtte Z-posisjonen senkes 1,5 mm ekstra og offseten økes med 1,5 mm for at SK15 skulle gå helt ned.
+
+| Målt verdi | Verdi |
+| --- | --- |
+| `ToolX[1]` | 60.2281 |
+| `ToolY[1]` | 742.850 |
+| `ToolRackHeight[1]` | -84.3156 |
+| `Ztooloffset` | 70.5 |
+| `WaitSpin` | 7000 |
+
+### 6.03 Verktøyposisjoner i magasinet
+
+Holderne i SK15-magasinet med pneumatisk løft (in-table) står **45 mm** fra hverandre, så X øker med 45 mm per verktøy mens Y er den samme.
+
+| Verktøy | X (maskin) | Y (maskin) |
+| --- | --- | --- |
+| T1 | 60.2281 | 742.850 |
+| T2 | 105.2281 | 742.850 |
+| T3 | 150.2281 | 742.850 |
+| T4 | 195.2281 | 742.850 |
+| T5 | 240.2281 | 742.850 |
+| T6 | 285.2281 | 742.850 |
+| T7 | 330.2281 | 742.850 |
+| T8 | 375.2281 | 742.850 |
+| T9 | 420.2281 | 742.850 |
+| T10 | 465.2281 | 742.850 |
+
+I UCCNC er verktøy 9 deaktivert i vår M6-macro, og verktøy 10 er 3D Touch Probe (se [4.02](#402-kalibrere-offset-for-verktøy-i-verktøymagasinet)).
+
+### 6.04 Teste verktøyveksleren
+
+Klikk **M6** og skriv **0** (ingen verktøy). Skriv så **`m6t1`** i **MDI**-feltet og trykk **Enter** for verktøy 1. Gjenta for verktøy 2 (**`m6t2`**), verktøy 3 (**`m6t3`**) osv. ved behov.
+
+### 6.05 Verktøylengdesensor og probe
+
+Under **TOOLS** → **DIGITIZE** sjekker du at høyden på verktøylengdesensoren er satt. Standardverdier:
+
+- Probe radius: **2**
+- Tool length sensor height: **32,5 mm**
+- Nøyaktighet: **0,07 mm**
+
+![TOOLS > DIGITIZE med proberadius og høyden på verktøylengdesensoren](images/71-tls-height-probe-radius.png)
+
+### 6.06 Spindel
+
+**Starte spindelen (MM-1000 DI):** klikk **«Single Line»** for å starte spindelen med innstilt turtall (**Sset**). Med G-kode starter `M03 S5000` spindelen med klokka på 5000 o/min, og `M05` stopper den.
+
+For MM-1000 DI oppgir Stepcraft disse turtallene for innstillingene på spindelen:
+
+| Innstilling | 1 | 2 | 3 | 4 | 5 | 6 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Turtall (o/min) | 4 000 | 8 200 | 12 400 | 16 600 | 20 800 | 25 000 |
+
+**Spindelinnstillinger i UCCNC:** under **CONFIGURATION** → **AXIS SETUP** → **SPINDLE** settes turtallet til **min. 4000** og **maks. 25000** o/min.
+
+![SPINDLE-fanen under AXIS SETUP](images/75-axis-setup-spindle-tab.png)
+
+![Spindelinnstillinger: PWM spindle og spindle velocity min/max](images/72-spindle-settings.png)
+
+### 6.07 Oppvarming
+
+For å varme opp steppermotorene klikker du **Warmup** på RUN-skjermen.
+
+![Warmup-knappen under LOAD FILE, EDIT FILE, REWIND FILE og CLOSE FILE](images/73-warmup-button.png)
+
+For å varme opp spindelen kan du kjøre den på ca. **10 000 o/min** en liten stund hvis den ikke har vært brukt på lenge.
+
+### 6.08 M6-macroen under kalibrering
+
+Under **CONFIGURATION** → **GENERAL SETTINGS** må «On tool change code (M6) do the following» stå på **Run the tool change macro (M6)**. Da tas hver endring du lagrer i M6-filen under kalibreringen, i bruk med en gang.
+
+![GENERAL SETTINGS med Run the tool change macro (M6) valgt](images/74-m6-file-mode.png)
+
+### 6.09 Diagnose, støttede koder og hurtigtaster
+
+**Diagnose:** fanen **DIAGNOSTICS** viser om alt virker, for eksempel grensebryterne.
+
+![DIAGNOSTICS-fanen med I/O- og statusmonitorene](images/76-diagnostics.png)
+
+**Støttede G- og M-koder:** en oversikt finnes under fanen **HELP**.
+
+![HELP-fanen med SUPPORTED G-CODES og SUPPORTED M-CODES](images/77-help-supported-codes.png)
+
+**Hurtigtaster:** egne hurtigtaster legges til under **CONFIGURATION** → **I/O TRIGGER** → **HOTKEYS**. Vanlige taster for å kjøre maskinen er **piltastene** for X og Y og **Page Up/Down** for Z. Hold inne **Shift** for rask bevegelse eller **Ctrl** for å gå stegvis. **Tab** bytter mellom mus- og tastaturstyring.
+
+![HOTKEYS-fanen under I/O TRIGGER](images/78-hotkeys-tab.png)
+
+### 6.10 Verktøyoffset for verktøyveksleren
+
+Når du legger til nye verktøy, må Z-offset for hvert verktøy oppdateres. Knappen **OFFSETS** gjør dette automatisk og bruker resultatet midlertidig eller permanent, som du velger (se [4.02](#402-kalibrere-offset-for-verktøy-i-verktøymagasinet)).
+
+### 6.11 Plugins
+
+Plugins som webkamera, Xbox 360-kontroller eller AutoLevelerCA slås på under **CONFIGURATION** → **GENERAL SETTINGS** → **Configure plugins**. Der kan du aktivere og vise plugins og la dem starte sammen med UCCNC.
+
+![GENERAL SETTINGS-fanen](images/79-general-settings-tab.png)
+
+![Knappene Configure plugins og Config macroloops](images/80-configure-plugins.png)
+
+### 6.12 Z-offset fra et referansepunkt på delen
+
+For å legge til en fast offset når Z-nullpunktet settes fra et referansepunkt (datum), redigerer du **M31**-macroen:
+
+1. Ta en kopi av `M31.txt` som sikkerhetskopi, og rediger originalen.
+2. Legg til disse linjene **under linje 28**:
+
+   ```text
+   // Add an offset (mm). Positive is up, negative is down:
+   double ZOffset = 0.335;
+   newZ = newZ-ZOffset;
+   ```
+
+3. **Juster `ZOffset`** etter behov, lagre filen og test. Gjenta til det stemmer.
+
+![Den redigerte M31-macroen med ZOffset = 0.335](images/81-m31-zoffset.png)
+
+For å sette et nytt Z-nullpunkt fra et referansepunkt legger du kalibreringsverktøyet for simple probe på referansepunktet, rett under verktøyet, og klikker **TLS**-knappen. **GOTO ZERO** kjører da til det nye Z-nullpunktet.
+
+## 7. Ekstern dokumentasjon (Stepcraft)
+
+Disse manualene er laget av **STEPCRAFT**, ikke av USN, og er © STEPCRAFT. Last ned nyeste versjon fra Stepcrafts side for manualer: **[stepcraft-systems.com/en/services/manuals](https://stepcraft-systems.com/en/services/manuals)**.
+
+| Dokument | Innhold |
+| --- | --- |
+| *Quick Start Guide – UCCNC STEPCRAFT OEM Version 3.6* (06/23, engelsk) | Installasjon av UCCNC, lisens og maskinprofil, feilsøking, og M6-macroen for verktøymagasiner (side 11), brukt i [kapittel 6](#6-maskinkoordinater-og-kalibrering-av-vår-m700--lærere) |
+| *First Steps – Tool Magazine M-Series, UCCNC v3.4* (engelsk) | Oppsett av verktøymagasinet i UCCNC: klargjøring av verktøyveksleren og redigering av macroene |
