@@ -20,7 +20,7 @@ All machines: [equipment/](equipment/README.md)
 
 | Equipment | Used in | Guide | Quick card |
 | --- | --- | --- | --- |
-| **Matsuzawa MXT50** Vickers microhardness tester | TSM2370 Lab 2 (heat treatment of Sølvstål 2210) | [English](equipment/hardness-vickers-matsuzawa-mxt50/README.md) · [Norsk](equipment/hardness-vickers-matsuzawa-mxt50/README.no.md) · PDF: [EN](equipment/hardness-vickers-matsuzawa-mxt50/guide-en.pdf), [NO](equipment/hardness-vickers-matsuzawa-mxt50/guide-no.pdf) · Word: [EN](equipment/hardness-vickers-matsuzawa-mxt50/guide-en.docx), [NO](equipment/hardness-vickers-matsuzawa-mxt50/guide-no.docx) | [A4, norsk](equipment/hardness-vickers-matsuzawa-mxt50/quick-card-no.pdf) |
+| **Matsuzawa MXT50** Vickers microhardness tester | TSM2370 Lab 2 (heat treatment of Sølvstål 2210) | [English](equipment/hardness-vickers-matsuzawa-mxt50/README.md) · [Norsk](equipment/hardness-vickers-matsuzawa-mxt50/README.no.md) · PDF: [EN](equipment/hardness-vickers-matsuzawa-mxt50/guide-en.pdf), [NO](equipment/hardness-vickers-matsuzawa-mxt50/guide-no.pdf) · Word: [EN](equipment/hardness-vickers-matsuzawa-mxt50/guide-en.docx), [NO](equipment/hardness-vickers-matsuzawa-mxt50/guide-no.docx) | A4: [EN](equipment/hardness-vickers-matsuzawa-mxt50/quick-card-en.pdf), [NO](equipment/hardness-vickers-matsuzawa-mxt50/quick-card-no.pdf) |
 | **Lloyd LR 10K** universal testing machine (tensile, compression, 3-point bending) | TSM2370 Lab 1 (tensile testing) | [Overview and links](equipment/tensile-lloyd-lr10k/README.md) · software and user guide in [ravo10/lr10k-2027](https://github.com/ravo10/lr10k-2027) | – |
 | **Nabertherm lab furnaces** (up to 1000 °C) and quenching stations | TSM2370 Lab 2 | [English](equipment/furnace-heat-treatment/README.md) · [Norsk](equipment/furnace-heat-treatment/README.no.md) | – |
 | **Grinding and polishing machines** (Buehler MetaServ 250, Metaserv, Ecomet I) | TSM2370 Lab 2 | [English](equipment/polisher-metallographic/README.md) · [Norsk](equipment/polisher-metallographic/README.no.md), machines and controls; procedure in progress | – |
@@ -50,8 +50,9 @@ equipment/
 │   ├── guide-no.pdf
 │   ├── guide-en.docx      editable Word versions
 │   ├── guide-no.docx
-│   ├── quick-card-no.pdf  one-page card to laminate and keep at the machine
-│   ├── quick-card-no.html source of the quick card (print to A4 PDF, no margins)
+│   ├── quick-card-en.pdf  one-page card to laminate and keep at the machine (QR code to the guide)
+│   ├── quick-card-no.pdf
+│   ├── quick-card-*.html  source of the quick cards (print to A4 PDF, no margins)
 │   └── images/            labelled photos used in the guides
 ├── tensile-lloyd-lr10k/
 │   └── README.md          overview, links to the LR 10K software documentation
