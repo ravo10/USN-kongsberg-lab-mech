@@ -8,6 +8,21 @@ The Lloyd LR 10K (1990s, 10 kN) is used for tensile, compression and 3-point ben
 
 The machine is run from a PC with the **LR 10K Control Software**, which has its own repository and documentation: [ravo10/lr10k-2027](https://github.com/ravo10/lr10k-2027).
 
+![Figure 1: The Lloyd LR 10K with numbered parts](images/01-lr10k-front.jpg)
+
+*Figure 1. The Lloyd LR 10K with the camera extensometer. The numbers match the table.*
+
+| No. | Part | What it does |
+| --- | --- | --- |
+| 1 | Load cell | Measures the force (up to 10 kN). |
+| 2 | Crosshead | Moves up and down and pulls the specimen. |
+| 3 | Upper grip | Holds the top of the specimen. |
+| 4 | Lower grip | Holds the bottom of the specimen. |
+| 5 | Camera (optical extensometer) | Films the two green markers on the specimen, on a 3D-printed holder. |
+| 6 | **STOP button** | The machine's own emergency stop (red, on the base, right). Press it to stop everything. |
+
+> **Note on the machine:** *"Machine shows about 2 % more load than is actually applied"* (Tinius Olsen service, 11 Mar 2022). Keep this in mind when you compare forces and strengths with literature values.
+
 **Used in:** [TSM2370 Lab 1 – Axial tensile testing and strain measurement accuracy](../../labs/tsm2370-materialteknikk/README.md#lab-1--axial-tensile-testing-and-strain-measurement-accuracy)
 
 ## Where to find what
@@ -25,7 +40,7 @@ The machine is run from a PC with the **LR 10K Control Software**, which has its
 ## Safety (short version)
 
 - A tensile machine can crush fingers and break specimens violently. Keep hands out of the grips while the crosshead moves.
-- Keep the machine's own stop within reach during every test.
+- Keep the machine's own **STOP button** (red, on the base, right, no. 6 in Figure 1) within reach during every test.
 - Check the results before you rely on them. The software is a USN student/community project, not made or supported by Lloyd Instruments or AMETEK.
 
 The full safety section is in the [software README](https://github.com/ravo10/lr10k-2027#safety).

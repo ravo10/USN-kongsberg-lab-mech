@@ -37,7 +37,7 @@ README.md is the home page on GitHub; keep the two in step when you add a lab or
     {%- for item in site.data.wiki.equipment %}
     <a class="card" href="{{ item.url | relative_url }}">
       <span class="card-media{% unless item.image %} card-media-icon{% endunless %}">
-        {%- if item.image -%}<img src="{{ item.image | relative_url }}" alt="" loading="lazy">{%- else -%}{% include icon.html name=item.icon %}{%- endif -%}
+        {%- if item.image -%}<img src="{{ item.image | relative_url }}" alt="" loading="lazy"{% if item.image_pos %} style="object-position: {{ item.image_pos }}"{% endif %}>{%- else -%}{% include icon.html name=item.icon %}{%- endif -%}
       </span>
       <span class="card-body">
         <span class="badge badge-{{ item.status }}">{{ site.data.wiki.status_labels[item.status] }}</span>

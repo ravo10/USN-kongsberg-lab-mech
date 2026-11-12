@@ -3,6 +3,7 @@
 #
 # status: ready | in-progress | external  (shown as a small label)
 # image:  photo used on the home-page card (optional)
+# image_pos: which part of a tall photo the card shows, e.g. "50% 60%" (optional)
 # icon:   used on the card when there is no photo: tensile | hardness | furnace | polisher | lab
 
 labs:
@@ -30,6 +31,8 @@ equipment:
     kind: Universal testing machine
     url: /equipment/tensile-lloyd-lr10k/
     url_no: /equipment/tensile-lloyd-lr10k/README.no.html
+    image: /equipment/tensile-lloyd-lr10k/images/01-lr10k-front.jpg
+    image_pos: 60% 45%   # which part of the photo the card shows (x y)
     icon: tensile
     status: external
     used_in: TSM2370 Lab 1
@@ -38,6 +41,7 @@ equipment:
     url: /equipment/furnace-heat-treatment/
     url_no: /equipment/furnace-heat-treatment/README.no.html
     image: /equipment/furnace-heat-treatment/images/01-nabertherm-s27.jpg
+    image_pos: 50% 62%   # which part of the photo the card shows (x y)
     icon: furnace
     status: ready
     used_in: TSM2370 Lab 2
@@ -46,6 +50,7 @@ equipment:
     url: /equipment/polisher-metallographic/
     url_no: /equipment/polisher-metallographic/README.no.html
     image: /equipment/polisher-metallographic/images/01-metaserv-250-overview.jpg
+    image_pos: 50% 75%   # which part of the photo the card shows (x y)
     icon: polisher
     status: ready
     used_in: TSM2370 Lab 2
@@ -62,6 +67,7 @@ equipment:
     url: /equipment/3d-printer-modix-big60/
     url_no: /equipment/3d-printer-modix-big60/README.no.html
     image: /equipment/3d-printer-modix-big60/images/01-modix-big60-front.jpg
+    image_pos: 50% 45%   # which part of the photo the card shows (x y)
     icon: printer
     status: ready
     used_in: the metrology lab (Måleteknisk lab)

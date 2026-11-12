@@ -6,12 +6,27 @@ Lloyd LR 10K (1990-tallet, 10 kN) brukes til strekk-, trykk- og trepunkts bøyep
 
 Maskinen styres fra en PC med **LR 10K Control Software**, som har eget repository og egen dokumentasjon: [ravo10/lr10k-2027](https://github.com/ravo10/lr10k-2027). Dokumentasjonen der er på engelsk; det viktigste står på norsk under.
 
+![Figur 1: Lloyd LR 10K med nummererte deler](images/01-lr10k-front.jpg)
+
+*Figur 1. Lloyd LR 10K med kamera-ekstensometeret. Numrene stemmer med tabellen.*
+
+| Nr. | Del | Funksjon |
+| --- | --- | --- |
+| 1 | Lastcelle | Måler kraften (opptil 10 kN). |
+| 2 | Travers | Går opp og ned og trekker i prøven. |
+| 3 | Øvre klemme | Holder toppen av prøven. |
+| 4 | Nedre klemme | Holder bunnen av prøven. |
+| 5 | Kamera (optisk ekstensometer) | Filmer de to grønne prikkene på prøven, på en 3D-printet holder. |
+| 6 | **STOP-knapp** | Maskinens egen nødstopp (rød, på foten, til høyre). Trykk for å stoppe alt. |
+
+> **Merknad på maskinen:** *«Maskin viser ca. 2 % mer 'Load' enn hva som faktisk ytes»* (Tinius Olsen, service 11.3.2022). Husk dette når du sammenligner krefter og fasthet med litteraturverdier.
+
 **Brukes i:** [TSM2370 Lab 1 – Axial tensile testing and strain measurement accuracy](../../labs/tsm2370-materialteknikk/README.md#lab-1--axial-tensile-testing-and-strain-measurement-accuracy)
 
 ## Sikkerhet (kortversjon)
 
 - En strekkmaskin kan klemme fingre, og prøver kan ryke voldsomt. **Hold hendene unna klemmene** når traversen kan gå.
-- **Kjenn maskinens egen stoppknapp** og ha den innen rekkevidde under hver test. *Stop* (F1) i programmet virker bare når PC-en, kabelen og programmet virker.
+- **Kjenn maskinens egen STOP-knapp** (rød, på foten, til høyre, nr. 6 i figur 1) og ha den innen rekkevidde under hver test. *Stop* (F1) i programmet virker bare når PC-en, kabelen og programmet virker.
 - **Bruk vernebriller**, særlig ved sprø prøver og kompositter.
 - **Avlast før du tar ut prøven:** *Return to zero point* (F5).
 - Sperren på 50 N (når traversen kjøres uten test) og lastgrensen virker gjennom programmet. De er en ekstra sikring, ikke en erstatning for maskinens egne grenser eller for å følge med på testen.
