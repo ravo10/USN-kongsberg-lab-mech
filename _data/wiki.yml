@@ -49,6 +49,14 @@ equipment:
     icon: polisher
     status: in-progress
     used_in: TSM2370 Lab 2
+  - title: Stepcraft M700 CNC
+    kind: CNC mill · UCCNC and SolidWorks CAM
+    url: /equipment/cnc-stepcraft-m700/
+    url_no: /equipment/cnc-stepcraft-m700/README.no.html
+    image: /equipment/cnc-stepcraft-m700/images/65-probe-on-surface.jpg
+    icon: cnc
+    status: ready
+    used_in: student projects (prototype lab)
 
 contribute:
   - title: How this website works

@@ -40,10 +40,11 @@ HERE = Path(__file__).resolve().parent
 STYLE = HERE / "style.css"
 LANGS = {"en": "README.md", "no": "README.no.md"}
 
-# Lines that are website navigation only (links to the other language, the
-# downloads, and the lab that uses the machine). They are left out of the PDF
+# Lines that are website navigation only: the "> **Norsk versjon:** / > **English
+# version:**" line (other language and downloads) and the "Used in" line.
+# Other "> **…" lines, such as safety notes, are kept. They are left out of the PDF
 # and Word files, where those links would not work.
-NAV_LINE = re.compile(r"^(> \*\*|\*\*(Used in|Brukes i):\*\*)")
+NAV_LINE = re.compile(r"^(> \*\*(Norsk versjon|English version):|\*\*(Used in|Brukes i):\*\*)")
 
 
 # ---------------------------------------------------------------- helpers

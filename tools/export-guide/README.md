@@ -8,7 +8,7 @@ python tools/export-guide/export.py equipment/hardness-vickers-matsuzawa-mxt50
 
 This writes `guide-en.pdf`, `guide-en.docx`, `guide-no.pdf` and `guide-no.docx` in the guide folder. The PDFs are made from `style.css` in this folder; the Word files get A4 pages, 2 cm side margins, Calibri 10.5 pt, images scaled to fit, and borders on all tables.
 
-The navigation lines at the top of a guide (the line starting with `> **` that links to the other language and the downloads, and the **Used in:** / **Brukes i:** line) are only for the website and are left out of the PDF and Word files.
+The navigation lines at the top of a guide (the line starting with `> **Norsk versjon:**` or `> **English version:**` that links to the other language and the downloads, and the **Used in:** / **Brukes i:** line) are only for the website and are left out of the PDF and Word files.
 
 ## Options
 
