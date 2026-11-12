@@ -4,7 +4,7 @@ Maskiningeniør, produktutvikling · USN Kongsberg · Forfatter: Rasmus Ullestad
 
 > **English version:** [README.md](README.md) · **PDF:** [guide-no.pdf](guide-no.pdf) · **Word:** [guide-no.docx](guide-no.docx) · **Hurtigkort (A4):** [norsk](quick-card-no.pdf), [engelsk](quick-card-en.pdf)
 
-**Brukes i:** studentprosjekter i prototypelabben (deler fra SolidWorks frest ut på Stepcraft M700).
+**Brukes i:** studentprosjekter (deler fra SolidWorks frest ut på Stepcraft M700). Maskinen står i **Komposittlabben**.
 
 > **HMS er ikke dekket i denne manualen.** Følg instruksene fra labansvarlig, og ikke bruk maskinen uten opplæring.
 
@@ -20,6 +20,8 @@ Maskiningeniør, produktutvikling · USN Kongsberg · Forfatter: Rasmus Ullestad
 - **lærere** redigerer en post-prosessor for Stepcraft M700 i SolidWorks ([kapittel 5](#5-redigere-post-prosessor--lærere)).
 
 **Målgruppe.** Studenter og lærere ved USN Kongsberg.
+
+**Plassering.** Stepcraft M700 står i **Komposittlabben**.
 
 **Begrensninger.**
 

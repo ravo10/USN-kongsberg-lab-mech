@@ -56,7 +56,7 @@ equipment:
     image: /equipment/cnc-stepcraft-m700/images/65-probe-on-surface.jpg
     icon: cnc
     status: ready
-    used_in: student projects (prototype lab)
+    used_in: student projects (Komposittlabben)
 
 contribute:
   - title: How this website works

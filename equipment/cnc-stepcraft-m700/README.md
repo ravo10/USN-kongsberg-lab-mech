@@ -4,7 +4,7 @@ Mechanical engineering, product development · USN Kongsberg · Author: Rasmus U
 
 > **Norsk versjon:** [README.no.md](README.no.md) · **PDF:** [guide-en.pdf](guide-en.pdf) · **Word:** [guide-en.docx](guide-en.docx) · **Quick card (A4):** [English](quick-card-en.pdf), [Norsk](quick-card-no.pdf)
 
-**Used in:** student projects in the prototype lab (parts from SolidWorks milled on the Stepcraft M700).
+**Used in:** student projects (parts from SolidWorks milled on the Stepcraft M700). The machine is in the **composites lab** (*Komposittlabben*).
 
 > **Health and safety (HMS) is not covered in this manual.** Follow the lab supervisor's instructions, and do not use the machine without training.
 
@@ -22,6 +22,8 @@ Mechanical engineering, product development · USN Kongsberg · Author: Rasmus U
 - **teachers** edit a post-processor for the Stepcraft M700 in SolidWorks ([chapter 5](#5-editing-the-post-processor--teachers)).
 
 **Audience.** Students and teachers at USN Kongsberg.
+
+**Location.** The Stepcraft M700 is in the **composites lab** (*Komposittlabben*).
 
 **Limitations.**
 
