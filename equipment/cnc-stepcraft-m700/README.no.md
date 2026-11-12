@@ -2,7 +2,7 @@
 
 Maskiningeniør, produktutvikling · USN Kongsberg · Forfatter: Rasmus Ullestad Relling · Oppdatert 25. feb. 2026
 
-> **English version:** [README.md](README.md) · **PDF:** [guide-no.pdf](guide-no.pdf) · **Word:** [guide-no.docx](guide-no.docx) · **Hurtigkort (A4):** [norsk](quick-card-no.pdf), [engelsk](quick-card-en.pdf)
+> **English version:** [README.md](README.md) · **PDF:** [guide-no.pdf](guide-no.pdf) · **Word:** [guide-no.docx](guide-no.docx) · **Hurtigkort (A4):** [norsk](quick-card-no.pdf), [engelsk](quick-card-en.pdf) · **Originalt Word-dokument (rev. 1.1):** [brukermanual-original.docx](brukermanual-original.docx)
 
 **Brukes i:** studentprosjekter (deler fra SolidWorks frest ut på Stepcraft M700). Maskinen står i **Komposittlabben**.
 

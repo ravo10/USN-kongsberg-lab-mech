@@ -24,7 +24,7 @@ All machines: [equipment/](equipment/README.md)
 | **Lloyd LR 10K** universal testing machine (tensile, compression, 3-point bending) | TSM2370 Lab 1 (tensile testing) | [English](equipment/tensile-lloyd-lr10k/README.md) · [Norsk](equipment/tensile-lloyd-lr10k/README.no.md) · software and user guide in [ravo10/lr10k-2027](https://github.com/ravo10/lr10k-2027) | A4: [EN](equipment/tensile-lloyd-lr10k/quick-card-en.pdf), [NO](equipment/tensile-lloyd-lr10k/quick-card-no.pdf) |
 | **Nabertherm lab furnaces** (up to 1000 °C) and quenching stations | TSM2370 Lab 2 | [English](equipment/furnace-heat-treatment/README.md) · [Norsk](equipment/furnace-heat-treatment/README.no.md) | – |
 | **Grinding and polishing machines** (Buehler MetaServ 250, Metaserv, Ecomet I) | TSM2370 Lab 2 | [English](equipment/polisher-metallographic/README.md) · [Norsk](equipment/polisher-metallographic/README.no.md), machines and controls; procedure in progress | – |
-| **Stepcraft M700** CNC mill (UCCNC, SolidWorks CAM, 3D Touch Probe) | Student projects (Komposittlabben) | [Norsk](equipment/cnc-stepcraft-m700/README.no.md) · [English](equipment/cnc-stepcraft-m700/README.md) · PDF: [NO](equipment/cnc-stepcraft-m700/guide-no.pdf), [EN](equipment/cnc-stepcraft-m700/guide-en.pdf) · Word: [NO](equipment/cnc-stepcraft-m700/guide-no.docx), [EN](equipment/cnc-stepcraft-m700/guide-en.docx) | A4: [NO](equipment/cnc-stepcraft-m700/quick-card-no.pdf), [EN](equipment/cnc-stepcraft-m700/quick-card-en.pdf) |
+| **Stepcraft M700** CNC mill (UCCNC, SolidWorks CAM, 3D Touch Probe) | Student projects (Komposittlabben) | [Norsk](equipment/cnc-stepcraft-m700/README.no.md) · [English](equipment/cnc-stepcraft-m700/README.md) · PDF: [NO](equipment/cnc-stepcraft-m700/guide-no.pdf), [EN](equipment/cnc-stepcraft-m700/guide-en.pdf) · Word: [NO](equipment/cnc-stepcraft-m700/guide-no.docx), [EN](equipment/cnc-stepcraft-m700/guide-en.docx), [original](equipment/cnc-stepcraft-m700/brukermanual-original.docx) | A4: [NO](equipment/cnc-stepcraft-m700/quick-card-no.pdf), [EN](equipment/cnc-stepcraft-m700/quick-card-en.pdf) |
 
 ## Before any lab
 
@@ -60,7 +60,8 @@ equipment/
 │   ├── README.no.md       the same in Norwegian, with the test steps and hotkeys
 │   └── quick-card-*.pdf   one-page cards (EN/NO) with QR code, source in quick-card-*.html
 ├── furnace-heat-treatment/    Nabertherm furnaces and quenching (EN/NO)
-├── cnc-stepcraft-m700/       CNC mill: SolidWorks CAM, UCCNC, probe (NO master, EN translation)
+├── cnc-stepcraft-m700/       CNC mill: SolidWorks CAM, UCCNC, probe (NO master, EN translation,
+│                              plus the author's original Word document)
 ├── polisher-metallographic/   grinding and polishing machines (EN/NO), procedure in progress
 └── _template/
     └── README.md          starting point for a new machine
