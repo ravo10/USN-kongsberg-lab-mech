@@ -2,7 +2,7 @@
 
 Maskiningeniør, produktutvikling · USN Kongsberg · Forfatter: Rasmus Ullestad Relling · Oppdatert 25. feb. 2026
 
-> **English version:** [README.md](README.md) · **PDF:** [guide-no.pdf](guide-no.pdf) · **Word:** [guide-no.docx](guide-no.docx) · **Hurtigkort (A4):** [norsk](quick-card-no.pdf), [engelsk](quick-card-en.pdf) · **Originalt Word-dokument (rev. 1.1):** [brukermanual-original.docx](brukermanual-original.docx)
+> **English version:** [README.md](README.md) · **PDF:** [guide-no.pdf](guide-no.pdf) · **Word:** [guide-no.docx](guide-no.docx) · **Hurtigkort (A4):** [norsk](quick-card-no.pdf), [engelsk](quick-card-en.pdf) · **Originale Word-dokumenter:** [brukermanual (rev. 1.1)](brukermanual-original.docx), [maskinkoordinater (engelsk)](machine-coordinates-original.docx)
 
 **Brukes i:** studentprosjekter (deler fra SolidWorks frest ut på Stepcraft M700). Maskinen står i **Komposittlabben**.
 
@@ -484,7 +484,7 @@ Før du oppdaterer SolidWorks, for eksempel fra 2021- til 2025-versjonen, må Te
 
 Verdiene under ble funnet da verktøymagasinet (automatisk verktøyveksler, ATC) ble kalibrert på Stepcraft M700 ved USN. Ta vare på dem, så maskinen kan settes opp igjen etter en programvareoppdatering eller ny installasjon. De følger Stepcrafts fremgangsmåte i *Quick Start Guide UCCNC v3.6*, side 11, «M6 Macro: A New Way of Changing Tools in UCCNC» (se [kapittel 7](#7-ekstern-dokumentasjon-stepcraft)). Kalibreringen gjøres ved å redigere macro-filene **M6** og **M20204**.
 
-*Oversatt fra det engelske notatet «Stepcraft CNC Machine Coordinates».*
+*Oversatt fra det engelske notatet «Stepcraft CNC Machine Coordinates», som kan lastes ned som Word-fil: [machine-coordinates-original.docx](machine-coordinates-original.docx) (bilder fra Stepcrafts manualer er byttet ut med korte merknader).*
 
 ### 6.01 Oppsummering av kalibreringen
 

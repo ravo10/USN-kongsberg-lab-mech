@@ -2,7 +2,7 @@
 
 Mechanical engineering, product development · USN Kongsberg · Author: Rasmus Ullestad Relling · Updated 25 Feb 2026
 
-> **Norsk versjon:** [README.no.md](README.no.md) · **PDF:** [guide-en.pdf](guide-en.pdf) · **Word:** [guide-en.docx](guide-en.docx) · **Quick card (A4):** [English](quick-card-en.pdf), [Norsk](quick-card-no.pdf) · **Original Word document (Norwegian, rev. 1.1):** [brukermanual-original.docx](brukermanual-original.docx)
+> **Norsk versjon:** [README.no.md](README.no.md) · **PDF:** [guide-en.pdf](guide-en.pdf) · **Word:** [guide-en.docx](guide-en.docx) · **Quick card (A4):** [English](quick-card-en.pdf), [Norsk](quick-card-no.pdf) · **Original Word documents:** [user manual (Norwegian, rev. 1.1)](brukermanual-original.docx), [machine coordinates (English)](machine-coordinates-original.docx)
 
 **Used in:** student projects (parts from SolidWorks milled on the Stepcraft M700). The machine is in the **composites lab** (*Komposittlabben*).
 
@@ -485,6 +485,8 @@ Before you update SolidWorks, for example from the 2021 to the 2025 version, the
 ## 6. Machine coordinates and calibration of our M700 | Teachers
 
 The settings below were found when the tool magazine (automatic tool changer, ATC) was calibrated on the USN Stepcraft M700. Keep them, so the machine can be set up again after a software update or a reinstall. They follow Stepcraft's procedure in *Quick Start Guide UCCNC v3.6*, page 11, "M6 Macro: A New Way of Changing Tools in UCCNC" (see [chapter 7](#7-external-documentation-stepcraft)). The calibration means editing the **M6** and **M20204** macro files.
+
+The original note is available as a Word file: [machine-coordinates-original.docx](machine-coordinates-original.docx) (pictures from Stepcraft's manuals replaced by short notes).
 
 ### 6.01 Summary of the calibration
 
