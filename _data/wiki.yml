@@ -29,6 +29,7 @@ equipment:
   - title: Lloyd LR 10K
     kind: Universal testing machine
     url: /equipment/tensile-lloyd-lr10k/
+    url_no: /equipment/tensile-lloyd-lr10k/README.no.html
     icon: tensile
     status: external
     used_in: TSM2370 Lab 1
