@@ -1,8 +1,8 @@
 # Slipe- og poleremaskiner (metallografisk prøvepreparering)
 
-TSM2370 Materialteknikk · USN Kongsberg · Oppdatert 11. nov. 2026
+TSM2370 Materialteknikk · USN Kongsberg · Oppdatert 12. nov. 2026
 
-> **English version:** [README.md](README.md) · **Veiledning under arbeid:** maskinene og betjeningen er beskrevet under. Trinn-for-trinn-prosedyren (hvilken maskin, korning og tid i hvilken rekkefølge) kommer snart. Inntil da: følg instruksjonene fra labansvarlig.
+> **English version:** [README.md](README.md) · **PDF:** [guide-no.pdf](guide-no.pdf) · **Word:** [guide-no.docx](guide-no.docx)
 
 **Brukes i:** [TSM2370 Lab 2 – Thermal processing and quench severity](../../labs/tsm2370-materialteknikk/README.md#lab-2--thermal-processing-and-quench-severity)
 
@@ -116,7 +116,35 @@ En eldre maskin som brukes til sliping: først fjernes de verste ripene og frese
 
 ## 4. Trinn for trinn
 
-*Kommer snart:* hvilken maskin, korning eller duk, turtall og tid du skal bruke i hvilken rekkefølge, hvordan du holder prøven, og hvordan du sjekker overflaten mellom trinnene.
+### 4.1 Oversikt
+
+| Trinn | Maskin | Slipepapir | Vann | Turtall | Tid |
+| --- | --- | --- | --- | --- | --- |
+| 1. Grovsliping | Ecomet I | Grovt slipepapir (korning: spør labansvarlig) | Rennende | 200–400 o/min der turtallet kan stilles | ca. **1 minutt** |
+| 2. Polering | MetaServ 250 eller Metaserv | **600** silisiumkarbid (SiC) for metallografi | Rennende | **200–400 o/min** | **1–2 minutter** |
+
+Se [kapittel 1](#1-dette-skal-du-oppnå) for hvordan overflaten skal se ut etter hvert trinn.
+
+### 4.2 Slik holder du prøven
+
+- Bruk **to fingre** med **skinnhanske eller gummihanske**.
+- Hold den flate siden **parallelt med den roterende skiven**, så prøven ikke blir revet med og slengt av.
+- Trykk **lett**, og sett prøven ned på skiven med **bakkanten først** (som i den oppslåtte instruksen).
+
+![Figur 6: prøven holdes med to fingre i skinnhanske, flatt mot skiven, med rennende vann](images/06-holding-the-sample.jpg)
+
+*Figur 6. Prøven holdes med to fingre i skinnhanske, med den flate siden parallelt med skiven og rennende vann fra dysen (MetaServ 250).*
+
+### 4.3 Fremgangsmåte
+
+1. Ta på **vernebriller** og **hanske** (skinn eller gummi).
+2. Grovsliping på **Ecomet I**: skru på vannet så det **renner jevnt** over papiret, og start skiven.
+3. Hold prøven flatt mot skiven (se 4.2) i ca. **1 minutt**, til fresesporene er borte og alle ripene går samme vei.
+4. Skyll prøven og hanskene, så korn fra grovslipingen ikke følger med til neste trinn.
+5. Polering på **600 SiC-papir** med rennende vann, **200–400 o/min**, i **1–2 minutter**.
+6. Skyll og sjekk overflaten: den skal være blank og nesten speilende, uten synlige riper. Er den ikke det, poler litt til.
+7. Rengjør prøven med etanol og tørk den, og merk den (A–D) igjen hvis merket er slipt bort.
+8. Sjekk overflaten i det oransje objektivet på [MXT50](../hardness-vickers-matsuzawa-mxt50/README.no.md) før du måler.
 
 ## 5. Når du er ferdig
 

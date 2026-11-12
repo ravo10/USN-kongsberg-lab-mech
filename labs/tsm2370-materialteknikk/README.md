@@ -50,7 +50,7 @@ If a result is far outside its range, check the measurement first (green objecti
 | Equipment | Guide |
 | --- | --- |
 | Primary furnace (810 °C), secondary oven (600 °C) and quenching stations | [Guide (EN)](../../equipment/furnace-heat-treatment/README.md) · [Veiledning (NO)](../../equipment/furnace-heat-treatment/README.no.md) |
-| Grinding and polishing machines | [Guide (EN)](../../equipment/polisher-metallographic/README.md) · [Veiledning (NO)](../../equipment/polisher-metallographic/README.no.md) (procedure in progress) |
+| Grinding and polishing machines | [Guide (EN)](../../equipment/polisher-metallographic/README.md) · [Veiledning (NO)](../../equipment/polisher-metallographic/README.no.md) |
 | Matsuzawa MXT50 Vickers hardness tester | [Guide (EN)](../../equipment/hardness-vickers-matsuzawa-mxt50/README.md) · [Veiledning (NO)](../../equipment/hardness-vickers-matsuzawa-mxt50/README.no.md) · quick card [EN](../../equipment/hardness-vickers-matsuzawa-mxt50/quick-card-en.pdf), [NO](../../equipment/hardness-vickers-matsuzawa-mxt50/quick-card-no.pdf) |
 
 Samples B, C and D are held at 810 °C for 15–30 minutes before quenching or transfer. 810 °C is inside the hardening range in the datasheets for 1.2210 (780–840 °C).

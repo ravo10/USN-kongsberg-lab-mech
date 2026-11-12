@@ -1,8 +1,8 @@
 # Grinding and polishing machines (metallographic sample preparation)
 
-TSM2370 Materialteknikk · USN Kongsberg · Updated 11 Nov 2026
+TSM2370 Materialteknikk · USN Kongsberg · Updated 12 Nov 2026
 
-> **Norsk versjon:** [README.no.md](README.no.md) · **Guide in progress:** the machines and controls are described below. The step-by-step procedure (which machine, grit and time in which order) will be added soon. Until then, follow the lab supervisor's instructions.
+> **Norsk versjon:** [README.no.md](README.no.md) · **PDF:** [guide-en.pdf](guide-en.pdf) · **Word:** [guide-en.docx](guide-en.docx)
 
 **Used in:** [TSM2370 Lab 2 – Thermal processing and quench severity](../../labs/tsm2370-materialteknikk/README.md#lab-2--thermal-processing-and-quench-severity)
 
@@ -116,7 +116,35 @@ An older machine used for grinding: removing the worst scratches and milling mar
 
 ## 4. Step-by-step procedure
 
-*Coming soon:* which machine, grit or cloth, speed and time to use in which order, how to hold the sample, and how to check the surface between steps.
+### 4.1 Overview
+
+| Step | Machine | Paper | Water | Speed | Time |
+| --- | --- | --- | --- | --- | --- |
+| 1. Rough grinding | Ecomet I | Coarse grinding paper (grit: ask the lab supervisor) | Flowing | 200–400 rpm where the speed can be set | about **1 minute** |
+| 2. Polishing | MetaServ 250 or Metaserv | **600** silicon carbide (SiC) for metallography | Flowing | **200–400 rpm** | **1–2 minutes** |
+
+See [chapter 1](#1-what-you-are-aiming-for) for what the surface should look like after each step.
+
+### 4.2 How to hold the sample
+
+- Use **two fingers** with a **leather or rubber glove**.
+- Hold the flat surface **parallel to the rotating disc**, so the sample is not caught and thrown off.
+- Press **lightly**, and put the sample down on the disc **rear edge first** (as in the posted instruction).
+
+![Figure 6: the sample held with two fingers in a leather glove, flat against the disc, with flowing water](images/06-holding-the-sample.jpg)
+
+*Figure 6. The sample held with two fingers in a leather glove, flat side parallel to the disc, with water flowing from the nozzle (MetaServ 250).*
+
+### 4.3 Procedure
+
+1. Put on **safety glasses** and a **glove** (leather or rubber).
+2. Rough grinding on the **Ecomet I**: turn on the water so it **flows evenly** over the paper, and start the disc.
+3. Hold the sample flat against the disc (see 4.2) for about **1 minute**, until the milling marks are gone and all scratches run the same way.
+4. Rinse the sample and the gloves, so grit from rough grinding does not reach the next step.
+5. Polish on **600 SiC paper** with flowing water, **200–400 rpm**, for **1–2 minutes**.
+6. Rinse and check the surface: it should be shiny and almost a mirror, with no visible scratches. If not, polish a little more.
+7. Clean the sample with ethanol and dry it, and mark it (A–D) again if the mark has been ground off.
+8. Check the surface in the orange objective of the [MXT50](../hardness-vickers-matsuzawa-mxt50/README.md) before you measure.
 
 ## 5. When you are finished
 
@@ -125,4 +153,4 @@ An older machine used for grinding: removing the worst scratches and milling mar
 - [ ] Put the covers back on the MetaServ 250.
 - [ ] Clean the sample with ethanol and dry it, so it does not rust before you test it.
 
-<!-- TODO (from Rasmus): order of machines and the grit/cloth/time for each step; confirm timer mode button (1), WATER positions (7) and knob (11) on the MetaServ 250, whether one panel runs both stations, and that the Ecomet I has a single speed. -->
+<!-- TODO (from Rasmus): rough grinding grit; which machine is used for polishing; confirm timer mode button (1), WATER positions (7) and knob (11) on the MetaServ 250, whether one panel runs both stations, and that the Ecomet I has a single speed. -->

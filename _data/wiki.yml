@@ -47,7 +47,7 @@ equipment:
     url_no: /equipment/polisher-metallographic/README.no.html
     image: /equipment/polisher-metallographic/images/01-metaserv-250-overview.jpg
     icon: polisher
-    status: in-progress
+    status: ready
     used_in: TSM2370 Lab 2
   - title: Stepcraft M700 CNC
     kind: CNC mill · UCCNC and SolidWorks CAM
