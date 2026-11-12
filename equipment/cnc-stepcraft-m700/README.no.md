@@ -15,7 +15,7 @@ Maskiningeniør, produktutvikling · USN Kongsberg · Forfatter: Rasmus Ullestad
 - **studenter** setter opp en del i SolidWorks og gjør den klar for SolidWorks CAM ([kapittel 2](#2-solidworks-cam--studenter));
 - **lærere** post-prosesserer G-kode (NC-kode) fra SolidWorks til bruk i UCCNC ([3.04](#304-lage-verktøybane-i-solidworks-cam), [3.07](#307-post-prosessere-til-nc-kode-for-uccnc));
 - **lærere og studenter** eksporterer en DXF-fil fra SolidWorks til bruk i UCCNC CAM ([3.05](#305-lage-verktøybane-i-uccnc-cam-fra-en-dxf-fil));
-- **lærere** starter og setter opp Stepcraft M700 for vanlig bruk ([3.01](#301-koble-opp-cnc), [kapittel 4](#4-gjøre-stepcraft-klar-for-bruk--lærere));
+- **lærere** starter, setter opp og slår av Stepcraft M700 for vanlig bruk ([3.01](#301-koble-opp-cnc), [3.08](#308-slå-av-cnc), [kapittel 4](#4-gjøre-stepcraft-klar-for-bruk--lærere));
 - **lærere** bruker en 3D Touch Probe sammen med Stepcraft M700 og UCCNC ([4.03](#403-kalibrere-3d-touch-probe-i-verktøymagasinet-z));
 - **lærere** redigerer en post-prosessor for Stepcraft M700 i SolidWorks ([kapittel 5](#5-redigere-post-prosessor--lærere)).
 
@@ -141,6 +141,8 @@ Ingeniøren/designeren må enten endre disse hullene til Ø2 mm før produksjon,
 4. Start UCCNC på den lokale datamaskinen.
 5. Skru på bryteren for spindelen (den skal blinke blått/rødt når ingen program kjører).
 6. Klikk **«Reset»** nede i høyre hjørne.
+
+Når du er ferdig, slår du av i motsatt rekkefølge: se [3.08](#308-slå-av-cnc).
 
 ### 3.02 Eksportere en Technology Database for import
 
@@ -353,6 +355,19 @@ Her kan du endre *Leadin amount* og *Leadin/out point*, noe du ofte vil gjøre i
 Lager ikke UCCNC riktig verktøybane fra den importerte NC-koden, prøv først å starte programmet på nytt (lukk og åpne). Det løser ofte problemet hvis alt er greit i simuleringen i SolidWorks CAM.
 
 Det er laget en egen post-prosessor for Stepcraft med programmet [Universal Post Generator](https://camworks.com/universal-post-generator/) (med **FANUC11M** som grunnlag). Den ligger definert for maskinen i SolidWorks (Technology Database/TechDB). *For programmer som Fusion har Stepcraft allerede laget en post-prosessor som kan lastes ned.*
+
+### 3.08 Slå av CNC
+
+Slå av i motsatt rekkefølge av oppstarten ([3.01](#301-koble-opp-cnc)):
+
+1. Vent til programmet er ferdig og spindelen har stoppet.
+2. Sett verktøyet tilbake i magasinet (**M6**) og kjør maskinen til hjemmeposisjon.
+3. Skru av bryteren for spindelen.
+4. Lukk UCCNC.
+5. Trykk inn nødstoppene (utsiden og innsiden av døra).
+6. Slå av vakuumanlegget (bryteren over fresen).
+7. Skru av trykkluften.
+8. Støvsug spon og støv fra bordet og verktøyholderen (se [4.04](#404-unngå-at-verktøy-henger-fast-under-bytte)).
 
 ## 4. Gjøre Stepcraft klar for bruk | Lærere
 

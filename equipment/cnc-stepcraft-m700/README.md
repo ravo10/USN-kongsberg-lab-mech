@@ -17,7 +17,7 @@ Mechanical engineering, product development · USN Kongsberg · Author: Rasmus U
 - **students** set up a part in SolidWorks and make it ready for SolidWorks CAM ([chapter 2](#2-solidworks-cam--students));
 - **teachers** post-process G-code (NC code) from SolidWorks for use in UCCNC ([3.04](#304-making-a-toolpath-in-solidworks-cam), [3.07](#307-post-processing-to-nc-code-for-uccnc));
 - **teachers and students** export a DXF file from SolidWorks for use in UCCNC CAM ([3.05](#305-making-a-toolpath-in-uccnc-cam-from-a-dxf-file));
-- **teachers** start the Stepcraft M700 and set it up for normal use ([3.01](#301-starting-up-the-cnc), [chapter 4](#4-getting-the-stepcraft-ready--teachers));
+- **teachers** start the Stepcraft M700, set it up for normal use and shut it down ([3.01](#301-starting-up-the-cnc), [3.08](#308-shutting-down-the-cnc), [chapter 4](#4-getting-the-stepcraft-ready--teachers));
 - **teachers** use a 3D Touch Probe with the Stepcraft M700 and UCCNC ([4.03](#403-calibrating-the-3d-touch-probe-in-the-tool-magazine-z));
 - **teachers** edit a post-processor for the Stepcraft M700 in SolidWorks ([chapter 5](#5-editing-the-post-processor--teachers)).
 
@@ -143,6 +143,8 @@ The engineer/designer must either change these holes to Ø2 mm before production
 4. Start UCCNC on the local computer.
 5. Turn on the spindle switch (it should flash blue/red when no program is running).
 6. Click **"Reset"** in the bottom right corner.
+
+When you are done, shut down in the reverse order: see [3.08](#308-shutting-down-the-cnc).
 
 ### 3.02 Exporting a Technology Database for import
 
@@ -355,6 +357,19 @@ Here you can change the *Leadin amount* and the *Leadin/out point*, which you of
 If UCCNC does not make the right toolpath from the imported NC code, first try restarting the program (close and open it). That often solves the problem if everything is fine in the SolidWorks CAM simulation.
 
 A dedicated post-processor for the Stepcraft has been made with [Universal Post Generator](https://camworks.com/universal-post-generator/) (based on **FANUC11M**). It is defined for the machine in SolidWorks (Technology Database/TechDB). *For programs such as Fusion, Stepcraft already provides a post-processor that can be downloaded.*
+
+### 3.08 Shutting down the CNC
+
+Shut down in the reverse order of the start-up ([3.01](#301-starting-up-the-cnc)):
+
+1. Wait until the program has finished and the spindle has stopped.
+2. Put the tool back in the magazine (**M6**) and move the machine to its home position.
+3. Turn off the spindle switch.
+4. Close UCCNC.
+5. Press in the emergency stops (outside and inside the door).
+6. Turn off the vacuum (the switch above the mill).
+7. Turn off the compressed air.
+8. Vacuum chips and dust from the table and the tool holder (see [4.04](#404-preventing-tools-from-sticking-during-a-tool-change)).
 
 ## 4. Getting the Stepcraft ready | Teachers
 
