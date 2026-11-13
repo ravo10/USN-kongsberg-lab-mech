@@ -22,4 +22,4 @@ Mechanical engineering labs at USN, campus Kongsberg.
 | Bergseminaret prototype lab (USN and KB Group) | | – | – |
 | External area | | 4th | – |
 
-Not yet placed on the map: [Matsuzawa MXT50](../../equipment/hardness-vickers-matsuzawa-mxt50/README.md), [Lloyd LR 10K](../../equipment/tensile-lloyd-lr10k/README.md), [lab furnaces](../../equipment/furnace-heat-treatment/README.md) and [grinding and polishing machines](../../equipment/polisher-metallographic/README.md). Their labs will be added here.
+Not yet placed on the map: [Matsuzawa MXT50](../../equipment/hardness-vickers-matsuzawa-mxt50/README.md), [Lloyd LR 10K](../../equipment/tensile-lloyd-lr10k/README.md), [lab furnaces](../../equipment/furnace-heat-treatment/README.md), [grinding and polishing machines](../../equipment/polisher-metallographic/README.md) and the [HM EMS-1250 plate shear](../../equipment/shear-hm-ems1250/README.md). Their labs will be added here.

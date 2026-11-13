@@ -4,7 +4,7 @@
 # status: ready | in-progress | external  (shown as a small label)
 # image:  photo used on the home-page card (optional)
 # image_pos: which part of a tall photo the card shows, e.g. "50% 60%" (optional)
-# icon:   used on the card when there is no photo: tensile | hardness | furnace | polisher | cnc | printer | fan | lab
+# icon:   used on the card when there is no photo: tensile | hardness | furnace | polisher | cnc | printer | fan | shear | lab
 # children: sub-pages shown under the item in the sidebar when you are on it (used by "Other")
 
 labs:
@@ -72,6 +72,15 @@ equipment:
     icon: printer
     status: ready
     used_in: the metrology lab (Måleteknisk lab)
+  - title: HM EMS-1250 plate shear
+    kind: Guillotine for sheet metal · 1250 × 4 mm
+    url: /equipment/shear-hm-ems1250/
+    url_no: /equipment/shear-hm-ems1250/README.no.html
+    image: /equipment/shear-hm-ems1250/images/01-ems1250-front.jpg
+    image_pos: 50% 62%   # which part of the photo the card shows (x y)
+    icon: shear
+    status: in-progress
+    used_in: student projects
   - title: Other
     kind: Other lab equipment · parts, rigs and instruments
     url: /equipment/other/
