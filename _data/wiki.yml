@@ -4,7 +4,8 @@
 # status: ready | in-progress | external  (shown as a small label)
 # image:  photo used on the home-page card (optional)
 # image_pos: which part of a tall photo the card shows, e.g. "50% 60%" (optional)
-# icon:   used on the card when there is no photo: tensile | hardness | furnace | polisher | lab
+# icon:   used on the card when there is no photo: tensile | hardness | furnace | polisher | cnc | printer | fan | lab
+# children: sub-pages shown under the item in the sidebar when you are on it (used by "Other")
 
 labs:
   - title: TSM2370 Materialteknikk
@@ -71,6 +72,19 @@ equipment:
     icon: printer
     status: ready
     used_in: the metrology lab (Måleteknisk lab)
+  - title: Other
+    kind: Other lab equipment · parts, rigs and instruments
+    url: /equipment/other/
+    url_no: /equipment/other/README.no.html
+    image: /equipment/other/wind-tunnel-fan/images/01-fan-overview.jpg
+    image_pos: 50% 55%   # which part of the photo the card shows (x y)
+    icon: fan
+    status: in-progress
+    used_in: lab projects (wind tunnel)
+    children:
+      - title: Wind-tunnel fan
+        url: /equipment/other/wind-tunnel-fan/
+        url_no: /equipment/other/wind-tunnel-fan/README.no.html
 
 contribute:
   - title: How this website works
