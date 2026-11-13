@@ -146,7 +146,17 @@ Measurements on the SC210, taken out of the machine (13 November 2026):
 
 After the capacitor change, the board was fed with about 30 V DC directly on one of the 220 µF capacitors. The output relay pulled in and **stayed on** for as long as the DC was connected (no 0.5 s pulse). This test bypasses the transformer and rectifier, and without a circuit diagram we do not know which capacitor was fed, so the result is **not conclusive**. If the relay also stays on with 24 VAC on pins 2–10, that would explain the fault: a relay that stays on makes single-stroke mode behave like continuous mode.
 
-*Next: test the relay in the machine (no 24 VAC supply on the bench), or run test D with 24 VAC and add the result here: does the relay give one 0.5 s pulse, and does single-stroke mode work in the machine?*
+**13 November 2026, test in the machine (test F), with the new capacitors:** in single-stroke mode the "RELAY ON" LED lights when the pedal is pressed, **stays on for as long as the pedal is held**, and goes off when it is released. The knife keeps cycling while the pedal is held. The pedal and the 24 VAC supply work; **the SC210 does not time out after 0.5 s**, so single-stroke mode behaves like continuous mode. This is the fault.
+
+Possible causes, cheapest check first:
+
+1. The **5–6 bridge** in the machine's socket (or the wires to pins 5 and 6 inside the relay) is broken, so the relay is not set to "pulse on energization".
+2. The **timing part of the circuit**: the two small electrolytic capacitors (same age as the big ones) or a transistor.
+3. If neither helps: replace the whole SC210 with a modern 11-pin timer (see [5.4](#54-spare-parts)).
+
+Until it is repaired, a sign on the mode selector says that single-stroke mode is out of order.
+
+*Next: check the 5–6 bridge, then the small capacitors, and add the result here.*
 
 ### 5.3 How to test the one-shot relay
 

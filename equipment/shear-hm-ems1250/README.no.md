@@ -146,7 +146,17 @@ Målinger på SC210, tatt ut av maskinen (13. november 2026):
 
 Etter kondensatorbyttet ble kortet forsynt med omtrent 30 V DC direkte på en av 220 µF-kondensatorene. Utgangsreléet trakk og **ble liggende inne** så lenge likespenningen var tilkoblet (ingen puls på 0,5 s). Testen går forbi transformatoren og likeretteren, og uten koblingsskjema vet vi ikke hvilken kondensator som ble forsynt, så resultatet er **ikke sikkert**. Blir reléet også liggende inne med 24 V AC på pinne 2–10, forklarer det feilen: et relé som blir liggende inne, får enkeltslag til å oppføre seg som kontinuerlig drift.
 
-*Neste steg: test reléet i maskinen (det fantes ingen 24 V AC-forsyning på benken), eller kjør test D med 24 V AC og skriv inn resultatet her: gir reléet én puls på 0,5 s, og virker enkeltslag i maskinen?*
+**13. november 2026, test i maskinen (test F), med de nye kondensatorene:** i enkeltslag tennes lysdioden «RELAY ON» når pedalen trykkes, **lyser så lenge pedalen holdes inne**, og slukker når den slippes. Kniven går kontinuerlig så lenge pedalen holdes. Pedalen og 24 V AC-forsyningen virker; **SC210 slår ikke av etter 0,5 s**, så enkeltslag oppfører seg som kontinuerlig drift. Dette er feilen.
+
+Mulige årsaker, billigste kontroll først:
+
+1. **Laskingen 5–6** i sokkelen i maskinen (eller ledningene til pinne 5 og 6 inne i reléet) er brutt, slik at reléet ikke er stilt på «puls ved innkobling».
+2. **Tidsdelen av kretsen**: de to små elektrolyttkondensatorene (like gamle som de store) eller en transistor.
+3. Hjelper ingen av delene: bytt hele SC210 med et moderne 11-polet tidsrelé (se [5.4](#54-reservedeler)).
+
+Til feilen er rettet, henger det et skilt ved velgerbryteren om at enkeltslag er ute av drift.
+
+*Neste steg: kontroller laskingen 5–6, deretter de små kondensatorene, og skriv inn resultatet her.*
 
 ### 5.3 Slik tester du enkeltslagsreléet
 
