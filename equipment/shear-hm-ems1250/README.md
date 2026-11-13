@@ -144,13 +144,13 @@ Measurements on the SC210, taken out of the machine (13 November 2026):
 
 *Figure 12. The SC210 board with the two new 220 µF 50 V capacitors (bottom). The old Frako capacitors are on the right.*
 
-After the capacitor change, the board was fed with DC directly on a 220 µF capacitor (test E) and the relay switched on again. The pulse length was not measured.
+After the capacitor change, the board was fed with about 30 V DC directly on one of the 220 µF capacitors. The output relay pulled in and **stayed on** for as long as the DC was connected (no 0.5 s pulse). This test bypasses the transformer and rectifier, and without a circuit diagram we do not know which capacitor was fed, so the result is **not conclusive**. If the relay also stays on with 24 VAC on pins 2–10, that would explain the fault: a relay that stays on makes single-stroke mode behave like continuous mode.
 
 *Next: test the relay in the machine (no 24 VAC supply on the bench), or run test D with 24 VAC and add the result here: does the relay give one 0.5 s pulse, and does single-stroke mode work in the machine?*
 
 ### 5.3 How to test the one-shot relay
 
-All tests are done with the relay **out of the machine**, on the bench. The highest voltage used is about 30 V DC (test E); all tests are at extra-low voltage.
+All tests are done with the relay **out of the machine**, on the bench. The highest voltage used is 24 V; all tests are at extra-low voltage.
 
 **A. Contacts and transformer (unpowered, multimeter on Ω / continuity)**
 
@@ -186,13 +186,9 @@ All tests are done with the relay **out of the machine**, on the bench. The high
 
 Test D needs **AC**. Never put DC on pins 2–10: the relay's transformer does not work on DC, and about 0.7 A flows through its 35 Ω winding.
 
-**E. Without a 24 VAC supply: DC on the capacitor**
+**E. DC on a capacitor (not reliable)**
 
-This feeds the circuit after the transformer and rectifier, so it tests the timer and the output relay, but not the transformer or the rectifier.
-
-1. Set the lab power supply to **about 30 V DC** with the **current limit at about 100 mA**. Do not go above 34 V.
-2. Connect **+** to the lead of one 220 µF capacitor that is **not** on the stripe side, and **−** to the striped lead.
-3. Switch the supply on: the LED should light and the relay should click and release after about 0.5 s, with the lamp on 1–3 flashing once.
+Feeding DC directly onto one of the capacitors bypasses the transformer and rectifier, and probably the part of the circuit that detects switch-on. On 13 November 2026 the relay stayed on during this test, which cannot be interpreted without the circuit diagram. Use test D (24 VAC) or test F instead.
 
 **F. In the machine**
 

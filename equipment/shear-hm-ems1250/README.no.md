@@ -144,13 +144,13 @@ Målinger på SC210, tatt ut av maskinen (13. november 2026):
 
 *Figur 12. SC210-kortet med de to nye 220 µF 50 V-kondensatorene (nederst). De gamle Frako-kondensatorene ligger til høyre.*
 
-Etter kondensatorbyttet ble kortet forsynt med likespenning direkte på en 220 µF-kondensator (test E), og reléet slo inn igjen. Pulslengden ble ikke målt.
+Etter kondensatorbyttet ble kortet forsynt med omtrent 30 V DC direkte på en av 220 µF-kondensatorene. Utgangsreléet trakk og **ble liggende inne** så lenge likespenningen var tilkoblet (ingen puls på 0,5 s). Testen går forbi transformatoren og likeretteren, og uten koblingsskjema vet vi ikke hvilken kondensator som ble forsynt, så resultatet er **ikke sikkert**. Blir reléet også liggende inne med 24 V AC på pinne 2–10, forklarer det feilen: et relé som blir liggende inne, får enkeltslag til å oppføre seg som kontinuerlig drift.
 
 *Neste steg: test reléet i maskinen (det fantes ingen 24 V AC-forsyning på benken), eller kjør test D med 24 V AC og skriv inn resultatet her: gir reléet én puls på 0,5 s, og virker enkeltslag i maskinen?*
 
 ### 5.3 Slik tester du enkeltslagsreléet
 
-Alle testene gjøres med reléet **tatt ut av maskinen**, på benken. Høyeste spenning er omtrent 30 V DC (test E); alle testene er på lavspenning under 50 V.
+Alle testene gjøres med reléet **tatt ut av maskinen**, på benken. Høyeste spenning er 24 V; alle testene er på lavspenning.
 
 **A. Kontakter og transformator (uten spenning, multimeter på Ω / gjennomgang)**
 
@@ -186,13 +186,9 @@ Alle testene gjøres med reléet **tatt ut av maskinen**, på benken. Høyeste s
 
 Test D krever **vekselspenning**. Sett aldri likespenning på pinne 2–10: transformatoren i reléet virker ikke på likespenning, og det går omtrent 0,7 A gjennom viklingen på 35 Ω.
 
-**E. Uten 24 V AC-forsyning: likespenning på kondensatoren**
+**E. Likespenning på en kondensator (ikke pålitelig)**
 
-Dette forsyner kretsen etter transformatoren og likeretteren, så det tester tidskretsen og utgangsreléet, men ikke transformatoren eller likeretteren.
-
-1. Still labforsyningen på **omtrent 30 V DC** med **strømgrensen på omtrent 100 mA**. Ikke gå over 34 V.
-2. Koble **+** til benet på en av 220 µF-kondensatorene som **ikke** er på stripesiden, og **−** til benet på stripesiden.
-3. Slå på forsyningen: lysdioden skal lyse, og reléet skal klikke og slippe etter omtrent 0,5 s, med lampen på 1–3 som blinker én gang.
+Å sette likespenning direkte på en av kondensatorene går forbi transformatoren og likeretteren, og trolig også den delen av kretsen som merker innkoblingen. 13. november 2026 ble reléet liggende inne under denne testen, og det kan ikke tolkes uten koblingsskjema. Bruk heller test D (24 V AC) eller test F.
 
 **F. I maskinen**
 
