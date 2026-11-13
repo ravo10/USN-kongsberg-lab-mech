@@ -210,8 +210,30 @@ Bare med fagperson: hovedbryteren av og låst mens reléet settes i. Deretter, u
 | --- | --- | --- |
 | Utgangsreléet i SC210 (ER23002L) | 24 V DC spole, 2 vekselkontakter (2 CO), 8 A, pinner for kretskort | Eksempel: Finder 40.52.9.024.0000. Sammenlign pinneplasseringen med det gamle reléet; passer den ikke, monter det med korte ledninger. |
 | Kondensatorer i SC210 (2 stk.) | 220 µF, 50 V, 105 °C elektrolytt | Samme diameter som de gamle. Merk **+**-siden før du lodder dem ut: en elektrolyttkondensator montert feil vei ødelegges. |
-| Hele SC210-reléet (hvis det ikke kan repareres) | 11-polet plugg-inn tidsrelé, 24 V AC, funksjon «intervall» (puls ved innkobling), 0,5 s, 2 vekselkontakter | Mange 11-polede tidsreléer bruker pinne 2–10 til forsyning og 1 og 11 som felles, men NO og NC kan være byttet om: sammenlign med tabellen i [5.1](#51-enkeltslagsreléet-electromatic-sc210-024) før du setter det i. Det må gi **én** puls per start, også når startsignalet holdes inne. Det nye reléet skal monteres av fagperson. |
+| Hele SC210-reléet (hvis det ikke kan repareres) | **Finder 88.02.0.230.0002** (11-polet multifunksjons tidsrelé, 24–230 V AC/DC, 2 CO 8 A), stilt på funksjon **DI**, 0,5 s. Sokkel ved behov: Finder 90.21 | Kontrollert mot Finders datablad for 88-serien (XI-2018), se [erstatningstabellen under](#erstatning-for-sc210-finder-8802). **Laskingen 5–6 i sokkelen må fjernes.** Skal monteres av fagperson. |
 | Signallampe | BA9s, 24 V 2 W, rørformet T10 | Eller en BA9s LED-pære, 24 V AC/DC |
+
+#### Erstatning for SC210: Finder 88.02
+
+Pinnetilordning fra Finders datablad for 88-serien (XI-2018), sammenlignet med SC210:
+
+| Pinne | SC210 | Finder 88.02 | Likt? |
+| --- | --- | --- | --- |
+| 2 – 10 | Forsyning 24 V AC | Forsyning (A1 = 2, A2 = 10), 24–230 V AC/DC | Ja |
+| 1 / 3 / 4 | Felles / NO / NC | 11 felles / 14 NO / 12 NC | Ja |
+| 11 / 9 / 8 | Felles / NO / NC | 31 felles / 34 NO / 32 NC | Ja |
+| 5 | Lasking for modus (5–6 = puls ved innkobling) | **Pause-inngang** (2–5 lukket stopper tidtakingen) | Nei |
+| 6 | Lasking for modus | **Startsignal-inngang** (2–6), bare for funksjonene BE, CEa, DE | Nei |
+| 7 | Lasking for modus (6–7 = puls ved utkobling) | **Reset-inngang** (2–7 lukket nullstiller tidsreléet) | Nei |
+
+**Slik monteres det:**
+
+1. Hovedbryteren av og låst. Bare fagperson.
+2. **Fjern laskingen 5–6** i sokkelen, og kontroller at ingenting annet er koblet til sokkelklemme 5, 6 og 7. På Finder er dette styreinnganger.
+3. **Før det settes i**, still funksjonsvelgeren på **DI** (intervall: kontaktene lukker når spenningen kommer, og åpner etter innstilt tid selv om spenningen blir stående) og tiden på **0,5 s**: enhet «s», skala 1 s, rattet på 0,5 (eller skala 0,5 s på fullt utslag). Finder: tidsskala og funksjon skal stilles før tidsreléet får spenning.
+4. Test uten plate i saksen: ett slag per pedaltrykk, også når pedalen holdes inne. Gul lysdiode viser spenning, rød lysdiode viser at tidsreléet teller.
+
+Fra databladet: gjenopprettingstid 300 ms (slipp pedalen minst 0,3 s før neste trykk), innstillingsnøyaktighet ±3 % av fullt utslag, kontakter AgNi 8 A, effekt 1 W ved 24 V.
 
 ## 6. Åpne spørsmål
 

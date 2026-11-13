@@ -210,8 +210,30 @@ Only with authorised personnel: main isolator off and locked while the relay is 
 | --- | --- | --- |
 | Output relay in the SC210 (ER23002L) | 24 V DC coil, 2 changeover contacts (2 CO), 8 A, PCB pins | Example: Finder 40.52.9.024.0000. Check the pin layout against the old relay; if it does not match, fit it with short wires. |
 | Capacitors in the SC210 (2 ×) | 220 µF, 50 V, 105 °C electrolytic | Same diameter as the old ones. Mark the **+** side before desoldering: a reversed electrolytic capacitor is destroyed. |
-| Whole SC210 relay (if it cannot be repaired) | 11-pin plug-in timer, 24 VAC, function "interval" (pulse on energization), 0.5 s, 2 changeover contacts | Many 11-pin timers use pins 2–10 for the supply and 1 and 11 as the commons, but NO and NC can differ: compare with the table in [5.1](#51-the-one-shot-relay-electromatic-sc210-024) before plugging it in. It must give **one** pulse per start, also when the start signal is held. The new relay must be fitted by authorised personnel. |
+| Whole SC210 relay (if it cannot be repaired) | **Finder 88.02.0.230.0002** (11-pin multifunction timer, 24–230 V AC/DC, 2 CO 8 A), set to function **DI**, 0.5 s. Socket if needed: Finder 90.21 | Checked against the Finder 88 series datasheet (XI-2018), see [the replacement table below](#replacement-for-the-sc210-finder-8802). The **5–6 bridge in the socket must be removed**. Must be fitted by authorised personnel. |
 | Pilot lamp | BA9s, 24 V 2 W, tubular T10 | Or a BA9s LED lamp, 24 V AC/DC |
+
+#### Replacement for the SC210: Finder 88.02
+
+Pin-out from the Finder 88 series datasheet (XI-2018), compared with the SC210:
+
+| Pin | SC210 | Finder 88.02 | Same? |
+| --- | --- | --- | --- |
+| 2 – 10 | Supply 24 VAC | Supply (A1 = 2, A2 = 10), 24–230 V AC/DC | Yes |
+| 1 / 3 / 4 | Common / NO / NC | 11 common / 14 NO / 12 NC | Yes |
+| 11 / 9 / 8 | Common / NO / NC | 31 common / 34 NO / 32 NC | Yes |
+| 5 | Mode bridge (5–6 = pulse on energization) | **Pause input** (closing 2–5 stops the timing) | No |
+| 6 | Mode bridge | **Start signal input** (2–6), only for functions BE, CEa, DE | No |
+| 7 | Mode bridge (6–7 = pulse on de-energization) | **Reset input** (closing 2–7 resets the timer) | No |
+
+**How to fit it:**
+
+1. Main isolator off and locked. Authorised personnel only.
+2. **Remove the 5–6 bridge** in the socket, and check that nothing else is connected to socket terminals 5, 6 and 7. On the Finder these are control inputs.
+3. **Before plugging it in**, set the function selector to **DI** (Interval: the contacts close when power is applied and open after the set time, even if power stays on) and the time to **0.5 s**: unit "s", scale 1 s, knob at 0.5 (or scale 0.5 s at full scale). Finder: "time scales and functions must be set before energising the timer".
+4. Test with no sheet in the shear: one stroke per pedal press, also when the pedal is held. The yellow LED shows power, the red LED shows that the timer is timing.
+
+Notes from the datasheet: recovery time 300 ms (release the pedal at least 0.3 s before the next press), setting accuracy ±3 % of full scale, contacts AgNi 8 A, power 1 W at 24 V.
 
 ## 6. Open questions
 
