@@ -136,9 +136,15 @@ Målinger på SC210, tatt ut av maskinen (13. november 2026):
 
 **Konklusjon så langt:** transformatoren og reléspolen er OK. Kontaktene i utgangsreléet er slitte (høy og ustabil motstand), og elektrolyttkondensatorene er omtrent 35 år gamle. Begge deler kan hindre at pulsen på 0,5 s kommer fram. Hele reléet er **ikke** testet med 24 V AC på pinne 2–10 ennå ([test D](#53-slik-tester-du-enkeltslagsreléet)).
 
-**Planlagt reparasjon:** bytte utgangsreléet ER23002L og de to 220 µF-kondensatorene (se [5.4](#54-reservedeler)), deretter kjøre test D og teste maskinen.
+**Planlagt reparasjon:** bytte de to 220 µF-kondensatorene og ved behov utgangsreléet ER23002L (se [5.4](#54-reservedeler)), deretter kjøre test D og teste maskinen.
 
-*Skriv inn resultatet her når reparasjonen er gjort: dato, hva som ble byttet, og om enkeltslag virker.*
+**13. november 2026:** de to Frako 220 µF 40 V-kondensatorene ble byttet til FMZ 220 µF 50 V 105 °C (10 × 13 mm). Utgangsreléet er ikke byttet ennå.
+
+![Figur 12: kretskortet med de nye kondensatorene](images/12-new-capacitors.jpg)
+
+*Figur 12. SC210-kortet med de to nye 220 µF 50 V-kondensatorene (nederst). De gamle Frako-kondensatorene ligger til høyre.*
+
+*Neste steg: kjør test D med 24 V AC og skriv inn resultatet her: gir reléet én puls på 0,5 s, og virker enkeltslag i maskinen?*
 
 ### 5.3 Slik tester du enkeltslagsreléet
 

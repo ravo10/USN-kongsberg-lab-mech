@@ -136,9 +136,15 @@ Measurements on the SC210, taken out of the machine (13 November 2026):
 
 **Conclusion so far:** the transformer and the relay coil are OK. The output relay's contacts are worn (high and unstable resistance), and the electrolytic capacitors are about 35 years old. Either can stop the 0.5 s pulse from getting through. The whole relay has **not yet** been tested with 24 VAC on pins 2–10 ([test D](#53-how-to-test-the-one-shot-relay)).
 
-**Planned repair:** replace the output relay ER23002L and the two 220 µF capacitors (see [5.4](#54-spare-parts)), then run test D and test the machine.
+**Planned repair:** replace the two 220 µF capacitors and, if needed, the output relay ER23002L (see [5.4](#54-spare-parts)), then run test D and test the machine.
 
-*Add the result here when the repair is done: date, what was replaced, and whether single-stroke mode works.*
+**13 November 2026:** the two Frako 220 µF 40 V capacitors were replaced with FMZ 220 µF 50 V 105 °C (10 × 13 mm). The output relay has not been replaced yet.
+
+![Figure 12: the board with the new capacitors](images/12-new-capacitors.jpg)
+
+*Figure 12. The SC210 board with the two new 220 µF 50 V capacitors (bottom). The old Frako capacitors are on the right.*
+
+*Next: run test D with 24 VAC and add the result here: does the relay give one 0.5 s pulse, and does single-stroke mode work in the machine?*
 
 ### 5.3 How to test the one-shot relay
 
