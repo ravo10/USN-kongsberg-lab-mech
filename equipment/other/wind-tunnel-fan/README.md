@@ -2,7 +2,7 @@
 
 Other lab equipment · USN Kongsberg · Updated 13 November 2026
 
-> **Norsk versjon:** [README.no.md](README.no.md) · **Measurement workbook:** [fan-motor-measurements.xlsx](fan-motor-measurements.xlsx) · **Wiring diagram:** [PDF (A3)](wiring-diagram-v20.pdf), [PNG](wiring-diagram-v20.png), [SVG (editable)](wiring-diagram-v20.svg)
+> **Norsk versjon:** [README.no.md](README.no.md) · **Measurement workbook:** [fan-motor-measurements.xlsx](fan-motor-measurements.xlsx) · **Wiring diagram:** [PDF (A3)](wiring-diagram-v20.pdf), [PNG](wiring-diagram-v20.png), [SVG (editable)](wiring-diagram-v20.svg) · **Quick card (A4):** [EN](quick-card-en.pdf), [NO](quick-card-no.pdf)
 
 **Status:** in progress. The motor has been identified and the drive wiring is drawn, but nothing has been connected to mains yet. The wiring diagram is a **draft** that must be checked and approved by authorised personnel before installation.
 
@@ -156,5 +156,6 @@ The **thermal contact** is wired through relay K1 on the 230 V side, because it 
 | --- | --- |
 | [fan-motor-measurements.xlsx](fan-motor-measurements.xlsx) | Guide, resistance matrix, spin and DC test, polarity test, V20 wiring and parameters |
 | [wiring-diagram-v20.pdf](wiring-diagram-v20.pdf) / [.png](wiring-diagram-v20.png) / [.svg](wiring-diagram-v20.svg) | Wiring diagram for the electrician (draft) |
+| [quick-card-en.pdf](quick-card-en.pdf) / [quick-card-no.pdf](quick-card-no.pdf) | One-page A4 card to keep at the fan: start, stop, faults, first-run checklist (source: `quick-card-*.html`) |
 
 Source for terminal numbers and parameters: *SINAMICS V20 Inverter Operating Instructions*, 09/2014, A5E34559884 (Siemens). Page numbers are given in the workbook.

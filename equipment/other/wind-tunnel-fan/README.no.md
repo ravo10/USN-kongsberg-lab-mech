@@ -2,7 +2,7 @@
 
 Annet labutstyr · USN Kongsberg · Oppdatert 13. november 2026
 
-> **English version:** [README.md](README.md) · **Måleark:** [fan-motor-measurements.xlsx](fan-motor-measurements.xlsx) (på engelsk) · **Koblingsskjema:** [PDF (A3)](wiring-diagram-v20.pdf), [PNG](wiring-diagram-v20.png), [SVG (redigerbar)](wiring-diagram-v20.svg)
+> **English version:** [README.md](README.md) · **Måleark:** [fan-motor-measurements.xlsx](fan-motor-measurements.xlsx) (på engelsk) · **Koblingsskjema:** [PDF (A3)](wiring-diagram-v20.pdf), [PNG](wiring-diagram-v20.png), [SVG (redigerbar)](wiring-diagram-v20.svg) · **Hurtigkort (A4):** [NO](quick-card-no.pdf), [EN](quick-card-en.pdf)
 
 **Status:** under arbeid. Motoren er identifisert og koblingen til frekvensomformeren er tegnet, men ingenting er koblet til nettspenning ennå. Koblingsskjemaet er et **utkast**. Det må kontrolleres og godkjennes av autorisert personell før installasjon.
 
@@ -156,5 +156,6 @@ Motoren kobles i **trekant** til en **Siemens SINAMICS V20, 1AC 230 V inn / 3AC 
 | --- | --- |
 | [fan-motor-measurements.xlsx](fan-motor-measurements.xlsx) | Veiledning, motstandsmatrise, spinn- og DC-test, polaritetstest, V20-kobling og parametere (på engelsk) |
 | [wiring-diagram-v20.pdf](wiring-diagram-v20.pdf) / [.png](wiring-diagram-v20.png) / [.svg](wiring-diagram-v20.svg) | Koblingsskjema til elektrikeren (utkast, på engelsk) |
+| [quick-card-no.pdf](quick-card-no.pdf) / [quick-card-en.pdf](quick-card-en.pdf) | A4-hurtigkort til å ha ved viften: start, stopp, feil, sjekkliste før første kjøring (kilde: `quick-card-*.html`) |
 
 Kilde for klemmenumre og parametere: *SINAMICS V20 Inverter Operating Instructions*, 09/2014, A5E34559884 (Siemens). Sidetall står i målearket.
