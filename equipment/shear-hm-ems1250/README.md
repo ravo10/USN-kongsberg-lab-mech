@@ -150,7 +150,7 @@ After the capacitor change, the board was fed with DC directly on a 220 µF capa
 
 ### 5.3 How to test the one-shot relay
 
-All tests are done with the relay **out of the machine**, on the bench. The highest voltage used is 24 V.
+All tests are done with the relay **out of the machine**, on the bench. The highest voltage used is about 30 V DC (test E); all tests are at extra-low voltage.
 
 **A. Contacts and transformer (unpowered, multimeter on Ω / continuity)**
 

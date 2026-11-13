@@ -150,7 +150,7 @@ Etter kondensatorbyttet ble kortet forsynt med likespenning direkte på en 220 �
 
 ### 5.3 Slik tester du enkeltslagsreléet
 
-Alle testene gjøres med reléet **tatt ut av maskinen**, på benken. Høyeste spenning er 24 V.
+Alle testene gjøres med reléet **tatt ut av maskinen**, på benken. Høyeste spenning er omtrent 30 V DC (test E); alle testene er på lavspenning under 50 V.
 
 **A. Kontakter og transformator (uten spenning, multimeter på Ω / gjennomgang)**
 
