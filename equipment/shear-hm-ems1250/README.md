@@ -144,7 +144,9 @@ Measurements on the SC210, taken out of the machine (13 November 2026):
 
 *Figure 12. The SC210 board with the two new 220 µF 50 V capacitors (bottom). The old Frako capacitors are on the right.*
 
-*Next: run test D with 24 VAC and add the result here: does the relay give one 0.5 s pulse, and does single-stroke mode work in the machine?*
+After the capacitor change, the board was fed with DC directly on a 220 µF capacitor (test E) and the relay switched on again. The pulse length was not measured.
+
+*Next: test the relay in the machine (no 24 VAC supply on the bench), or run test D with 24 VAC and add the result here: does the relay give one 0.5 s pulse, and does single-stroke mode work in the machine?*
 
 ### 5.3 How to test the one-shot relay
 
@@ -181,6 +183,20 @@ All tests are done with the relay **out of the machine**, on the bench. The high
 | LED, but no click | Output relay, its driver transistor, or capacitors too weak to hold the pulse |
 | Click, but no lamp | Output relay contacts |
 | A clean 0.5 s pulse every time | The relay is OK. The fault is in the machine: the mode selector, the start circuit, the 5–6 bridge in the socket, or loose socket pins. |
+
+Test D needs **AC**. Never put DC on pins 2–10: the relay's transformer does not work on DC, and about 0.7 A flows through its 35 Ω winding.
+
+**E. Without a 24 VAC supply: DC on the capacitor**
+
+This feeds the circuit after the transformer and rectifier, so it tests the timer and the output relay, but not the transformer or the rectifier.
+
+1. Set the lab power supply to **about 30 V DC** with the **current limit at about 100 mA**. Do not go above 34 V.
+2. Connect **+** to the lead of one 220 µF capacitor that is **not** on the stripe side, and **−** to the striped lead.
+3. Switch the supply on: the LED should light and the relay should click and release after about 0.5 s, with the lamp on 1–3 flashing once.
+
+**F. In the machine**
+
+Only with authorised personnel: main isolator off and locked while the relay is plugged in. Then, with no sheet in the shear, select single-stroke and press start. The "RELAY ON" LED should flash once, the knife should make **one** stroke and stop at the top, and holding the start signal must **not** give a second stroke.
 
 ### 5.4 Spare parts
 

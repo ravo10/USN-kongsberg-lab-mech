@@ -144,7 +144,9 @@ Målinger på SC210, tatt ut av maskinen (13. november 2026):
 
 *Figur 12. SC210-kortet med de to nye 220 µF 50 V-kondensatorene (nederst). De gamle Frako-kondensatorene ligger til høyre.*
 
-*Neste steg: kjør test D med 24 V AC og skriv inn resultatet her: gir reléet én puls på 0,5 s, og virker enkeltslag i maskinen?*
+Etter kondensatorbyttet ble kortet forsynt med likespenning direkte på en 220 µF-kondensator (test E), og reléet slo inn igjen. Pulslengden ble ikke målt.
+
+*Neste steg: test reléet i maskinen (det fantes ingen 24 V AC-forsyning på benken), eller kjør test D med 24 V AC og skriv inn resultatet her: gir reléet én puls på 0,5 s, og virker enkeltslag i maskinen?*
 
 ### 5.3 Slik tester du enkeltslagsreléet
 
@@ -181,6 +183,20 @@ Alle testene gjøres med reléet **tatt ut av maskinen**, på benken. Høyeste s
 | Lysdiode, men ikke noe klikk | Utgangsreléet, transistoren som driver det, eller kondensatorer som er for svake til å holde pulsen |
 | Klikk, men ingen lampe | Kontaktene i utgangsreléet |
 | En ren puls på 0,5 s hver gang | Reléet er OK. Feilen sitter i maskinen: velgerbryteren, startkretsen, laskingen 5–6 i sokkelen eller løse sokkelpinner. |
+
+Test D krever **vekselspenning**. Sett aldri likespenning på pinne 2–10: transformatoren i reléet virker ikke på likespenning, og det går omtrent 0,7 A gjennom viklingen på 35 Ω.
+
+**E. Uten 24 V AC-forsyning: likespenning på kondensatoren**
+
+Dette forsyner kretsen etter transformatoren og likeretteren, så det tester tidskretsen og utgangsreléet, men ikke transformatoren eller likeretteren.
+
+1. Still labforsyningen på **omtrent 30 V DC** med **strømgrensen på omtrent 100 mA**. Ikke gå over 34 V.
+2. Koble **+** til benet på en av 220 µF-kondensatorene som **ikke** er på stripesiden, og **−** til benet på stripesiden.
+3. Slå på forsyningen: lysdioden skal lyse, og reléet skal klikke og slippe etter omtrent 0,5 s, med lampen på 1–3 som blinker én gang.
+
+**F. I maskinen**
+
+Bare med fagperson: hovedbryteren av og låst mens reléet settes i. Deretter, uten plate i saksen, velg enkeltslag og trykk start. Lysdioden «RELAY ON» skal blinke én gang, kniven skal gjøre **ett** slag og stoppe i toppen, og å holde startsignalet inne skal **ikke** gi et nytt slag.
 
 ### 5.4 Reservedeler
 
