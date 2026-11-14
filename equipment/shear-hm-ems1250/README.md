@@ -156,7 +156,27 @@ Possible causes, cheapest check first:
 
 Until it is repaired, a sign on the mode selector says that single-stroke mode is out of order.
 
-*Next: check the 5–6 bridge, then the small capacitors, and add the result here.*
+**14 November 2026, component tests on the SC210 board** (multimeter; capacitors and transistors measured out of the board, resistors on the board):
+
+| Part | Marking | Measured | Verdict |
+| --- | --- | --- | --- |
+| 5–6 bridge (socket and wires to the board) | – | Continuity | OK |
+| Electrolytic capacitor, gold (Roederstein) | 10 µF 63 V | 11.4 µF | OK (probably the timing capacitor) |
+| Electrolytic capacitor, blue | 1 µF 100 V | 0.9 µF | OK |
+| Tantalum capacitor, green bead | 0,1 µF 35 V | 88.1 nF | OK |
+| Film capacitor, orange (Philips MKT) | 0.1 µF 250 V ±10 % | – | Not tested (rarely fails) |
+| 2 × transistor, Philips BC547B (NPN, legs C–B–E with the flat side towards you) | C547B | B–C 0.687 / 0.697 V, B–E 0.693 / 0.702 V | OK |
+| Diodes 1N4148 | 4148 | Forward and reverse | OK |
+| Resistor | brown-blue-brown (160 Ω) or brown-black-brown (100 Ω) | 99.6 Ω | Check the colour code with one leg lifted |
+| Resistor | red-red-orange (22 kΩ) | 21 kΩ | OK |
+| Resistor | yellow-violet-red (4.7 kΩ) | 4 kΩ (coarse range) | Probably OK, re-measure on the 20 kΩ range |
+| Resistor | orange-orange-red (3.3 kΩ) | 2 kΩ (coarse range) | Lower on the board is normal (parallel parts), re-measure on the 20 kΩ range |
+| Resistor | red-violet-orange (27 kΩ) | 26 kΩ | OK |
+| Resistor | brown-black-brown (100 Ω) | 99 Ω | OK |
+
+No part has failed a static test so far. Still to do: the leak test on the 10 µF and tantalum capacitors (highest Ω range, the reading must climb towards MΩ), and re-measuring the 3.3 kΩ and 4.7 kΩ resistors. A fault that only shows with power on cannot be found with these tests; then the Finder 88.02 (see [5.4](#54-spare-parts)) is the practical fix.
+
+*Next: leak test, then either repair or fit the Finder 88.02, and add the result here.*
 
 ### 5.3 How to test the one-shot relay
 

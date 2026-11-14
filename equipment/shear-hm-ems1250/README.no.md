@@ -156,7 +156,27 @@ Mulige årsaker, billigste kontroll først:
 
 Til feilen er rettet, henger det et skilt ved velgerbryteren om at enkeltslag er ute av drift.
 
-*Neste steg: kontroller laskingen 5–6, deretter de små kondensatorene, og skriv inn resultatet her.*
+**14. november 2026, komponenttester på SC210-kortet** (multimeter; kondensatorer og transistorer målt utenfor kortet, motstander på kortet):
+
+| Del | Merking | Målt | Vurdering |
+| --- | --- | --- | --- |
+| Lasking 5–6 (sokkel og ledninger til kortet) | – | Gjennomgang | OK |
+| Elektrolyttkondensator, gull (Roederstein) | 10 µF 63 V | 11,4 µF | OK (trolig tidskondensatoren) |
+| Elektrolyttkondensator, blå | 1 µF 100 V | 0,9 µF | OK |
+| Tantalkondensator, grønn dråpe | 0,1 µF 35 V | 88,1 nF | OK |
+| Filmkondensator, oransje (Philips MKT) | 0,1 µF 250 V ±10 % | – | Ikke testet (svikter sjelden) |
+| 2 × transistor, Philips BC547B (NPN, bena C–B–E med flat side mot deg) | C547B | B–C 0,687 / 0,697 V, B–E 0,693 / 0,702 V | OK |
+| Dioder 1N4148 | 4148 | Lederetning og sperreretning | OK |
+| Motstand | brun-blå-brun (160 Ω) eller brun-svart-brun (100 Ω) | 99,6 Ω | Kontroller fargekoden med ett ben løftet |
+| Motstand | rød-rød-oransje (22 kΩ) | 21 kΩ | OK |
+| Motstand | gul-fiolett-rød (4,7 kΩ) | 4 kΩ (grovt område) | Trolig OK, mål på nytt i 20 kΩ-området |
+| Motstand | oransje-oransje-rød (3,3 kΩ) | 2 kΩ (grovt område) | Lavere på kortet er normalt (parallelle deler), mål på nytt i 20 kΩ-området |
+| Motstand | rød-fiolett-oransje (27 kΩ) | 26 kΩ | OK |
+| Motstand | brun-svart-brun (100 Ω) | 99 Ω | OK |
+
+Ingen del har feilet en statisk test så langt. Gjenstår: lekkasjetest på 10 µF- og tantalkondensatoren (høyeste Ω-område, avlesningen skal stige mot MΩ), og ny måling av motstandene på 3,3 kΩ og 4,7 kΩ. En feil som bare viser seg med spenning på, finnes ikke med disse testene; da er Finder 88.02 (se [5.4](#54-reservedeler)) den praktiske løsningen.
+
+*Neste steg: lekkasjetest, deretter reparasjon eller montering av Finder 88.02, og skriv inn resultatet her.*
 
 ### 5.3 Slik tester du enkeltslagsreléet
 
