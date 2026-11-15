@@ -4,7 +4,7 @@ Workshop · USN Kongsberg · Updated 13 November 2026
 
 > **Norsk versjon:** [README.no.md](README.no.md)
 
-**Status:** in progress. **Single-stroke ("one-shot") mode does not work** at the moment; continuous mode works. **Cause found (15 November 2026):** the home-made cam that should press the top-of-stroke switch once per revolution does not reach it. The electrics are OK. A new cam is needed, see [the fault log](#52-fault-log). There is no student operating guide yet: follow the posted instruction on the machine and ask the lab supervisor before use.
+**Status:** in progress. **Single-stroke ("one-shot") mode does not work** at the moment; continuous mode works. **Cause found (15 November 2026):** the **roller-lever head of the top-of-stroke switch was mounted the wrong way round**, so the actuator on the shaft folded the lever away instead of pressing the switch. The electrics are OK. Fix: turn the head 180° and test, see [the fault log](#52-fault-log). There is no student operating guide yet: follow the posted instruction on the machine and ask the lab supervisor before use.
 
 **Location:** not yet on the [lab map](../../labs/map/README.md).
 
@@ -245,6 +245,14 @@ Only if the direction is correct should the switch be turned around or the actua
 **Power terminals in the electrical box** (terminal strip, top to bottom): **R, S, T** (incoming three-phase supply) · earth bar · **R1, S1, T1** · **J** (earth; "jord" in Danish/Norwegian = protective earth, PE) · **U, V, W** (motor) · **J** (motor earth) · SF, 0, F24, 024, 1 … (control circuit; 024/F24 are probably the 24 V control voltage). The motor leads run through contactor 1 and the CT3-23 overload relay (scale 16–23 A) to U, V, W. The terminals do not show which way the motor turns: that is set by the phase sequence of the supply at R, S, T. Swapping any two motor leads, or any two supply phases, reverses the motor. This is 400 V work for an electrician only.
 
 **Direction check (15 November 2026):** in one stroke the **hold-downs clamp first, then the knife cuts**, so the motor most likely runs in the right direction. (If the hold-downs are spring-loaded and pushed by the knife beam itself, they clamp first in either direction; a rotation arrow on the motor or gearbox would confirm it.) Conclusion: the switch or its actuator was fitted for the wrong direction. Fix: turn the switch around or remake the actuator, then test as below.
+
+**Final cause (15 November 2026): the roller-lever head was mounted the wrong way round.** The head of the Bernstein switch is held by four screws and can be mounted in different directions. Its lever is **hinged with a spring (a one-way lever)**: pushed from one side it presses the plunger and opens the switch; pushed from the other side it just folds away and the switch does nothing. Someone had taken the head off and put it back **180° the wrong way**, so the actuator on the shaft folded the lever away on every turn. Fix: turn the head 180° so that the actuator pushes the lever in the direction that presses the plunger.
+
+![Figure 17: the roller-lever head taken off the switch](images/17-roller-lever-head.jpg)
+
+*Figure 17. The roller-lever head (black, four screws) taken off the switch body (red) with its plunger. The lever is hinged with a spring, so it only presses the plunger when pushed from one side.*
+
+**When refitting the head:** check the plunger seal, tighten the four screws evenly, and before closing the machine push the lever by hand in the shaft's direction of rotation: it must press the plunger (the contact between wires 1 and 4 changes), and pushed the other way it must fold away. Then run the test below.
 
 **Test after fitting** (with no sheet, hands clear): 20 or more single strokes with the pedal held. The knife must stop at the top **every time**, and must never make a second stroke while the pedal is held. Check that the cam is still tight afterwards. Single-stroke is a safety function on a guillotine, so the new cam should be checked by the person responsible for the machine before it is used again.
 

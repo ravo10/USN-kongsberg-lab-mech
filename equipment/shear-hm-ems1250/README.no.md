@@ -4,7 +4,7 @@ Verksted · USN Kongsberg · Oppdatert 13. november 2026
 
 > **English version:** [README.md](README.md)
 
-**Status:** under arbeid. **Enkeltslag («one-shot») virker ikke** for øyeblikket; kontinuerlig drift virker. **Årsaken er funnet (15. november 2026):** den hjemmelagde kammen som skal trykke inn toppbryteren én gang per omdreining, når ikke fram til den. Elektrikken er OK. Det trengs en ny kam, se [feilloggen](#52-feillogg). Det finnes ingen studentveiledning ennå: følg instruksen som henger på maskinen, og spør labansvarlig før bruk.
+**Status:** under arbeid. **Enkeltslag («one-shot») virker ikke** for øyeblikket; kontinuerlig drift virker. **Årsaken er funnet (15. november 2026):** **rullearmhodet på toppbryteren var montert feil vei**, så aktivatoren på akselen bøyde armen unna i stedet for å trykke inn bryteren. Elektrikken er OK. Retting: snu hodet 180° og test, se [feilloggen](#52-feillogg). Det finnes ingen studentveiledning ennå: følg instruksen som henger på maskinen, og spør labansvarlig før bruk.
 
 **Plassering:** ikke lagt inn på [labkartet](../../labs/map/README.md) ennå.
 
@@ -245,6 +245,14 @@ Bare hvis retningen er riktig, skal bryteren snus eller aktivatoren lages på ny
 **Kraftklemmer i el-skapet** (rekkeklemmene, ovenfra og ned): **R, S, T** (innkommende trefase) · jordskinne · **R1, S1, T1** · **J** (jord, PE) · **U, V, W** (motor) · **J** (motorjord) · SF, 0, F24, 024, 1 … (styrekretsen; 024/F24 er trolig styrespenningen på 24 V). Motorledningene går gjennom kontaktor 1 og motorvernet CT3-23 (skala 16–23 A) til U, V, W. Klemmene viser ikke hvilken vei motoren går: det bestemmes av fasefølgen på forsyningen inn på R, S, T. Bytter man to motorledninger, eller to faser på forsyningen, snur motoren. Dette er 400 V-arbeid som bare skal gjøres av elektriker.
 
 **Kontroll av retningen (15. november 2026):** i ett slag **klemmer nedholderne først, deretter klipper kniven**, så motoren går mest sannsynlig riktig vei. (Er nedholderne fjærbelastet og skyves av knivbjelken selv, klemmer de først uansett retning; en pil for dreieretning på motoren eller giret vil bekrefte det.) Konklusjon: bryteren eller aktivatoren er montert for feil retning. Retting: snu bryteren eller lag aktivatoren på nytt, og test som beskrevet under.
+
+**Endelig årsak (15. november 2026): rullearmhodet var montert feil vei.** Hodet på Bernstein-bryteren er festet med fire skruer og kan monteres i ulike retninger. Armen er **hengslet med en fjær (en enveis arm)**: skyves den fra den ene siden, trykker den inn stempelet og åpner bryteren; skyves den fra den andre siden, bøyer den seg bare unna, og bryteren gjør ingenting. Noen hadde tatt av hodet og satt det på igjen **180° feil vei**, så aktivatoren på akselen bøyde armen unna hver omdreining. Retting: snu hodet 180° slik at aktivatoren skyver armen i den retningen som trykker inn stempelet.
+
+![Figur 17: rullearmhodet tatt av bryteren](images/17-roller-lever-head.jpg)
+
+*Figur 17. Rullearmhodet (svart, fire skruer) tatt av bryterhuset (rødt) med stempelet. Armen er hengslet med en fjær, så den trykker bare inn stempelet når den skyves fra én side.*
+
+**Når hodet monteres igjen:** kontroller pakningen rundt stempelet, stram de fire skruene jevnt, og skyv armen for hånd i akselens dreieretning før maskinen lukkes: den skal trykke inn stempelet (kontakten mellom ledning 1 og 4 skifter), og skjøvet den andre veien skal den bøye seg unna. Kjør deretter testen under.
 
 **Test etter montering** (uten plate, hendene unna): 20 eller flere enkeltslag med pedalen holdt inne. Kniven skal stoppe i toppen **hver gang**, og skal aldri gjøre et nytt slag mens pedalen holdes. Kontroller at kammen fortsatt sitter fast etterpå. Enkeltslag er en sikkerhetsfunksjon på en platesaks, så den nye kammen bør kontrolleres av den som er ansvarlig for maskinen før den tas i bruk igjen.
 
