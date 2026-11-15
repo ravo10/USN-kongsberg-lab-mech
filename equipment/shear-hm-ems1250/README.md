@@ -6,7 +6,7 @@ Workshop · USN Kongsberg · Updated 13 November 2026
 
 **Status:** machine page and maintenance log. **Repaired 15 November 2026:** single-stroke and continuous mode both work again. The fault was the roller-lever head of the top-of-stroke switch, which had been mounted the wrong way round, see [the fault log](#52-fault-log). There is no student operating guide yet: follow the posted instruction on the machine and ask the lab supervisor before use.
 
-**Location:** not yet on the [lab map](../../labs/map/README.md).
+**Location:** Prototype lab (Prototypelabben), 1st floor (see the [lab map](../../labs/map/README.md)).
 
 An electric plate shear (guillotine) for cutting sheet metal up to 1250 mm wide and 4.0 mm thick. This page records what we know about the machine and its electrics, and the measurements made while repairing it, so the next person does not have to start from scratch.
 
@@ -352,7 +352,6 @@ Notes from the datasheet: recovery time 300 ms (release the pedal at least 0.3 s
 
 ## 6. Open questions
 
-- Where is the machine (which lab)? Add it to the [lab map](../../labs/map/README.md).
 - What does contactor 2 do?
 - Is the Feinwerkbau 01.505 the stroke counter?
 - Is there a wiring diagram for the EMS-1250?

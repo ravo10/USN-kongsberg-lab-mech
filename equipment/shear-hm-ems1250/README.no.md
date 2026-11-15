@@ -6,7 +6,7 @@ Verksted · USN Kongsberg · Oppdatert 13. november 2026
 
 **Status:** maskinside og vedlikeholdslogg. **Reparert 15. november 2026:** enkeltslag og kontinuerlig drift virker igjen. Feilen var rullearmhodet på toppbryteren, som var montert feil vei, se [feilloggen](#52-feillogg). Det finnes ingen studentveiledning ennå: følg instruksen som henger på maskinen, og spør labansvarlig før bruk.
 
-**Plassering:** ikke lagt inn på [labkartet](../../labs/map/README.md) ennå.
+**Plassering:** Prototypelabben, 1. etasje (se [labkartet](../../labs/map/README.md)).
 
 En elektrisk platesaks (giljotin) for å klippe metallplater opptil 1250 mm brede og 4,0 mm tykke. Denne siden samler det vi vet om maskinen og elektrikken, og målingene fra reparasjonen, slik at neste person slipper å starte på nytt.
 
@@ -352,7 +352,6 @@ Fra databladet: gjenopprettingstid 300 ms (slipp pedalen minst 0,3 s før neste 
 
 ## 6. Åpne spørsmål
 
-- Hvor står maskinen (hvilken lab)? Legg den inn på [labkartet](../../labs/map/README.md).
 - Hva gjør kontaktor 2?
 - Er Feinwerkbau 01.505 slagtelleren?
 - Finnes det et koblingsskjema for EMS-1250?

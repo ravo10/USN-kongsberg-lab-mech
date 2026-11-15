@@ -80,7 +80,7 @@ equipment:
     image_pos: 50% 62%   # which part of the photo the card shows (x y)
     icon: shear
     status: in-progress
-    used_in: student projects
+    used_in: student projects (Prototypelabben)
   - title: Other
     kind: Other lab equipment · parts, rigs and instruments
     url: /equipment/other/

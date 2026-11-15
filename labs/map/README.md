@@ -14,7 +14,7 @@ Mechanical engineering labs at USN, campus Kongsberg.
 | --- | --- | --- | --- |
 | Composite lab | Komposittlabben | 1st | [Stepcraft M700 CNC mill](../../equipment/cnc-stepcraft-m700/README.md) |
 | Measurement lab + 3D printer lab | Måleteknisk lab | 2nd | [Modix BIG-60 3D printer](../../equipment/3d-printer-modix-big60/README.md) |
-| Prototype lab | Prototypelabben | 1st | Drill bits for drilling out small holes in CNC parts (ask for access to the lock) |
+| Prototype lab | Prototypelabben | 1st | [HM EMS-1250 plate shear](../../equipment/shear-hm-ems1250/README.md) · Drill bits for drilling out small holes in CNC parts (ask for access to the lock) |
 | Quantum lab | | 1st | – |
 | Welding area | | 1st | – |
 | Tinius Olsen lab | | 1st | – |
@@ -22,4 +22,4 @@ Mechanical engineering labs at USN, campus Kongsberg.
 | Bergseminaret prototype lab (USN and KB Group) | | – | – |
 | External area | | 4th | – |
 
-Not yet placed on the map: [Matsuzawa MXT50](../../equipment/hardness-vickers-matsuzawa-mxt50/README.md), [Lloyd LR 10K](../../equipment/tensile-lloyd-lr10k/README.md), [lab furnaces](../../equipment/furnace-heat-treatment/README.md), [grinding and polishing machines](../../equipment/polisher-metallographic/README.md) and the [HM EMS-1250 plate shear](../../equipment/shear-hm-ems1250/README.md). Their labs will be added here.
+Not yet placed on the map: [Matsuzawa MXT50](../../equipment/hardness-vickers-matsuzawa-mxt50/README.md), [Lloyd LR 10K](../../equipment/tensile-lloyd-lr10k/README.md), [lab furnaces](../../equipment/furnace-heat-treatment/README.md) and [grinding and polishing machines](../../equipment/polisher-metallographic/README.md). Their labs will be added here.
