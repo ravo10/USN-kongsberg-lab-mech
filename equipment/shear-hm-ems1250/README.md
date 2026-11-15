@@ -203,7 +203,9 @@ Check of the first cause (power off, relay out): socket terminals 5 and 6 beep *
 
 **LED test in the machine:** with the pedal held, the "RELAY ON" LED goes out after **about 0.5 s** in **both** selector positions, but the knife keeps cycling. With the pedal up the LED glows faintly, so the 9.9 VAC measured earlier on terminals 2–10 is a real (weak) voltage, not only a ghost voltage. **The SC210 works correctly in the machine.** The stroke is kept going by something else, and the selector makes no difference: either the selector is stuck in "continuous", or the switch that should stop the knife at the top does not open.
 
-*Next (power off, relay out): measure socket terminals 1–3 in both selector positions, then the selector's contact blocks, then the top-of-stroke switch.*
+**Mode selector, first contact block** (power off, relay out, measured on the board): one terminal goes via the blue wire to the **pedal**, whose black return wire goes to socket terminal **2** (relay supply). The other terminal has continuity to socket terminals 1, 3 and 10. **Single-stroke: closed. Continuous: 140–180 Ω.** So this contact switches, and in single-stroke it lets the pedal feed the relay. The 140–180 Ω is most likely a coil or lamp elsewhere in the circuit measured in parallel, not a leaking switch; lift one wire off the contact to confirm OL.
+
+*Next: test the selector's second contact block the same way (lift a wire, both positions), and record where its wires go. Then find the top-of-stroke switch.*
 
 ### 5.3 How to test the one-shot relay
 
