@@ -208,7 +208,7 @@ Kontroll av første årsak (strømmen av, reléet ute): sokkelklemme 5 og 6 pipe
 
 ![Figur 15: toppbryteren](images/15-top-of-stroke-switch.jpg)
 
-*Figur 15. Toppbryteren (Bernstein classic, rullearm) over hovedakselen.*
+*Figur 15. Toppbryteren (Bernstein classic, rullearm) over hovedakselen, slik den ble funnet. **Rullearmhodet er montert feil vei** (180° feil), så aktivatoren bøyer armen unna i stedet for å trykke inn bryteren. Dette var årsaken til feilen; figur 18 viser riktig retning.*
 
 **15. november 2026: årsaken er funnet. Den er mekanisk, ikke elektrisk.** Kammen som skal trykke inn toppbryteren, er **hjemmelaget**: en U-bolt-rørklemme rundt hovedakselen med en kort tapp sveiset på salen (figur 16). Tappen **når ikke fram til rullen**, så bryteren åpnes aldri i toppen, og holdekretsen holder motoren i gang.
 

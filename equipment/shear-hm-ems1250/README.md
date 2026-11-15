@@ -208,7 +208,7 @@ Check of the first cause (power off, relay out): socket terminals 5 and 6 beep *
 
 ![Figure 15: the top-of-stroke switch](images/15-top-of-stroke-switch.jpg)
 
-*Figure 15. The top-of-stroke switch (Bernstein classic, roller lever) above the main shaft.*
+*Figure 15. The top-of-stroke switch (Bernstein classic, roller lever) above the main shaft, as it was found. **The roller-lever head is mounted the wrong way round** (180° wrong), so the actuator folds the lever away instead of pressing the switch. This was the cause of the fault; Figure 18 shows the correct direction.*
 
 **15 November 2026: cause found. It is mechanical, not electrical.** The cam that should press the top-of-stroke switch is **home-made**: a U-bolt pipe clamp around the main shaft with a short pin welded to its saddle (Figure 16). The pin **does not reach the roller**, so the switch is never opened at the top and the hold path keeps the motor running.
 
