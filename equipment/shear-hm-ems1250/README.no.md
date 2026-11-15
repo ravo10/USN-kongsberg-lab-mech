@@ -176,7 +176,17 @@ Til feilen er rettet, henger det et skilt ved velgerbryteren om at enkeltslag er
 
 Ingen del har feilet en statisk test så langt. Gjenstår: lekkasjetest på 10 µF- og tantalkondensatoren (høyeste Ω-område, avlesningen skal stige mot MΩ), og ny måling av motstandene på 3,3 kΩ og 4,7 kΩ. En feil som bare viser seg med spenning på, finnes ikke med disse testene; da er Finder 88.02 (se [5.4](#54-reservedeler)) den praktiske løsningen.
 
-*Neste steg: lekkasjetest, deretter reparasjon eller montering av Finder 88.02, og skriv inn resultatet her.*
+Lekkasjetester (høyeste Ω-område): kondensatorene på 10 µF, 1 µF og 0,1 µF stiger alle til OL, så ingen av dem lekker. Motstanden som først ble lest som brun-blå-brun, er brun-svart-brun (100 Ω), så alle seks motstandene er OK.
+
+**15. november 2026, test D med maskinens egen 24 V AC:** to ledninger ble koblet til sokkelklemme 2 og 10 (strømmen av og låst under tilkoblingen), og SC210 ble testet på en gummimatte på bordet, med 5–6 lasket og multimeteret (gjennomgang) på 1–3. Målt på ledningene uten reléet: **29,9 V AC med pedalen nede** (uten last) og 9,9 V AC med pedalen oppe (trolig en «spøkelsesspenning» på en åpen ledning; kontroller med last). Med reléet tilkoblet og pedalen **holdt nede** pep multimeteret i **omtrent 0,5 s og stoppet så**: **SC210 virker nå riktig på benken.**
+
+![Figur 13: benktest med maskinens 24 V AC](images/13-bench-test-machine-24vac.jpg)
+
+*Figur 13. Test D med maskinens 24 V AC: ledninger fra sokkelklemme 2 og 10 (rød, grønn) klipset til pinne 2 og 10 på reléet, en trådlasking på 5–6, og multimeteret på 1–3.*
+
+Siden forrige test i maskinen er det arbeidet på kortet: transistorene ble loddet ut og inn igjen, og kondensatorer ble byttet. En sprukket loddeskjøt som ble rettet ved omlodding, er en mulig forklaring.
+
+*Neste steg: sett SC210 tilbake i sokkelen og gjenta test F. Virker enkeltslag, er reparasjonen ferdig. Blir reléet fortsatt liggende inne i sokkelen, sitter feilen i sokkelen eller kablingen rundt den.*
 
 ### 5.3 Slik tester du enkeltslagsreléet
 
@@ -203,7 +213,7 @@ Alle testene gjøres med reléet **tatt ut av maskinen**, på benken. Høyeste s
 **D. Hele reléet**
 
 1. Sett reléet i en ledig 11-polet sokkel, eller bruk klemmer på pinnene. Lask **5–6**.
-2. Koble **24 V AC** til **pinne 2 og 10** (fra en egen 24 V AC-transformator, ikke fra maskinen).
+2. Koble **24 V AC** til **pinne 2 og 10**: fra en egen 24 V AC-transformator, eller fra maskinen selv med to ledninger på sokkelklemme 2 og 10 (koblet til med strømmen av og låst, av fagperson; pedalen slår da 24 V AC av og på, og kniven beveger seg ikke fordi reléet står utenfor sokkelen). Kontroller at kniven står stille før reléet kobles til.
 3. Sett lampen (eller multimeteret på gjennomgang) på **1–3**.
 4. Hver gang du slår på 24 V AC skal lysdioden og lampen lyse **én gang, i omtrent et halvt sekund**.
 

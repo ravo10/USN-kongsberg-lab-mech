@@ -176,7 +176,17 @@ Until it is repaired, a sign on the mode selector says that single-stroke mode i
 
 No part has failed a static test so far. Still to do: the leak test on the 10 µF and tantalum capacitors (highest Ω range, the reading must climb towards MΩ), and re-measuring the 3.3 kΩ and 4.7 kΩ resistors. A fault that only shows with power on cannot be found with these tests; then the Finder 88.02 (see [5.4](#54-spare-parts)) is the practical fix.
 
-*Next: leak test, then either repair or fit the Finder 88.02, and add the result here.*
+Leak tests (highest Ω range): the 10 µF, 1 µF and 0.1 µF capacitors all climb to OL, so none of them leaks. The resistor first read as brown-blue-brown is brown-black-brown (100 Ω), so all six resistors are OK.
+
+**15 November 2026, test D with the machine's own 24 VAC:** two leads were fitted to socket terminals 2 and 10 (power off and locked while connecting), and the SC210 was tested on a rubber mat on the table, with 5–6 bridged and the multimeter (continuity) on 1–3. Measured on the leads without the relay: **29.9 VAC with the pedal down** (no load) and 9.9 VAC with the pedal up (probably a ghost voltage on an open wire; check with a load). With the relay connected and the pedal **held down**, the multimeter beeped for **about 0.5 s and then stopped**: **the SC210 now works correctly on the bench.**
+
+![Figure 13: bench test with the machine's 24 VAC](images/13-bench-test-machine-24vac.jpg)
+
+*Figure 13. Test D with the machine's 24 VAC: leads from socket terminals 2 and 10 (red, green) clipped to the relay's pins 2 and 10, a wire bridge on 5–6, and the multimeter on 1–3.*
+
+Since the last test in the machine, the board has been worked on: the transistors were desoldered and soldered back, and capacitors were replaced. A cracked solder joint fixed by resoldering is a possible explanation.
+
+*Next: plug the SC210 back into its socket and repeat test F. If single-stroke mode works, the repair is done. If the relay still stays on in the socket, the fault is in the socket or its wiring.*
 
 ### 5.3 How to test the one-shot relay
 
@@ -203,7 +213,7 @@ All tests are done with the relay **out of the machine**, on the bench. The high
 **D. The whole relay**
 
 1. Plug the relay into a spare 11-pin socket, or use clips on the pins. Bridge **5–6**.
-2. Connect **24 VAC** to **pins 2 and 10** (from a separate 24 VAC transformer, not from the machine).
+2. Connect **24 VAC** to **pins 2 and 10**: from a separate 24 VAC transformer, or from the machine itself with two leads on socket terminals 2 and 10 (fitted with the power off and locked, by authorised personnel; the pedal then switches the 24 VAC, and the knife does not move because the relay is out of its socket). Check that the knife stays still before connecting the relay.
 3. Put the lamp (or the multimeter on continuity) on **1–3**.
 4. Each time you switch on the 24 VAC, the LED and the lamp should light **once, for about half a second**.
 
