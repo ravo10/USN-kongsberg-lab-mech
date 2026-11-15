@@ -253,15 +253,23 @@ Bare hvis retningen er riktig, skal bryteren snus eller aktivatoren lages på ny
 
 **Når hodet monteres igjen:** kontroller pakningen rundt stempelet, stram de fire skruene jevnt, og skyv armen for hånd i akselens dreieretning før maskinen lukkes: den skal trykke inn stempelet (kontakten mellom ledning 1 og 4 skifter), og skjøvet den andre veien skal den bøye seg unna. Kjør deretter testen under.
 
-**Reparasjonen er ferdig (15. november 2026):** rullearmhodet ble snudd 180°, og tappen på aktivatoren på akselen fikk ekstra materiale på tuppen slik at den når rullen sikkert. Testet i maskinen: **enkeltslag** gir ett slag og stopper i toppen med pedalen holdt inne; **kontinuerlig** går så lenge pedalen holdes og stopper når den slippes. Bildene under viser riktig stilling etter reparasjonen. Aktivatoren måtte justeres litt på akselen for at kniven skulle stoppe på riktig sted.
+**Reparasjonen er ferdig (15. november 2026):** rullearmhodet ble snudd 180°, og tappen på aktivatoren på akselen ble gjort tykkere på tuppen slik at den når rullen sikkert: hodet på en sylinderskrue med innvendig sekskant ble tredd på tappen, gjengene ble kappet av, og hodet ble sveiset fast og plandreid (figur 20 og 21). Testet i maskinen: **enkeltslag** gir ett slag og stopper i toppen med pedalen holdt inne; **kontinuerlig** går så lenge pedalen holdes og stopper når den slippes. Bildene under viser riktig stilling etter reparasjonen. Aktivatoren måtte justeres litt på akselen for at kniven skulle stoppe på riktig sted.
 
 ![Figur 18: bryterhodet og aktivatoren i riktig stilling](images/18-switch-and-actuator-correct.jpg)
 
-*Figur 18. Etter reparasjonen, med kniven i hvilestilling: rullearmhodet er snudd riktig vei, og tappen på aktivatoren (med ekstra materiale på tuppen) trykker inn rullen, så bryteren er åpen. Bruk dette som referanse hvis bryteren eller klemmen noen gang flyttes.*
+*Figur 18. Etter reparasjonen, med kniven i hvilestilling: rullearmhodet er snudd riktig vei, og tappen på aktivatoren (med det påsveisede skruehodet på tuppen) trykker inn rullen, så bryteren er åpen. Bruk dette som referanse hvis bryteren eller klemmen noen gang flyttes.*
 
 ![Figur 19: kniven i hvilestilling](images/19-knife-rest-position.jpg)
 
 *Figur 19. Knivbjelken i hvilestilling (toppen av slaget) bak fingervernet, med aktivatoren stilt som i figur 18.*
+
+![Figur 20: slik ble den tykkere tuppen laget](images/20-actuator-tip-making.jpg)
+
+*Figur 20. Slik ble den tykkere tuppen laget: hodet på en sylinderskrue tredd på tappen på aktivatoren, før gjengene ble kappet av.*
+
+![Figur 21: den ferdige tuppen på aktivatoren](images/21-actuator-tip-finished.jpg)
+
+*Figur 21. Den ferdige tuppen: skruehodet sveiset fast på tappen og plandreid. Den større diameteren gjør at tappen når rullen.*
 
 **Test etter montering** (uten plate, hendene unna): 20 eller flere enkeltslag med pedalen holdt inne. Kniven skal stoppe i toppen **hver gang**, og skal aldri gjøre et nytt slag mens pedalen holdes. Kontroller at kammen fortsatt sitter fast etterpå. Enkeltslag er en sikkerhetsfunksjon på en platesaks, så den nye kammen bør kontrolleres av den som er ansvarlig for maskinen før den tas i bruk igjen.
 

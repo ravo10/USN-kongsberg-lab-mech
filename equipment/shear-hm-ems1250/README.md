@@ -253,15 +253,23 @@ Only if the direction is correct should the switch be turned around or the actua
 
 **When refitting the head:** check the plunger seal, tighten the four screws evenly, and before closing the machine push the lever by hand in the shaft's direction of rotation: it must press the plunger (the contact between wires 1 and 4 changes), and pushed the other way it must fold away. Then run the test below.
 
-**Repair done (15 November 2026):** the roller-lever head was turned 180°, and the actuator pin on the shaft was given extra material at its tip so that it reaches the roller reliably. Tested in the machine: **single-stroke** gives one stroke and stops at the top with the pedal held; **continuous** runs while the pedal is held and stops when it is released. The photos below show the correct position after the repair. The actuator needed a little adjustment on the shaft to stop the knife at the right place.
+**Repair done (15 November 2026):** the roller-lever head was turned 180°, and the actuator pin on the shaft was made thicker at its tip so that it reaches the roller reliably: the head of a socket-head cap screw was slid onto the pin, the thread was cut off, and the head was welded on and faced flat (Figures 20 and 21). Tested in the machine: **single-stroke** gives one stroke and stops at the top with the pedal held; **continuous** runs while the pedal is held and stops when it is released. The photos below show the correct position after the repair. The actuator needed a little adjustment on the shaft to stop the knife at the right place.
 
 ![Figure 18: switch head and actuator in the correct position](images/18-switch-and-actuator-correct.jpg)
 
-*Figure 18. After the repair, with the knife at rest: the roller-lever head is turned the right way, and the actuator pin (with extra material on its tip) is pressing the roller, so the switch is open. Use this as the reference if the switch or the clamp is ever moved.*
+*Figure 18. After the repair, with the knife at rest: the roller-lever head is turned the right way, and the actuator pin (with the welded-on screw head on its tip) is pressing the roller, so the switch is open. Use this as the reference if the switch or the clamp is ever moved.*
 
 ![Figure 19: the knife at its rest position](images/19-knife-rest-position.jpg)
 
 *Figure 19. The knife beam at its rest position (top of the stroke) behind the finger guard, with the actuator set as in Figure 18.*
+
+![Figure 20: making the thicker tip](images/20-actuator-tip-making.jpg)
+
+*Figure 20. Making the thicker tip: the head of a socket-head cap screw slid onto the actuator pin, before the thread was cut off.*
+
+![Figure 21: the finished actuator tip](images/21-actuator-tip-finished.jpg)
+
+*Figure 21. The finished tip: the screw head welded onto the pin and faced flat. The larger diameter makes the pin reach the roller.*
 
 **Test after fitting** (with no sheet, hands clear): 20 or more single strokes with the pedal held. The knife must stop at the top **every time**, and must never make a second stroke while the pedal is held. Check that the cam is still tight afterwards. Single-stroke is a safety function on a guillotine, so the new cam should be checked by the person responsible for the machine before it is used again.
 
