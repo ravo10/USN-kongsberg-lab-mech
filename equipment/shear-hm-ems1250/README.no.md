@@ -199,7 +199,9 @@ To mulige årsaker, som skilles av lysdioden «RELAY ON» mens pedalen holdes in
 | **Lyser hele tiden** | Forbindelsen 5–6 blir ikke laget i maskinen. Klemme 5 og 6 er ført ut av sokkelen, kanskje gjennom velgerbryteren (enkeltslag / kontinuerlig) på betjeningspanelet; en slitt kontakt i velgeren gjør at reléet mister «puls»-innstillingen | Strømmen av og låst, reléet ute: mål gjennomgang mellom sokkelklemme **5 og 6** med velgeren på **enkeltslag** og på **kontinuerlig**, og vri velgeren fram og tilbake noen ganger |
 | **Slukker etter 0,5 s**, men kniven fortsetter | Reléet er OK; slaget holdes i gang av holdekretsen (hjelpekontakten på kontaktoren og bryteren som stopper kniven i toppen) | Finn og kontroller toppbryteren (kam- eller endebryter) |
 
-*Neste steg: se hva lysdioden gjør i enkeltslag, og gjør så kontrollen som passer i tabellen over.*
+Kontroll av første årsak (strømmen av, reléet ute): sokkelklemme 5 og 6 piper **i begge stillingene på velgeren**. Forbindelsen 5–6 er fast, og velgeren bryter den ikke, så reléet står alltid på «puls ved innkobling», slik det skal. Velgeren må virke et annet sted, trolig på holdekretsen.
+
+*Neste steg: se hva lysdioden gjør i enkeltslag. Slukker den etter 0,5 s, kontroller kontaktblokkene på velgeren (minst ett par skal skifte mellom enkeltslag og kontinuerlig), deretter toppbryteren.*
 
 ### 5.3 Slik tester du enkeltslagsreléet
 

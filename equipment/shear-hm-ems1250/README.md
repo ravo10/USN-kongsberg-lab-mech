@@ -199,7 +199,9 @@ Two possible causes, told apart by the "RELAY ON" LED while the pedal is held:
 | **Stays on** | The 5–6 link is not made in the machine. Terminals 5 and 6 are wired out of the socket, possibly through the mode selector (single-stroke / continuous) on the control panel; a worn selector contact would leave the relay without its "pulse" setting | Power off and locked, relay out: measure continuity between socket terminals **5 and 6** with the selector in **single-stroke** and in **continuous**, turning the selector a few times |
 | **Goes out after 0.5 s**, but the knife keeps cycling | The relay is fine; the stroke is kept going by the hold circuit (contactor auxiliary contact and the switch that stops the knife at the top) | Find and check the top-of-stroke switch (cam or limit switch) |
 
-*Next: note what the LED does in single-stroke mode, then do the matching check above.*
+Check of the first cause (power off, relay out): socket terminals 5 and 6 beep **in both selector positions**. The 5–6 link is permanent and the selector does not switch it, so the relay is always set to "pulse on energization", as it should be. The selector must act somewhere else, probably on the hold circuit.
+
+*Next: note what the LED does in single-stroke mode. If it goes out after 0.5 s, check the selector's contact blocks (at least one pair must change between single-stroke and continuous), then the top-of-stroke switch.*
 
 ### 5.3 How to test the one-shot relay
 
