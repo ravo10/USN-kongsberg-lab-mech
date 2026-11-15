@@ -71,6 +71,10 @@ We have not found a manual or wiring diagram for the EMS model. If you find one 
 
 *Figure 5. The pilot lamp: BA9s base, 24 V 2 W. Check it with a multimeter on Ω between the bottom contact and the metal side: a few tens of ohms is OK, OL means the filament is broken.*
 
+![Figure 6: the control panel with the pilot lamp lit](images/06-control-panel-front.jpg)
+
+*Figure 6. The front of the control panel with the power on: the red stop button **0** (twist to release), the start button **I** with the pilot lamp (lit while the machine is switched on), and the mode selector for **single stroke** (one arrow up and down) and **continuous** (several arrows).*
+
 ## 5. Maintenance
 
 ### 5.1 The one-shot relay (Electromatic SC210 024)
@@ -79,13 +83,13 @@ In **single-stroke mode** the start signal switches the 24 VAC supply onto this 
 
 Electromatic (Denmark) later became part of Carlo Gavazzi. The S-System range has been discontinued.
 
-![Figure 6: the front of the relay](images/06-sc210-front.jpg)
+![Figure 7: the front of the relay](images/07-sc210-front.jpg)
 
-*Figure 6. Electromatic S-System SC210 024: supply 24 VAC, one shot 0.5 s. The "RELAY ON" LED lights while the output is on.*
+*Figure 7. Electromatic S-System SC210 024: supply 24 VAC, one shot 0.5 s. The "RELAY ON" LED lights while the output is on.*
 
-![Figure 7: the pin diagram on the side of the relay](images/07-sc210-pinout.jpg)
+![Figure 8: the pin diagram on the side of the relay](images/08-sc210-pinout.jpg)
 
-*Figure 7. The pin diagram on the side of the relay.*
+*Figure 8. The pin diagram on the side of the relay.*
 
 It plugs into an **11-pin round socket** (undecal):
 
@@ -101,17 +105,17 @@ NO and NC were confirmed by measurement (see [5.2](#52-fault-log)).
 
 **Inside the relay** (circuit board marked EM-1 / SC110-D): a small transformer, a rectifier, two Frako 220 µF 40 V electrolytic capacitors, two smaller electrolytic capacitors, transistors, the red LED and an output relay **Electromatic ER23002L** (coil 23.6 V DC, contacts 8 A).
 
-![Figure 8: the circuit board, component side](images/08-sc210-board-top.jpg)
+![Figure 9: the circuit board, component side](images/09-sc210-board-top.jpg)
 
-*Figure 8. Inside the SC210: transformer (middle), output relay ER23002L (right), the two 220 µF capacitors (bottom) and the LED.*
+*Figure 9. Inside the SC210: transformer (middle), output relay ER23002L (right), the two 220 µF capacitors (bottom) and the LED.*
 
-![Figure 9: the circuit board, solder side](images/09-sc210-board-bottom.jpg)
+![Figure 10: the circuit board, solder side](images/10-sc210-board-bottom.jpg)
 
-*Figure 9. Solder side. The large pads at top left marked 3, 9, 4 and 8 are the output relay's contact pins. The two round pads just below them, with thin tracks, are the relay coil.*
+*Figure 10. Solder side. The large pads at top left marked 3, 9, 4 and 8 are the output relay's contact pins. The two round pads just below them, with thin tracks, are the relay coil.*
 
-![Figure 10: the output relay ER23002L](images/10-er23002l-relay.jpg)
+![Figure 11: the output relay ER23002L](images/11-er23002l-relay.jpg)
 
-*Figure 10. The output relay inside the SC210: Electromatic ER23002L, coil 23.6 V DC, contacts 8 A.*
+*Figure 11. The output relay inside the SC210: Electromatic ER23002L, coil 23.6 V DC, contacts 8 A.*
 
 ### 5.2 Fault log
 
@@ -130,9 +134,9 @@ Measurements on the SC210, taken out of the machine (13 November 2026):
 | Output relay coil on 24 V DC from a lab supply | Clicks | The relay pulls in |
 | 1 – 3 and 11 – 9, relay pulled in | 0.2 – 0.5 Ω, but sometimes jumps around | NO contacts close, but the reading is unstable: worn or oxidised contacts |
 
-![Figure 11: the coil test on the bench](images/11-coil-test-setup.jpg)
+![Figure 12: the coil test on the bench](images/12-coil-test-setup.jpg)
 
-*Figure 11. Testing the output relay coil: a lab power supply (24 V DC, current limit set low) clipped onto the two coil pads, and the multimeter on the socket pins.*
+*Figure 12. Testing the output relay coil: a lab power supply (24 V DC, current limit set low) clipped onto the two coil pads, and the multimeter on the socket pins.*
 
 **Conclusion so far:** the transformer and the relay coil are OK. The output relay's contacts are worn (high and unstable resistance), and the electrolytic capacitors are about 35 years old. Either can stop the 0.5 s pulse from getting through. The whole relay has **not yet** been tested with 24 VAC on pins 2–10 ([test D](#53-how-to-test-the-one-shot-relay)).
 
@@ -140,9 +144,9 @@ Measurements on the SC210, taken out of the machine (13 November 2026):
 
 **13 November 2026:** the two Frako 220 µF 40 V capacitors were replaced with FMZ 220 µF 50 V 105 °C (10 × 13 mm). The output relay has not been replaced yet.
 
-![Figure 12: the board with the new capacitors](images/12-new-capacitors.jpg)
+![Figure 13: the board with the new capacitors](images/13-new-capacitors.jpg)
 
-*Figure 12. The SC210 board with the two new 220 µF 50 V capacitors (bottom). The old Frako capacitors are on the right.*
+*Figure 13. The SC210 board with the two new 220 µF 50 V capacitors (bottom). The old Frako capacitors are on the right.*
 
 After the capacitor change, the board was fed with about 30 V DC directly on one of the 220 µF capacitors. The output relay pulled in and **stayed on** for as long as the DC was connected (no 0.5 s pulse). This test bypasses the transformer and rectifier, and without a circuit diagram we do not know which capacitor was fed, so the result is **not conclusive**. If the relay also stays on with 24 VAC on pins 2–10, that would explain the fault: a relay that stays on makes single-stroke mode behave like continuous mode.
 
@@ -179,17 +183,17 @@ Leak tests (highest Ω range): the 10 µF, 1 µF and 0.1 µF capacitors all clim
 
 **15 November 2026, test D with the machine's own 24 VAC:** two leads were fitted to socket terminals 2 and 10 (power off and locked while connecting), and the SC210 was tested on a rubber mat on the table, with 5–6 bridged and the multimeter (continuity) on 1–3. Measured on the leads without the relay: **29.9 VAC with the pedal down** (no load) and 9.9 VAC with the pedal up (probably a ghost voltage on an open wire; check with a load). With the relay connected and the pedal **held down**, the multimeter beeped for **about 0.5 s and then stopped**: **the SC210 now works correctly on the bench.**
 
-![Figure 13: bench test with the machine's 24 VAC](images/13-bench-test-machine-24vac.jpg)
+![Figure 14: bench test with the machine's 24 VAC](images/14-bench-test-machine-24vac.jpg)
 
-*Figure 13. Test D with the machine's 24 VAC: leads from socket terminals 2 and 10 (red, green) clipped to the relay's pins 2 and 10, a wire bridge on 5–6, and the multimeter on 1–3.*
+*Figure 14. Test D with the machine's 24 VAC: leads from socket terminals 2 and 10 (red, green) clipped to the relay's pins 2 and 10, a wire bridge on 5–6, and the multimeter on 1–3.*
 
 Since the last test in the machine, the board has been worked on: the transistors were desoldered and soldered back, and capacitors were replaced. A cracked solder joint fixed by resoldering is a possible explanation.
 
 **15 November 2026, test F again (SC210 back in its socket):** single-stroke mode still runs continuously. So the SC210 works on the bench but not in the machine: the fault is **in the machine around the relay**.
 
-![Figure 14: the SC210 socket in the electrical box](images/14-sc210-socket.jpg)
+![Figure 15: the SC210 socket in the electrical box](images/15-sc210-socket.jpg)
 
-*Figure 14. The SC210 socket (Releco, 11-pin). Wires are connected to terminals 1, 2, 3, 5, 6 and 10. Terminals 4, 7, 8, 9 and 11 are empty, so only contact 1 (1 = common, 3 = NO) is used. The control transformer (left) is marked 11–13: 24 V 1 A.*
+*Figure 15. The SC210 socket (Releco, 11-pin). Wires are connected to terminals 1, 2, 3, 5, 6 and 10. Terminals 4, 7, 8, 9 and 11 are empty, so only contact 1 (1 = common, 3 = NO) is used. The control transformer (left) is marked 11–13: 24 V 1 A.*
 
 Two possible causes, told apart by the "RELAY ON" LED while the pedal is held:
 
@@ -206,20 +210,20 @@ Check of the first cause (power off, relay out): socket terminals 5 and 6 beep *
 
 **Top-of-stroke switch found:** a **Bernstein "classic" roller-lever limit switch** (10 A, 500 V AC, IP65), mounted above the main shaft so that a cam on the shaft can press the roller once per revolution. Its two wires are marked **1** and **4**: wire 1 goes to socket terminal **3** (the relay's NO output), and wire 4 goes to the **second contact block of the mode selector**. So the switch and the selector contact form a path in parallel with the relay contact: once the relay's 0.5 s pulse has started the stroke, this path keeps the motor running until the cam opens the switch at the top. If the switch never opens, the knife never stops.
 
-![Figure 15: the top-of-stroke switch](images/15-top-of-stroke-switch.jpg)
+![Figure 16: the top-of-stroke switch](images/16-top-of-stroke-switch.jpg)
 
-*Figure 15. The top-of-stroke switch (Bernstein classic, roller lever) above the main shaft, as it was found. **The roller-lever head is mounted the wrong way round** (180° wrong), so the actuator folds the lever away instead of pressing the switch. This was the cause of the fault; Figure 18 shows the correct direction.*
+*Figure 16. The top-of-stroke switch (Bernstein classic, roller lever) above the main shaft, as it was found. **The roller-lever head is mounted the wrong way round** (180° wrong), so the actuator folds the lever away instead of pressing the switch. This was the cause of the fault; Figure 19 shows the correct direction.*
 
-**15 November 2026: cause found. It is mechanical, not electrical.** The cam that should press the top-of-stroke switch is **home-made**: a U-bolt pipe clamp around the main shaft with a short pin welded to its saddle (Figure 16). The pin **does not reach the roller**, so the switch is never opened at the top and the hold path keeps the motor running.
+**15 November 2026: cause found. It is mechanical, not electrical.** The cam that should press the top-of-stroke switch is **home-made**: a U-bolt pipe clamp around the main shaft with a short pin welded to its saddle (Figure 17). The pin **does not reach the roller**, so the switch is never opened at the top and the hold path keeps the motor running.
 
 With the clamp removed and the roller pressed by hand with a wooden stick at the right moment, everything worked as designed:
 
 - **Single-stroke:** with the pedal held, the knife made one stroke and stopped when the switch was pressed.
 - **Continuous:** with the pedal held, the switch did not stop the machine; releasing the pedal stopped it.
 
-![Figure 16: the home-made switch actuator](images/16-homemade-switch-actuator.jpg)
+![Figure 17: the home-made switch actuator](images/17-homemade-switch-actuator.jpg)
 
-*Figure 16. The home-made switch actuator, taken off the shaft: a U-bolt pipe clamp with a saddle plate and a welded pin. Held only by clamping friction, and the pin does not reach the roller of the limit switch.*
+*Figure 17. The home-made switch actuator, taken off the shaft: a U-bolt pipe clamp with a saddle plate and a welded pin. Held only by clamping friction, and the pin does not reach the roller of the limit switch.*
 
 **Lesson:** the relay, capacitors, transistors, selector and limit switch were all fine. Before measuring electronics, check that the **mechanical parts that operate the switches** actually operate them: watch the cam and the roller through one revolution. (The SC210 did once stay on in the machine on 13 November; after its transistors were resoldered on 14 November it always pulsed correctly.)
 
@@ -247,29 +251,29 @@ Only if the direction is correct should the switch be turned around or the actua
 
 **Final cause (15 November 2026): the roller-lever head was mounted the wrong way round.** The head of the Bernstein switch is held by four screws and can be mounted in different directions. Its lever is **hinged with a spring (a one-way lever)**: pushed from one side it presses the plunger and opens the switch; pushed from the other side it just folds away and the switch does nothing. Someone had taken the head off and put it back **180° the wrong way**, so the actuator on the shaft folded the lever away on every turn. Fix: turn the head 180° so that the actuator pushes the lever in the direction that presses the plunger.
 
-![Figure 17: the roller-lever head taken off the switch](images/17-roller-lever-head.jpg)
+![Figure 18: the roller-lever head taken off the switch](images/18-roller-lever-head.jpg)
 
-*Figure 17. The roller-lever head (black, four screws) taken off the switch body (red) with its plunger. The lever is hinged with a spring, so it only presses the plunger when pushed from one side. **The head is shown here in the correct direction:** mount it this way round on the switch body.*
+*Figure 18. The roller-lever head (black, four screws) taken off the switch body (red) with its plunger. The lever is hinged with a spring, so it only presses the plunger when pushed from one side. **The head is shown here in the correct direction:** mount it this way round on the switch body.*
 
 **When refitting the head:** check the plunger seal, tighten the four screws evenly, and before closing the machine push the lever by hand in the shaft's direction of rotation: it must press the plunger (the contact between wires 1 and 4 changes), and pushed the other way it must fold away. Then run the test below.
 
-**Repair done (15 November 2026):** the roller-lever head was turned 180°, and the actuator pin on the shaft was made thicker at its tip so that it reaches the roller reliably: the head of a socket-head cap screw was slid onto the pin, the thread was cut off, and the head was welded on and faced flat (Figures 20 and 21). Its face and edges were polished so it does not wear the plastic roller, and the clamp screws were tightened firmly, with good clearance around the switch. Tested in the machine: **single-stroke** gives one stroke and stops at the top with the pedal held; **continuous** runs while the pedal is held and stops when it is released. The photos below show the correct position after the repair. The actuator needed a little adjustment on the shaft to stop the knife at the right place.
+**Repair done (15 November 2026):** the roller-lever head was turned 180°, and the actuator pin on the shaft was made thicker at its tip so that it reaches the roller reliably: the head of a socket-head cap screw was slid onto the pin, the thread was cut off, and the head was welded on and faced flat (Figures 21 and 22). Its face and edges were polished so it does not wear the plastic roller, and the clamp screws were tightened firmly, with good clearance around the switch. Tested in the machine: **single-stroke** gives one stroke and stops at the top with the pedal held; **continuous** runs while the pedal is held and stops when it is released. The photos below show the correct position after the repair. The actuator needed a little adjustment on the shaft to stop the knife at the right place.
 
-![Figure 18: switch head and actuator in the correct position](images/18-switch-and-actuator-correct.jpg)
+![Figure 19: switch head and actuator in the correct position](images/19-switch-and-actuator-correct.jpg)
 
-*Figure 18. After the repair, with the knife at rest: the roller-lever head is turned the right way, and the actuator pin (with the welded-on screw head on its tip) is pressing the roller, so the switch is open. Use this as the reference if the switch or the clamp is ever moved.*
+*Figure 19. After the repair, with the knife at rest: the roller-lever head is turned the right way, and the actuator pin (with the welded-on screw head on its tip) is pressing the roller, so the switch is open. Use this as the reference if the switch or the clamp is ever moved.*
 
-![Figure 19: the knife at its rest position](images/19-knife-rest-position.jpg)
+![Figure 20: the knife at its rest position](images/20-knife-rest-position.jpg)
 
-*Figure 19. The knife beam at its rest position (top of the stroke) behind the finger guard, with the actuator set as in Figure 18.*
+*Figure 20. The knife beam at its rest position (top of the stroke) behind the finger guard, with the actuator set as in Figure 19.*
 
-![Figure 20: making the thicker tip](images/20-actuator-tip-making.jpg)
+![Figure 21: making the thicker tip](images/21-actuator-tip-making.jpg)
 
-*Figure 20. Making the thicker tip: the head of a socket-head cap screw slid onto the actuator pin, before the thread was cut off.*
+*Figure 21. Making the thicker tip: the head of a socket-head cap screw slid onto the actuator pin, before the thread was cut off.*
 
-![Figure 21: the finished actuator tip](images/21-actuator-tip-finished.jpg)
+![Figure 22: the finished actuator tip](images/22-actuator-tip-finished.jpg)
 
-*Figure 21. The finished tip: the screw head welded onto the pin and faced flat. The larger diameter makes the pin reach the roller.*
+*Figure 22. The finished tip: the screw head welded onto the pin and faced flat. The larger diameter makes the pin reach the roller.*
 
 **Test after fitting** (with no sheet, hands clear): 20 or more single strokes with the pedal held. The knife must stop at the top **every time**, and must never make a second stroke while the pedal is held. Check that the cam is still tight afterwards. Single-stroke is a safety function on a guillotine, so the new cam should be checked by the person responsible for the machine before it is used again.
 
@@ -286,12 +290,12 @@ All tests are done with the relay **out of the machine**, on the bench. The high
 
 **B. Output relay coil**
 
-1. Open the relay case. On the solder side, measure the two coil pads (Figure 9): about 700 Ω. OL means a broken coil.
+1. Open the relay case. On the solder side, measure the two coil pads (Figure 10): about 700 Ω. OL means a broken coil.
 2. Swap the probes. If one direction reads much lower, there is a protection diode across the coil. The pin where the red probe was for the **higher** reading is **+**.
 
 **C. Output relay on DC**
 
-1. Set a lab power supply to **24 V DC** with the **current limit at about 100 mA**, and connect it to the coil pads (Figure 11). With the current limit set, a wrong polarity does no harm: if the current goes straight to the limit, swap the leads.
+1. Set a lab power supply to **24 V DC** with the **current limit at about 100 mA**, and connect it to the coil pads (Figure 12). With the current limit set, a wrong polarity does no harm: if the current goes straight to the limit, swap the leads.
 2. The relay should click. While it is pulled in, **1–3** and **11–9** should read under 0.5 Ω, steadily, and **1–4** and **11–8** should read OL.
 3. **Better contact test:** a multimeter's few milliamps cannot break through the oxide on worn silver contacts. Instead, put the 24 V 2 W lamp in series with a contact (24 V → pin 1 → lamp → back to the supply, lamp on the pin 3 side). It should light steadily every time the relay pulls in. Flickering means worn contacts.
 

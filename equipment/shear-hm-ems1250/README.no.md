@@ -71,6 +71,10 @@ Vi har ikke funnet bruksanvisning eller koblingsskjema for EMS-modellen. Finner 
 
 *Figur 5. Signallampen: BA9s-sokkel, 24 V 2 W. Mål den med multimeter på Ω mellom kontakten i bunnen og metallsiden: noen titalls ohm er OK, OL betyr at glødetråden er røket.*
 
+![Figur 6: betjeningspanelet med signallampen tent](images/06-control-panel-front.jpg)
+
+*Figur 6. Forsiden av betjeningspanelet med strømmen på: den røde stoppknappen **0** (vri for å løse ut), startknappen **I** med signallampen (lyser så lenge maskinen er slått på), og velgerbryteren for **enkeltslag** (én pil opp og ned) og **kontinuerlig** (flere piler).*
+
 ## 5. Vedlikehold
 
 ### 5.1 Enkeltslagsreléet (Electromatic SC210 024)
@@ -79,13 +83,13 @@ I **enkeltslag** kobler startsignalet 24 V AC inn på dette reléet. Reléet luk
 
 Electromatic (Danmark) ble senere en del av Carlo Gavazzi. S-System-serien produseres ikke lenger.
 
-![Figur 6: fronten av reléet](images/06-sc210-front.jpg)
+![Figur 7: fronten av reléet](images/07-sc210-front.jpg)
 
-*Figur 6. Electromatic S-System SC210 024: forsyning 24 V AC, one shot 0,5 s. Lysdioden «RELAY ON» lyser mens utgangen er på.*
+*Figur 7. Electromatic S-System SC210 024: forsyning 24 V AC, one shot 0,5 s. Lysdioden «RELAY ON» lyser mens utgangen er på.*
 
-![Figur 7: koblingsskjemaet på siden av reléet](images/07-sc210-pinout.jpg)
+![Figur 8: koblingsskjemaet på siden av reléet](images/08-sc210-pinout.jpg)
 
-*Figur 7. Koblingsskjemaet på siden av reléet.*
+*Figur 8. Koblingsskjemaet på siden av reléet.*
 
 Det står i en **11-polet rund sokkel** (undecal):
 
@@ -101,17 +105,17 @@ NO og NC er bekreftet ved måling (se [5.2](#52-feillogg)).
 
 **Inne i reléet** (kretskortet er merket EM-1 / SC110-D): en liten transformator, en likeretter, to Frako 220 µF 40 V elektrolyttkondensatorer, to mindre elektrolyttkondensatorer, transistorer, den røde lysdioden og et utgangsrelé **Electromatic ER23002L** (spole 23,6 V DC, kontakter 8 A).
 
-![Figur 8: kretskortet, komponentsiden](images/08-sc210-board-top.jpg)
+![Figur 9: kretskortet, komponentsiden](images/09-sc210-board-top.jpg)
 
-*Figur 8. Inne i SC210: transformator (midten), utgangsreléet ER23002L (til høyre), de to 220 µF-kondensatorene (nederst) og lysdioden.*
+*Figur 9. Inne i SC210: transformator (midten), utgangsreléet ER23002L (til høyre), de to 220 µF-kondensatorene (nederst) og lysdioden.*
 
-![Figur 9: kretskortet, loddesiden](images/09-sc210-board-bottom.jpg)
+![Figur 10: kretskortet, loddesiden](images/10-sc210-board-bottom.jpg)
 
-*Figur 9. Loddesiden. De store loddeøyene øverst til venstre merket 3, 9, 4 og 8 er kontaktpinnene til utgangsreléet. De to runde loddeøyene rett under, med tynne baner, er reléspolen.*
+*Figur 10. Loddesiden. De store loddeøyene øverst til venstre merket 3, 9, 4 og 8 er kontaktpinnene til utgangsreléet. De to runde loddeøyene rett under, med tynne baner, er reléspolen.*
 
-![Figur 10: utgangsreléet ER23002L](images/10-er23002l-relay.jpg)
+![Figur 11: utgangsreléet ER23002L](images/11-er23002l-relay.jpg)
 
-*Figur 10. Utgangsreléet inne i SC210: Electromatic ER23002L, spole 23,6 V DC, kontakter 8 A.*
+*Figur 11. Utgangsreléet inne i SC210: Electromatic ER23002L, spole 23,6 V DC, kontakter 8 A.*
 
 ### 5.2 Feillogg
 
@@ -130,9 +134,9 @@ Målinger på SC210, tatt ut av maskinen (13. november 2026):
 | Spolen på 24 V DC fra labforsyning | Klikker | Reléet trekker |
 | 1 – 3 og 11 – 9, reléet trukket | 0,2 – 0,5 Ω, men hopper av og til | NO-kontaktene lukker, men avlesningen er ustabil: slitte eller oksiderte kontakter |
 
-![Figur 11: spoletesten på benken](images/11-coil-test-setup.jpg)
+![Figur 12: spoletesten på benken](images/12-coil-test-setup.jpg)
 
-*Figur 11. Test av spolen i utgangsreléet: labforsyning (24 V DC, lav strømgrense) klipset på de to spoleøyene, og multimeteret på sokkelpinnene.*
+*Figur 12. Test av spolen i utgangsreléet: labforsyning (24 V DC, lav strømgrense) klipset på de to spoleøyene, og multimeteret på sokkelpinnene.*
 
 **Konklusjon så langt:** transformatoren og reléspolen er OK. Kontaktene i utgangsreléet er slitte (høy og ustabil motstand), og elektrolyttkondensatorene er omtrent 35 år gamle. Begge deler kan hindre at pulsen på 0,5 s kommer fram. Hele reléet er **ikke** testet med 24 V AC på pinne 2–10 ennå ([test D](#53-slik-tester-du-enkeltslagsreléet)).
 
@@ -140,9 +144,9 @@ Målinger på SC210, tatt ut av maskinen (13. november 2026):
 
 **13. november 2026:** de to Frako 220 µF 40 V-kondensatorene ble byttet til FMZ 220 µF 50 V 105 °C (10 × 13 mm). Utgangsreléet er ikke byttet ennå.
 
-![Figur 12: kretskortet med de nye kondensatorene](images/12-new-capacitors.jpg)
+![Figur 13: kretskortet med de nye kondensatorene](images/13-new-capacitors.jpg)
 
-*Figur 12. SC210-kortet med de to nye 220 µF 50 V-kondensatorene (nederst). De gamle Frako-kondensatorene ligger til høyre.*
+*Figur 13. SC210-kortet med de to nye 220 µF 50 V-kondensatorene (nederst). De gamle Frako-kondensatorene ligger til høyre.*
 
 Etter kondensatorbyttet ble kortet forsynt med omtrent 30 V DC direkte på en av 220 µF-kondensatorene. Utgangsreléet trakk og **ble liggende inne** så lenge likespenningen var tilkoblet (ingen puls på 0,5 s). Testen går forbi transformatoren og likeretteren, og uten koblingsskjema vet vi ikke hvilken kondensator som ble forsynt, så resultatet er **ikke sikkert**. Blir reléet også liggende inne med 24 V AC på pinne 2–10, forklarer det feilen: et relé som blir liggende inne, får enkeltslag til å oppføre seg som kontinuerlig drift.
 
@@ -179,17 +183,17 @@ Lekkasjetester (høyeste Ω-område): kondensatorene på 10 µF, 1 µF og 0,1 µ
 
 **15. november 2026, test D med maskinens egen 24 V AC:** to ledninger ble koblet til sokkelklemme 2 og 10 (strømmen av og låst under tilkoblingen), og SC210 ble testet på en gummimatte på bordet, med 5–6 lasket og multimeteret (gjennomgang) på 1–3. Målt på ledningene uten reléet: **29,9 V AC med pedalen nede** (uten last) og 9,9 V AC med pedalen oppe (trolig en «spøkelsesspenning» på en åpen ledning; kontroller med last). Med reléet tilkoblet og pedalen **holdt nede** pep multimeteret i **omtrent 0,5 s og stoppet så**: **SC210 virker nå riktig på benken.**
 
-![Figur 13: benktest med maskinens 24 V AC](images/13-bench-test-machine-24vac.jpg)
+![Figur 14: benktest med maskinens 24 V AC](images/14-bench-test-machine-24vac.jpg)
 
-*Figur 13. Test D med maskinens 24 V AC: ledninger fra sokkelklemme 2 og 10 (rød, grønn) klipset til pinne 2 og 10 på reléet, en trådlasking på 5–6, og multimeteret på 1–3.*
+*Figur 14. Test D med maskinens 24 V AC: ledninger fra sokkelklemme 2 og 10 (rød, grønn) klipset til pinne 2 og 10 på reléet, en trådlasking på 5–6, og multimeteret på 1–3.*
 
 Siden forrige test i maskinen er det arbeidet på kortet: transistorene ble loddet ut og inn igjen, og kondensatorer ble byttet. En sprukket loddeskjøt som ble rettet ved omlodding, er en mulig forklaring.
 
 **15. november 2026, test F på nytt (SC210 tilbake i sokkelen):** enkeltslag går fortsatt kontinuerlig. SC210 virker altså på benken, men ikke i maskinen: feilen sitter **i maskinen rundt reléet**.
 
-![Figur 14: sokkelen til SC210 i el-skapet](images/14-sc210-socket.jpg)
+![Figur 15: sokkelen til SC210 i el-skapet](images/15-sc210-socket.jpg)
 
-*Figur 14. Sokkelen til SC210 (Releco, 11-polet). Det er ledninger på klemme 1, 2, 3, 5, 6 og 10. Klemme 4, 7, 8, 9 og 11 er tomme, så bare kontakt 1 (1 = felles, 3 = NO) brukes. Styretransformatoren (til venstre) er merket 11–13: 24 V 1 A.*
+*Figur 15. Sokkelen til SC210 (Releco, 11-polet). Det er ledninger på klemme 1, 2, 3, 5, 6 og 10. Klemme 4, 7, 8, 9 og 11 er tomme, så bare kontakt 1 (1 = felles, 3 = NO) brukes. Styretransformatoren (til venstre) er merket 11–13: 24 V 1 A.*
 
 To mulige årsaker, som skilles av lysdioden «RELAY ON» mens pedalen holdes inne:
 
@@ -206,20 +210,20 @@ Kontroll av første årsak (strømmen av, reléet ute): sokkelklemme 5 og 6 pipe
 
 **Toppbryteren er funnet:** en **Bernstein «classic» endebryter med rullearm** (10 A, 500 V AC, IP65), montert over hovedakselen slik at en kam på akselen kan trykke inn rullen én gang per omdreining. De to ledningene er merket **1** og **4**: ledning 1 går til sokkelklemme **3** (NO-utgangen på reléet), og ledning 4 går til **den andre kontaktblokken på velgerbryteren**. Bryteren og velgerkontakten danner altså en vei parallelt med reléets kontakt: når reléets puls på 0,5 s har startet slaget, holder denne veien motoren i gang til kammen åpner bryteren i toppen. Åpner bryteren aldri, stopper kniven aldri.
 
-![Figur 15: toppbryteren](images/15-top-of-stroke-switch.jpg)
+![Figur 16: toppbryteren](images/16-top-of-stroke-switch.jpg)
 
-*Figur 15. Toppbryteren (Bernstein classic, rullearm) over hovedakselen, slik den ble funnet. **Rullearmhodet er montert feil vei** (180° feil), så aktivatoren bøyer armen unna i stedet for å trykke inn bryteren. Dette var årsaken til feilen; figur 18 viser riktig retning.*
+*Figur 16. Toppbryteren (Bernstein classic, rullearm) over hovedakselen, slik den ble funnet. **Rullearmhodet er montert feil vei** (180° feil), så aktivatoren bøyer armen unna i stedet for å trykke inn bryteren. Dette var årsaken til feilen; figur 19 viser riktig retning.*
 
-**15. november 2026: årsaken er funnet. Den er mekanisk, ikke elektrisk.** Kammen som skal trykke inn toppbryteren, er **hjemmelaget**: en U-bolt-rørklemme rundt hovedakselen med en kort tapp sveiset på salen (figur 16). Tappen **når ikke fram til rullen**, så bryteren åpnes aldri i toppen, og holdekretsen holder motoren i gang.
+**15. november 2026: årsaken er funnet. Den er mekanisk, ikke elektrisk.** Kammen som skal trykke inn toppbryteren, er **hjemmelaget**: en U-bolt-rørklemme rundt hovedakselen med en kort tapp sveiset på salen (figur 17). Tappen **når ikke fram til rullen**, så bryteren åpnes aldri i toppen, og holdekretsen holder motoren i gang.
 
 Med klemmen tatt av og rullen trykket inn for hånd med en trepinne i riktig øyeblikk virket alt som det skal:
 
 - **Enkeltslag:** med pedalen holdt inne gjorde kniven ett slag og stoppet når bryteren ble trykket inn.
 - **Kontinuerlig:** med pedalen holdt inne stoppet ikke bryteren maskinen; maskinen stoppet når pedalen ble sluppet.
 
-![Figur 16: den hjemmelagde bryteraktivatoren](images/16-homemade-switch-actuator.jpg)
+![Figur 17: den hjemmelagde bryteraktivatoren](images/17-homemade-switch-actuator.jpg)
 
-*Figur 16. Den hjemmelagde bryteraktivatoren, tatt av akselen: en U-bolt-rørklemme med salplate og en sveiset tapp. Den holdes bare av klemkraften, og tappen når ikke fram til rullen på endebryteren.*
+*Figur 17. Den hjemmelagde bryteraktivatoren, tatt av akselen: en U-bolt-rørklemme med salplate og en sveiset tapp. Den holdes bare av klemkraften, og tappen når ikke fram til rullen på endebryteren.*
 
 **Lærdom:** reléet, kondensatorene, transistorene, velgerbryteren og endebryteren var alle i orden. Før du måler på elektronikk: kontroller at **de mekaniske delene som betjener bryterne**, faktisk betjener dem. Se på kammen og rullen gjennom én omdreining. (SC210 ble én gang liggende inne i maskinen 13. november; etter at transistorene ble loddet på nytt 14. november, ga det alltid riktig puls.)
 
@@ -247,29 +251,29 @@ Bare hvis retningen er riktig, skal bryteren snus eller aktivatoren lages på ny
 
 **Endelig årsak (15. november 2026): rullearmhodet var montert feil vei.** Hodet på Bernstein-bryteren er festet med fire skruer og kan monteres i ulike retninger. Armen er **hengslet med en fjær (en enveis arm)**: skyves den fra den ene siden, trykker den inn stempelet og åpner bryteren; skyves den fra den andre siden, bøyer den seg bare unna, og bryteren gjør ingenting. Noen hadde tatt av hodet og satt det på igjen **180° feil vei**, så aktivatoren på akselen bøyde armen unna hver omdreining. Retting: snu hodet 180° slik at aktivatoren skyver armen i den retningen som trykker inn stempelet.
 
-![Figur 17: rullearmhodet tatt av bryteren](images/17-roller-lever-head.jpg)
+![Figur 18: rullearmhodet tatt av bryteren](images/18-roller-lever-head.jpg)
 
-*Figur 17. Rullearmhodet (svart, fire skruer) tatt av bryterhuset (rødt) med stempelet. Armen er hengslet med en fjær, så den trykker bare inn stempelet når den skyves fra én side. **Hodet er vist i riktig retning her:** monter det denne veien på bryterhuset.*
+*Figur 18. Rullearmhodet (svart, fire skruer) tatt av bryterhuset (rødt) med stempelet. Armen er hengslet med en fjær, så den trykker bare inn stempelet når den skyves fra én side. **Hodet er vist i riktig retning her:** monter det denne veien på bryterhuset.*
 
 **Når hodet monteres igjen:** kontroller pakningen rundt stempelet, stram de fire skruene jevnt, og skyv armen for hånd i akselens dreieretning før maskinen lukkes: den skal trykke inn stempelet (kontakten mellom ledning 1 og 4 skifter), og skjøvet den andre veien skal den bøye seg unna. Kjør deretter testen under.
 
-**Reparasjonen er ferdig (15. november 2026):** rullearmhodet ble snudd 180°, og tappen på aktivatoren på akselen ble gjort tykkere på tuppen slik at den når rullen sikkert: hodet på en sylinderskrue med innvendig sekskant ble tredd på tappen, gjengene ble kappet av, og hodet ble sveiset fast og plandreid (figur 20 og 21). Endeflaten og kantene ble polert slik at den ikke sliter på plastrullen, og skruene på klemmen ble strammet godt, med god klaring rundt bryteren. Testet i maskinen: **enkeltslag** gir ett slag og stopper i toppen med pedalen holdt inne; **kontinuerlig** går så lenge pedalen holdes og stopper når den slippes. Bildene under viser riktig stilling etter reparasjonen. Aktivatoren måtte justeres litt på akselen for at kniven skulle stoppe på riktig sted.
+**Reparasjonen er ferdig (15. november 2026):** rullearmhodet ble snudd 180°, og tappen på aktivatoren på akselen ble gjort tykkere på tuppen slik at den når rullen sikkert: hodet på en sylinderskrue med innvendig sekskant ble tredd på tappen, gjengene ble kappet av, og hodet ble sveiset fast og plandreid (figur 21 og 22). Endeflaten og kantene ble polert slik at den ikke sliter på plastrullen, og skruene på klemmen ble strammet godt, med god klaring rundt bryteren. Testet i maskinen: **enkeltslag** gir ett slag og stopper i toppen med pedalen holdt inne; **kontinuerlig** går så lenge pedalen holdes og stopper når den slippes. Bildene under viser riktig stilling etter reparasjonen. Aktivatoren måtte justeres litt på akselen for at kniven skulle stoppe på riktig sted.
 
-![Figur 18: bryterhodet og aktivatoren i riktig stilling](images/18-switch-and-actuator-correct.jpg)
+![Figur 19: bryterhodet og aktivatoren i riktig stilling](images/19-switch-and-actuator-correct.jpg)
 
-*Figur 18. Etter reparasjonen, med kniven i hvilestilling: rullearmhodet er snudd riktig vei, og tappen på aktivatoren (med det påsveisede skruehodet på tuppen) trykker inn rullen, så bryteren er åpen. Bruk dette som referanse hvis bryteren eller klemmen noen gang flyttes.*
+*Figur 19. Etter reparasjonen, med kniven i hvilestilling: rullearmhodet er snudd riktig vei, og tappen på aktivatoren (med det påsveisede skruehodet på tuppen) trykker inn rullen, så bryteren er åpen. Bruk dette som referanse hvis bryteren eller klemmen noen gang flyttes.*
 
-![Figur 19: kniven i hvilestilling](images/19-knife-rest-position.jpg)
+![Figur 20: kniven i hvilestilling](images/20-knife-rest-position.jpg)
 
-*Figur 19. Knivbjelken i hvilestilling (toppen av slaget) bak fingervernet, med aktivatoren stilt som i figur 18.*
+*Figur 20. Knivbjelken i hvilestilling (toppen av slaget) bak fingervernet, med aktivatoren stilt som i figur 19.*
 
-![Figur 20: slik ble den tykkere tuppen laget](images/20-actuator-tip-making.jpg)
+![Figur 21: slik ble den tykkere tuppen laget](images/21-actuator-tip-making.jpg)
 
-*Figur 20. Slik ble den tykkere tuppen laget: hodet på en sylinderskrue tredd på tappen på aktivatoren, før gjengene ble kappet av.*
+*Figur 21. Slik ble den tykkere tuppen laget: hodet på en sylinderskrue tredd på tappen på aktivatoren, før gjengene ble kappet av.*
 
-![Figur 21: den ferdige tuppen på aktivatoren](images/21-actuator-tip-finished.jpg)
+![Figur 22: den ferdige tuppen på aktivatoren](images/22-actuator-tip-finished.jpg)
 
-*Figur 21. Den ferdige tuppen: skruehodet sveiset fast på tappen og plandreid. Den større diameteren gjør at tappen når rullen.*
+*Figur 22. Den ferdige tuppen: skruehodet sveiset fast på tappen og plandreid. Den større diameteren gjør at tappen når rullen.*
 
 **Test etter montering** (uten plate, hendene unna): 20 eller flere enkeltslag med pedalen holdt inne. Kniven skal stoppe i toppen **hver gang**, og skal aldri gjøre et nytt slag mens pedalen holdes. Kontroller at kammen fortsatt sitter fast etterpå. Enkeltslag er en sikkerhetsfunksjon på en platesaks, så den nye kammen bør kontrolleres av den som er ansvarlig for maskinen før den tas i bruk igjen.
 
@@ -286,12 +290,12 @@ Alle testene gjøres med reléet **tatt ut av maskinen**, på benken. Høyeste s
 
 **B. Spolen i utgangsreléet**
 
-1. Åpne reléhuset. Mål de to spoleøyene på loddesiden (figur 9): omtrent 700 Ω. OL betyr brudd i spolen.
+1. Åpne reléhuset. Mål de to spoleøyene på loddesiden (figur 10): omtrent 700 Ω. OL betyr brudd i spolen.
 2. Bytt om målepinnene. Viser den ene retningen mye lavere, sitter det en beskyttelsesdiode over spolen. Pinnen der den røde målepinnen var ved den **høyeste** avlesningen, er **+**.
 
 **C. Utgangsreléet på likespenning**
 
-1. Still en labforsyning på **24 V DC** med **strømgrensen på omtrent 100 mA**, og koble den til spoleøyene (figur 11). Med strømgrensen satt gjør feil polaritet ingen skade: går strømmen rett til grensen, bytter du ledningene.
+1. Still en labforsyning på **24 V DC** med **strømgrensen på omtrent 100 mA**, og koble den til spoleøyene (figur 12). Med strømgrensen satt gjør feil polaritet ingen skade: går strømmen rett til grensen, bytter du ledningene.
 2. Reléet skal klikke. Mens det er trukket skal **1–3** og **11–9** vise under 0,5 Ω, stabilt, og **1–4** og **11–8** skal vise OL.
 3. **Bedre kontakttest:** de få milliamperene fra et multimeter klarer ikke å bryte gjennom oksidet på slitte sølvkontakter. Sett heller 24 V 2 W-lampen i serie med en kontakt (24 V → pinne 1 → lampe → tilbake til forsyningen, lampen på pinne 3-siden). Den skal lyse stabilt hver gang reléet trekker. Flimring betyr slitte kontakter.
 
