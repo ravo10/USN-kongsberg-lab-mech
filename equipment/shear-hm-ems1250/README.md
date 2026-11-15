@@ -4,7 +4,7 @@ Workshop · USN Kongsberg · Updated 13 November 2026
 
 > **Norsk versjon:** [README.no.md](README.no.md)
 
-**Status:** in progress. **Single-stroke ("one-shot") mode does not work** at the moment; continuous mode works. **Cause found (15 November 2026):** the **roller-lever head of the top-of-stroke switch was mounted the wrong way round**, so the actuator on the shaft folded the lever away instead of pressing the switch. The electrics are OK. Fix: turn the head 180° and test, see [the fault log](#52-fault-log). There is no student operating guide yet: follow the posted instruction on the machine and ask the lab supervisor before use.
+**Status:** machine page and maintenance log. **Repaired 15 November 2026:** single-stroke and continuous mode both work again. The fault was the roller-lever head of the top-of-stroke switch, which had been mounted the wrong way round, see [the fault log](#52-fault-log). There is no student operating guide yet: follow the posted instruction on the machine and ask the lab supervisor before use.
 
 **Location:** not yet on the [lab map](../../labs/map/README.md).
 
@@ -154,7 +154,7 @@ Possible causes, cheapest check first:
 2. The **timing part of the circuit**: the two small electrolytic capacitors (same age as the big ones) or a transistor.
 3. If neither helps: replace the whole SC210 with a modern 11-pin timer (see [5.4](#54-spare-parts)).
 
-Until it is repaired, a sign on the mode selector says that single-stroke mode is out of order.
+While single-stroke mode was out of order, it was marked with a sign on the mode selector.
 
 **14 November 2026, component tests on the SC210 board** (multimeter; capacitors and transistors measured out of the board, resistors on the board):
 
@@ -253,6 +253,8 @@ Only if the direction is correct should the switch be turned around or the actua
 *Figure 17. The roller-lever head (black, four screws) taken off the switch body (red) with its plunger. The lever is hinged with a spring, so it only presses the plunger when pushed from one side.*
 
 **When refitting the head:** check the plunger seal, tighten the four screws evenly, and before closing the machine push the lever by hand in the shaft's direction of rotation: it must press the plunger (the contact between wires 1 and 4 changes), and pushed the other way it must fold away. Then run the test below.
+
+**Repair done (15 November 2026):** the roller-lever head was turned 180°, and the actuator pin on the shaft was given extra material at its tip so that it reaches the roller reliably. Tested in the machine: **single-stroke** gives one stroke and stops at the top with the pedal held; **continuous** runs while the pedal is held and stops when it is released. *Photos of the correct position of the switch head and the actuator will be added here.*
 
 **Test after fitting** (with no sheet, hands clear): 20 or more single strokes with the pedal held. The knife must stop at the top **every time**, and must never make a second stroke while the pedal is held. Check that the cam is still tight afterwards. Single-stroke is a safety function on a guillotine, so the new cam should be checked by the person responsible for the machine before it is used again.
 

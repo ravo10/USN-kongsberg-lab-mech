@@ -4,7 +4,7 @@ Verksted · USN Kongsberg · Oppdatert 13. november 2026
 
 > **English version:** [README.md](README.md)
 
-**Status:** under arbeid. **Enkeltslag («one-shot») virker ikke** for øyeblikket; kontinuerlig drift virker. **Årsaken er funnet (15. november 2026):** **rullearmhodet på toppbryteren var montert feil vei**, så aktivatoren på akselen bøyde armen unna i stedet for å trykke inn bryteren. Elektrikken er OK. Retting: snu hodet 180° og test, se [feilloggen](#52-feillogg). Det finnes ingen studentveiledning ennå: følg instruksen som henger på maskinen, og spør labansvarlig før bruk.
+**Status:** maskinside og vedlikeholdslogg. **Reparert 15. november 2026:** enkeltslag og kontinuerlig drift virker igjen. Feilen var rullearmhodet på toppbryteren, som var montert feil vei, se [feilloggen](#52-feillogg). Det finnes ingen studentveiledning ennå: følg instruksen som henger på maskinen, og spør labansvarlig før bruk.
 
 **Plassering:** ikke lagt inn på [labkartet](../../labs/map/README.md) ennå.
 
@@ -154,7 +154,7 @@ Mulige årsaker, billigste kontroll først:
 2. **Tidsdelen av kretsen**: de to små elektrolyttkondensatorene (like gamle som de store) eller en transistor.
 3. Hjelper ingen av delene: bytt hele SC210 med et moderne 11-polet tidsrelé (se [5.4](#54-reservedeler)).
 
-Til feilen er rettet, henger det et skilt ved velgerbryteren om at enkeltslag er ute av drift.
+Mens enkeltslag var ute av drift, var det merket med et skilt ved velgerbryteren.
 
 **14. november 2026, komponenttester på SC210-kortet** (multimeter; kondensatorer og transistorer målt utenfor kortet, motstander på kortet):
 
@@ -253,6 +253,8 @@ Bare hvis retningen er riktig, skal bryteren snus eller aktivatoren lages på ny
 *Figur 17. Rullearmhodet (svart, fire skruer) tatt av bryterhuset (rødt) med stempelet. Armen er hengslet med en fjær, så den trykker bare inn stempelet når den skyves fra én side.*
 
 **Når hodet monteres igjen:** kontroller pakningen rundt stempelet, stram de fire skruene jevnt, og skyv armen for hånd i akselens dreieretning før maskinen lukkes: den skal trykke inn stempelet (kontakten mellom ledning 1 og 4 skifter), og skjøvet den andre veien skal den bøye seg unna. Kjør deretter testen under.
+
+**Reparasjonen er ferdig (15. november 2026):** rullearmhodet ble snudd 180°, og tappen på aktivatoren på akselen fikk ekstra materiale på tuppen slik at den når rullen sikkert. Testet i maskinen: **enkeltslag** gir ett slag og stopper i toppen med pedalen holdt inne; **kontinuerlig** går så lenge pedalen holdes og stopper når den slippes. *Bilder av riktig stilling for bryterhodet og aktivatoren legges inn her.*
 
 **Test etter montering** (uten plate, hendene unna): 20 eller flere enkeltslag med pedalen holdt inne. Kniven skal stoppe i toppen **hver gang**, og skal aldri gjøre et nytt slag mens pedalen holdes. Kontroller at kammen fortsatt sitter fast etterpå. Enkeltslag er en sikkerhetsfunksjon på en platesaks, så den nye kammen bør kontrolleres av den som er ansvarlig for maskinen før den tas i bruk igjen.
 
