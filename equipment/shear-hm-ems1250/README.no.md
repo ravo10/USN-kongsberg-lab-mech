@@ -242,6 +242,8 @@ Med klemmen tatt av og rullen trykket inn for hånd med en trepinne i riktig øy
 
 Bare hvis retningen er riktig, skal bryteren snus eller aktivatoren lages på nytt.
 
+**Kraftklemmer i el-skapet** (rekkeklemmene, ovenfra og ned): **R, S, T** (innkommende trefase) · jordskinne · **R1, S1, T1** · **J** (jord, PE) · **U, V, W** (motor) · **J** (motorjord) · SF, 0, F24, 024, 1 … (styrekretsen; 024/F24 er trolig styrespenningen på 24 V). Motorledningene går gjennom kontaktor 1 og motorvernet CT3-23 (skala 16–23 A) til U, V, W. Klemmene viser ikke hvilken vei motoren går: det bestemmes av fasefølgen på forsyningen inn på R, S, T. Bytter man to motorledninger, eller to faser på forsyningen, snur motoren. Dette er 400 V-arbeid som bare skal gjøres av elektriker.
+
 **Test etter montering** (uten plate, hendene unna): 20 eller flere enkeltslag med pedalen holdt inne. Kniven skal stoppe i toppen **hver gang**, og skal aldri gjøre et nytt slag mens pedalen holdes. Kontroller at kammen fortsatt sitter fast etterpå. Enkeltslag er en sikkerhetsfunksjon på en platesaks, så den nye kammen bør kontrolleres av den som er ansvarlig for maskinen før den tas i bruk igjen.
 
 ### 5.3 Slik tester du enkeltslagsreléet
