@@ -186,7 +186,20 @@ Lekkasjetester (høyeste Ω-område): kondensatorene på 10 µF, 1 µF og 0,1 µ
 
 Siden forrige test i maskinen er det arbeidet på kortet: transistorene ble loddet ut og inn igjen, og kondensatorer ble byttet. En sprukket loddeskjøt som ble rettet ved omlodding, er en mulig forklaring.
 
-*Neste steg: sett SC210 tilbake i sokkelen og gjenta test F. Virker enkeltslag, er reparasjonen ferdig. Blir reléet fortsatt liggende inne i sokkelen, sitter feilen i sokkelen eller kablingen rundt den.*
+**15. november 2026, test F på nytt (SC210 tilbake i sokkelen):** enkeltslag går fortsatt kontinuerlig. SC210 virker altså på benken, men ikke i maskinen: feilen sitter **i maskinen rundt reléet**.
+
+![Figur 14: sokkelen til SC210 i el-skapet](images/14-sc210-socket.jpg)
+
+*Figur 14. Sokkelen til SC210 (Releco, 11-polet). Det er ledninger på klemme 1, 2, 3, 5, 6 og 10. Klemme 4, 7, 8, 9 og 11 er tomme, så bare kontakt 1 (1 = felles, 3 = NO) brukes. Styretransformatoren (til venstre) er merket 11–13: 24 V 1 A.*
+
+To mulige årsaker, som skilles av lysdioden «RELAY ON» mens pedalen holdes inne:
+
+| Lysdioden mens pedalen holdes | Trolig årsak | Kontroll |
+| --- | --- | --- |
+| **Lyser hele tiden** | Forbindelsen 5–6 blir ikke laget i maskinen. Klemme 5 og 6 er ført ut av sokkelen, kanskje gjennom velgerbryteren (enkeltslag / kontinuerlig) på betjeningspanelet; en slitt kontakt i velgeren gjør at reléet mister «puls»-innstillingen | Strømmen av og låst, reléet ute: mål gjennomgang mellom sokkelklemme **5 og 6** med velgeren på **enkeltslag** og på **kontinuerlig**, og vri velgeren fram og tilbake noen ganger |
+| **Slukker etter 0,5 s**, men kniven fortsetter | Reléet er OK; slaget holdes i gang av holdekretsen (hjelpekontakten på kontaktoren og bryteren som stopper kniven i toppen) | Finn og kontroller toppbryteren (kam- eller endebryter) |
+
+*Neste steg: se hva lysdioden gjør i enkeltslag, og gjør så kontrollen som passer i tabellen over.*
 
 ### 5.3 Slik tester du enkeltslagsreléet
 

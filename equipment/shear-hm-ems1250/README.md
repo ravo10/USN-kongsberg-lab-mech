@@ -186,7 +186,20 @@ Leak tests (highest Ω range): the 10 µF, 1 µF and 0.1 µF capacitors all clim
 
 Since the last test in the machine, the board has been worked on: the transistors were desoldered and soldered back, and capacitors were replaced. A cracked solder joint fixed by resoldering is a possible explanation.
 
-*Next: plug the SC210 back into its socket and repeat test F. If single-stroke mode works, the repair is done. If the relay still stays on in the socket, the fault is in the socket or its wiring.*
+**15 November 2026, test F again (SC210 back in its socket):** single-stroke mode still runs continuously. So the SC210 works on the bench but not in the machine: the fault is **in the machine around the relay**.
+
+![Figure 14: the SC210 socket in the electrical box](images/14-sc210-socket.jpg)
+
+*Figure 14. The SC210 socket (Releco, 11-pin). Wires are connected to terminals 1, 2, 3, 5, 6 and 10. Terminals 4, 7, 8, 9 and 11 are empty, so only contact 1 (1 = common, 3 = NO) is used. The control transformer (left) is marked 11–13: 24 V 1 A.*
+
+Two possible causes, told apart by the "RELAY ON" LED while the pedal is held:
+
+| LED while the pedal is held | Likely cause | Check |
+| --- | --- | --- |
+| **Stays on** | The 5–6 link is not made in the machine. Terminals 5 and 6 are wired out of the socket, possibly through the mode selector (single-stroke / continuous) on the control panel; a worn selector contact would leave the relay without its "pulse" setting | Power off and locked, relay out: measure continuity between socket terminals **5 and 6** with the selector in **single-stroke** and in **continuous**, turning the selector a few times |
+| **Goes out after 0.5 s**, but the knife keeps cycling | The relay is fine; the stroke is kept going by the hold circuit (contactor auxiliary contact and the switch that stops the knife at the top) | Find and check the top-of-stroke switch (cam or limit switch) |
+
+*Next: note what the LED does in single-stroke mode, then do the matching check above.*
 
 ### 5.3 How to test the one-shot relay
 
