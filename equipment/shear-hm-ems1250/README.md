@@ -201,7 +201,9 @@ Two possible causes, told apart by the "RELAY ON" LED while the pedal is held:
 
 Check of the first cause (power off, relay out): socket terminals 5 and 6 beep **in both selector positions**. The 5–6 link is permanent and the selector does not switch it, so the relay is always set to "pulse on energization", as it should be. The selector must act somewhere else, probably on the hold circuit.
 
-*Next: note what the LED does in single-stroke mode. If it goes out after 0.5 s, check the selector's contact blocks (at least one pair must change between single-stroke and continuous), then the top-of-stroke switch.*
+**LED test in the machine:** with the pedal held, the "RELAY ON" LED goes out after **about 0.5 s** in **both** selector positions, but the knife keeps cycling. With the pedal up the LED glows faintly, so the 9.9 VAC measured earlier on terminals 2–10 is a real (weak) voltage, not only a ghost voltage. **The SC210 works correctly in the machine.** The stroke is kept going by something else, and the selector makes no difference: either the selector is stuck in "continuous", or the switch that should stop the knife at the top does not open.
+
+*Next (power off, relay out): measure socket terminals 1–3 in both selector positions, then the selector's contact blocks, then the top-of-stroke switch.*
 
 ### 5.3 How to test the one-shot relay
 

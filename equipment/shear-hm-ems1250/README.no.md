@@ -201,7 +201,9 @@ To mulige årsaker, som skilles av lysdioden «RELAY ON» mens pedalen holdes in
 
 Kontroll av første årsak (strømmen av, reléet ute): sokkelklemme 5 og 6 piper **i begge stillingene på velgeren**. Forbindelsen 5–6 er fast, og velgeren bryter den ikke, så reléet står alltid på «puls ved innkobling», slik det skal. Velgeren må virke et annet sted, trolig på holdekretsen.
 
-*Neste steg: se hva lysdioden gjør i enkeltslag. Slukker den etter 0,5 s, kontroller kontaktblokkene på velgeren (minst ett par skal skifte mellom enkeltslag og kontinuerlig), deretter toppbryteren.*
+**Lysdiodetest i maskinen:** med pedalen holdt inne slukker lysdioden «RELAY ON» etter **omtrent 0,5 s** i **begge** stillingene på velgeren, men kniven fortsetter å gå. Med pedalen oppe gløder lysdioden svakt, så de 9,9 V AC som ble målt på klemme 2–10 tidligere, er en reell (svak) spenning og ikke bare en «spøkelsesspenning». **SC210 virker riktig i maskinen.** Slaget holdes i gang av noe annet, og velgeren gjør ingen forskjell: enten står velgeren fast i «kontinuerlig», eller så åpner ikke bryteren som skal stoppe kniven i toppen.
+
+*Neste steg (strømmen av, reléet ute): mål sokkelklemme 1–3 i begge stillingene på velgeren, deretter kontaktblokkene på velgeren, deretter toppbryteren.*
 
 ### 5.3 Slik tester du enkeltslagsreléet
 
