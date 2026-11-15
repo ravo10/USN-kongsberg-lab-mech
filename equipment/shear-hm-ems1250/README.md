@@ -4,7 +4,7 @@ Workshop · USN Kongsberg · Updated 13 November 2026
 
 > **Norsk versjon:** [README.no.md](README.no.md)
 
-**Status:** in progress. **Single-stroke ("one-shot") mode does not work** at the moment; continuous mode works. The fault is being traced to the one-shot timer relay, see [5. Maintenance](#5-maintenance). There is no student operating guide yet: follow the posted instruction on the machine and ask the lab supervisor before use.
+**Status:** in progress. **Single-stroke ("one-shot") mode does not work** at the moment; continuous mode works. **Cause found (15 November 2026):** the home-made cam that should press the top-of-stroke switch once per revolution does not reach it. The electrics are OK. A new cam is needed, see [the fault log](#52-fault-log). There is no student operating guide yet: follow the posted instruction on the machine and ask the lab supervisor before use.
 
 **Location:** not yet on the [lab map](../../labs/map/README.md).
 
@@ -211,7 +211,30 @@ Check of the first cause (power off, relay out): socket terminals 5 and 6 beep *
 
 *Figure 15. The top-of-stroke switch (Bernstein classic, roller lever) above the main shaft.*
 
-*Next (power off and locked, flywheel stopped): (1) press the roller lever by hand and check that the contact between wires 1 and 4 changes state; (2) check that the cam on the shaft actually presses the roller when the knife is at the top, and that the cam is tight on the shaft.*
+**15 November 2026: cause found. It is mechanical, not electrical.** The cam that should press the top-of-stroke switch is **home-made**: a U-bolt pipe clamp around the main shaft with a short pin welded to its saddle (Figure 16). The pin **does not reach the roller**, so the switch is never opened at the top and the hold path keeps the motor running.
+
+With the clamp removed and the roller pressed by hand with a wooden stick at the right moment, everything worked as designed:
+
+- **Single-stroke:** with the pedal held, the knife made one stroke and stopped when the switch was pressed.
+- **Continuous:** with the pedal held, the switch did not stop the machine; releasing the pedal stopped it.
+
+![Figure 16: the home-made switch actuator](images/16-homemade-switch-actuator.jpg)
+
+*Figure 16. The home-made switch actuator, taken off the shaft: a U-bolt pipe clamp with a saddle plate and a welded pin. Held only by clamping friction, and the pin does not reach the roller of the limit switch.*
+
+**Lesson:** the relay, capacitors, transistors, selector and limit switch were all fine. Before measuring electronics, check that the **mechanical parts that operate the switches** actually operate them: watch the cam and the roller through one revolution. (The SC210 did once stay on in the machine on 13 November; after its transistors were resoldered on 14 November it always pulsed correctly.)
+
+**Repair: a new cam (actuator) for the top-of-stroke switch.** Requirements:
+
+| Requirement | Why |
+| --- | --- |
+| **Fixed to the shaft so it cannot slip:** a split shaft collar with two clamping screws, plus a set screw or pin into a shallow spot-drilling in the shaft | A friction clamp that slips moves the stop position, or stops pressing the switch at all |
+| **A lobe that lifts the roller radially**, with a gentle ramp (about 30° or less) on the leading side | The roller lever is made to be pushed outwards by a cam turning under it, not knocked sideways |
+| **Lift:** enough to operate the switch fully, but less than the switch's maximum travel | Too little and the contact does not open; too much and the plunger or lever is damaged. Check the travel on the Bernstein data sheet for the switch type on its label |
+| **Lobe length (angle):** the switch must stay pressed where the knife comes to rest at the top, but the lobe must end soon enough that the 0.5 s relay pulse turns the shaft off it | If the lobe is too short, the knife can coast past and the switch closes again (a second stroke). If it is too long, the hold path is still open when the 0.5 s pulse ends and the stroke stops after a short movement. |
+| **Adjustable angle on the shaft** (the collar can be turned before tightening) | So the stop position can be set to the top of the stroke |
+
+**Test after fitting** (with no sheet, hands clear): 20 or more single strokes with the pedal held. The knife must stop at the top **every time**, and must never make a second stroke while the pedal is held. Check that the cam is still tight afterwards. Single-stroke is a safety function on a guillotine, so the new cam should be checked by the person responsible for the machine before it is used again.
 
 ### 5.3 How to test the one-shot relay
 

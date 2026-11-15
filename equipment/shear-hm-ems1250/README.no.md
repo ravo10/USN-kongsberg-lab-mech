@@ -4,7 +4,7 @@ Verksted · USN Kongsberg · Oppdatert 13. november 2026
 
 > **English version:** [README.md](README.md)
 
-**Status:** under arbeid. **Enkeltslag («one-shot») virker ikke** for øyeblikket; kontinuerlig drift virker. Feilen spores til tidsreléet for enkeltslag, se [5. Vedlikehold](#5-vedlikehold). Det finnes ingen studentveiledning ennå: følg instruksen som henger på maskinen, og spør labansvarlig før bruk.
+**Status:** under arbeid. **Enkeltslag («one-shot») virker ikke** for øyeblikket; kontinuerlig drift virker. **Årsaken er funnet (15. november 2026):** den hjemmelagde kammen som skal trykke inn toppbryteren én gang per omdreining, når ikke fram til den. Elektrikken er OK. Det trengs en ny kam, se [feilloggen](#52-feillogg). Det finnes ingen studentveiledning ennå: følg instruksen som henger på maskinen, og spør labansvarlig før bruk.
 
 **Plassering:** ikke lagt inn på [labkartet](../../labs/map/README.md) ennå.
 
@@ -211,7 +211,30 @@ Kontroll av første årsak (strømmen av, reléet ute): sokkelklemme 5 og 6 pipe
 
 *Figur 15. Toppbryteren (Bernstein classic, rullearm) over hovedakselen.*
 
-*Neste steg (strømmen av og låst, svinghjulet stått stille): (1) trykk rullearmen inn for hånd og kontroller at kontakten mellom ledning 1 og 4 skifter; (2) kontroller at kammen på akselen faktisk trykker inn rullen når kniven står i toppen, og at kammen sitter fast på akselen.*
+**15. november 2026: årsaken er funnet. Den er mekanisk, ikke elektrisk.** Kammen som skal trykke inn toppbryteren, er **hjemmelaget**: en U-bolt-rørklemme rundt hovedakselen med en kort tapp sveiset på salen (figur 16). Tappen **når ikke fram til rullen**, så bryteren åpnes aldri i toppen, og holdekretsen holder motoren i gang.
+
+Med klemmen tatt av og rullen trykket inn for hånd med en trepinne i riktig øyeblikk virket alt som det skal:
+
+- **Enkeltslag:** med pedalen holdt inne gjorde kniven ett slag og stoppet når bryteren ble trykket inn.
+- **Kontinuerlig:** med pedalen holdt inne stoppet ikke bryteren maskinen; maskinen stoppet når pedalen ble sluppet.
+
+![Figur 16: den hjemmelagde bryteraktivatoren](images/16-homemade-switch-actuator.jpg)
+
+*Figur 16. Den hjemmelagde bryteraktivatoren, tatt av akselen: en U-bolt-rørklemme med salplate og en sveiset tapp. Den holdes bare av klemkraften, og tappen når ikke fram til rullen på endebryteren.*
+
+**Lærdom:** reléet, kondensatorene, transistorene, velgerbryteren og endebryteren var alle i orden. Før du måler på elektronikk: kontroller at **de mekaniske delene som betjener bryterne**, faktisk betjener dem. Se på kammen og rullen gjennom én omdreining. (SC210 ble én gang liggende inne i maskinen 13. november; etter at transistorene ble loddet på nytt 14. november, ga det alltid riktig puls.)
+
+**Reparasjon: ny kam (aktivator) for toppbryteren.** Krav:
+
+| Krav | Hvorfor |
+| --- | --- |
+| **Festet til akselen slik at den ikke kan skli:** en delt akselkrage med to klemskruer, pluss en settskrue eller stift i en grunn forboring i akselen | En friksjonsklemme som sklir, flytter stoppunktet eller slutter helt å trykke inn bryteren |
+| **En kamnokk som løfter rullen radielt**, med en slak rampe (omtrent 30° eller mindre) på forkanten | Rullearmen er laget for å skyves utover av en kam som roterer under den, ikke for å slås sidelengs |
+| **Løft:** nok til å betjene bryteren helt, men mindre enn bryterens største vandring | For lite, og kontakten åpner ikke; for mye, og stempelet eller armen skades. Sjekk vandringen i Bernsteins datablad for brytertypen på etiketten |
+| **Lengden på kamnokken (vinkel):** bryteren må holdes inne der kniven blir stående i toppen, men nokken må slutte tidlig nok til at reléets puls på 0,5 s dreier akselen forbi den | Er nokken for kort, kan kniven rulle forbi og bryteren lukke igjen (et nytt slag). Er den for lang, er holdekretsen fortsatt åpen når pulsen på 0,5 s slutter, og slaget stopper etter en kort bevegelse. |
+| **Justerbar vinkel på akselen** (kragen kan dreies før den strammes) | Slik at stoppunktet kan stilles til toppen av slaget |
+
+**Test etter montering** (uten plate, hendene unna): 20 eller flere enkeltslag med pedalen holdt inne. Kniven skal stoppe i toppen **hver gang**, og skal aldri gjøre et nytt slag mens pedalen holdes. Kontroller at kammen fortsatt sitter fast etterpå. Enkeltslag er en sikkerhetsfunksjon på en platesaks, så den nye kammen bør kontrolleres av den som er ansvarlig for maskinen før den tas i bruk igjen.
 
 ### 5.3 Slik tester du enkeltslagsreléet
 
