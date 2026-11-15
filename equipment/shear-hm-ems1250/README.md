@@ -234,6 +234,14 @@ With the clamp removed and the roller pressed by hand with a wooden stick at the
 | **Lobe length (angle):** the switch must stay pressed where the knife comes to rest at the top, but the lobe must end soon enough that the 0.5 s relay pulse turns the shaft off it | If the lobe is too short, the knife can coast past and the switch closes again (a second stroke). If it is too long, the hold path is still open when the 0.5 s pulse ends and the stroke stops after a short movement. |
 | **Adjustable angle on the shaft** (the collar can be turned before tightening) | So the stop position can be set to the top of the stroke |
 
+**Later on 15 November:** the actuator presses the switch correctly only if the shaft turns the **other way**. Either the switch was mounted the wrong way round, or the **motor runs in reverse**. A three-phase motor reverses if two phases are swapped, for example when the machine is moved and connected to a different socket or plug. **Check the direction before changing the switch:**
+
+1. Look for a **rotation arrow** on the motor, fan cover, gearbox or flywheel guard.
+2. Watch one stroke with no sheet in the shear: the **hold-downs must clamp before the knife reaches the table**. If the knife reaches the table first, the sequence is wrong and the motor is probably running in reverse.
+3. If the motor runs in reverse, have an **electrician swap two phases in the machine's plug** (not in the wall socket), then check with a phase-sequence tester. The original switch orientation may then be right again.
+
+Only if the direction is correct should the switch be turned around or the actuator be remade.
+
 **Test after fitting** (with no sheet, hands clear): 20 or more single strokes with the pedal held. The knife must stop at the top **every time**, and must never make a second stroke while the pedal is held. Check that the cam is still tight afterwards. Single-stroke is a safety function on a guillotine, so the new cam should be checked by the person responsible for the machine before it is used again.
 
 ### 5.3 How to test the one-shot relay

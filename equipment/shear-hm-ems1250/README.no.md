@@ -234,6 +234,14 @@ Med klemmen tatt av og rullen trykket inn for hånd med en trepinne i riktig øy
 | **Lengden på kamnokken (vinkel):** bryteren må holdes inne der kniven blir stående i toppen, men nokken må slutte tidlig nok til at reléets puls på 0,5 s dreier akselen forbi den | Er nokken for kort, kan kniven rulle forbi og bryteren lukke igjen (et nytt slag). Er den for lang, er holdekretsen fortsatt åpen når pulsen på 0,5 s slutter, og slaget stopper etter en kort bevegelse. |
 | **Justerbar vinkel på akselen** (kragen kan dreies før den strammes) | Slik at stoppunktet kan stilles til toppen av slaget |
 
+**Senere 15. november:** aktivatoren trykker inn bryteren riktig bare hvis akselen går **motsatt vei**. Enten er bryteren montert feil vei, eller så **går motoren baklengs**. En trefasemotor bytter retning hvis to faser byttes, for eksempel når maskinen flyttes og kobles til en annen stikkontakt eller plugg. **Kontroller retningen før bryteren endres:**
+
+1. Se etter en **pil for dreieretning** på motoren, viftedekselet, giret eller svinghjulsdekselet.
+2. Se på ett slag uten plate i saksen: **nedholderne skal klemme før kniven når bordet**. Når kniven bordet først, er rekkefølgen feil, og motoren går trolig baklengs.
+3. Går motoren baklengs: få en **elektriker til å bytte to faser i støpselet på maskinen** (ikke i veggkontakten), og kontroller deretter med en fasefølgetester. Den opprinnelige retningen på bryteren kan da være riktig igjen.
+
+Bare hvis retningen er riktig, skal bryteren snus eller aktivatoren lages på nytt.
+
 **Test etter montering** (uten plate, hendene unna): 20 eller flere enkeltslag med pedalen holdt inne. Kniven skal stoppe i toppen **hver gang**, og skal aldri gjøre et nytt slag mens pedalen holdes. Kontroller at kammen fortsatt sitter fast etterpå. Enkeltslag er en sikkerhetsfunksjon på en platesaks, så den nye kammen bør kontrolleres av den som er ansvarlig for maskinen før den tas i bruk igjen.
 
 ### 5.3 Slik tester du enkeltslagsreléet
