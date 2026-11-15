@@ -249,7 +249,7 @@ Bare hvis retningen er riktig, skal bryteren snus eller aktivatoren lages på ny
 
 ![Figur 17: rullearmhodet tatt av bryteren](images/17-roller-lever-head.jpg)
 
-*Figur 17. Rullearmhodet (svart, fire skruer) tatt av bryterhuset (rødt) med stempelet. Armen er hengslet med en fjær, så den trykker bare inn stempelet når den skyves fra én side.*
+*Figur 17. Rullearmhodet (svart, fire skruer) tatt av bryterhuset (rødt) med stempelet. Armen er hengslet med en fjær, så den trykker bare inn stempelet når den skyves fra én side. **Hodet er vist i riktig retning her:** monter det denne veien på bryterhuset.*
 
 **Når hodet monteres igjen:** kontroller pakningen rundt stempelet, stram de fire skruene jevnt, og skyv armen for hånd i akselens dreieretning før maskinen lukkes: den skal trykke inn stempelet (kontakten mellom ledning 1 og 4 skifter), og skjøvet den andre veien skal den bøye seg unna. Kjør deretter testen under.
 

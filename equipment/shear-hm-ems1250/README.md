@@ -249,7 +249,7 @@ Only if the direction is correct should the switch be turned around or the actua
 
 ![Figure 17: the roller-lever head taken off the switch](images/17-roller-lever-head.jpg)
 
-*Figure 17. The roller-lever head (black, four screws) taken off the switch body (red) with its plunger. The lever is hinged with a spring, so it only presses the plunger when pushed from one side.*
+*Figure 17. The roller-lever head (black, four screws) taken off the switch body (red) with its plunger. The lever is hinged with a spring, so it only presses the plunger when pushed from one side. **The head is shown here in the correct direction:** mount it this way round on the switch body.*
 
 **When refitting the head:** check the plunger seal, tighten the four screws evenly, and before closing the machine push the lever by hand in the shaft's direction of rotation: it must press the plunger (the contact between wires 1 and 4 changes), and pushed the other way it must fold away. Then run the test below.
 
