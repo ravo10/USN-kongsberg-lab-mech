@@ -205,7 +205,13 @@ Kontroll av første årsak (strømmen av, reléet ute): sokkelklemme 5 og 6 pipe
 
 **Velgerbryteren, første kontaktblokk** (strømmen av, reléet ute, målt i maskinen): den ene klemmen går via den blå ledningen til **pedalen**, og pedalens svarte returledning går til sokkelklemme **2** (forsyning til reléet). Den andre klemmen har gjennomgang til sokkelklemme 1, 3 og 10. **Enkeltslag: lukket. Kontinuerlig: 140–180 Ω.** Kontakten skifter altså, og i enkeltslag lar den pedalen forsyne reléet. De 140–180 Ω er trolig en spole eller lampe et annet sted i kretsen som måles parallelt, ikke en lekk bryter; løft én ledning av kontakten for å bekrefte OL.
 
-*Neste steg: test den andre kontaktblokken på velgeren på samme måte (løft en ledning, begge stillinger), og noter hvor ledningene går. Finn deretter toppbryteren.*
+**Toppbryteren er funnet:** en **Bernstein «classic» endebryter med rullearm** (10 A, 500 V AC, IP65), montert over hovedakselen slik at en kam på akselen kan trykke inn rullen én gang per omdreining. De to ledningene er merket **1** og **4**: ledning 1 går til sokkelklemme **3** (NO-utgangen på reléet), og ledning 4 går til **den andre kontaktblokken på velgerbryteren**. Bryteren og velgerkontakten danner altså en vei parallelt med reléets kontakt: når reléets puls på 0,5 s har startet slaget, holder denne veien motoren i gang til kammen åpner bryteren i toppen. Åpner bryteren aldri, stopper kniven aldri.
+
+![Figur 15: toppbryteren](images/15-top-of-stroke-switch.jpg)
+
+*Figur 15. Toppbryteren (Bernstein classic, rullearm) over hovedakselen.*
+
+*Neste steg (strømmen av og låst, svinghjulet stått stille): (1) trykk rullearmen inn for hånd og kontroller at kontakten mellom ledning 1 og 4 skifter; (2) kontroller at kammen på akselen faktisk trykker inn rullen når kniven står i toppen, og at kammen sitter fast på akselen.*
 
 ### 5.3 Slik tester du enkeltslagsreléet
 

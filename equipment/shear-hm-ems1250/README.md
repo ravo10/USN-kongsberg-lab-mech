@@ -205,7 +205,13 @@ Check of the first cause (power off, relay out): socket terminals 5 and 6 beep *
 
 **Mode selector, first contact block** (power off, relay out, measured on the board): one terminal goes via the blue wire to the **pedal**, whose black return wire goes to socket terminal **2** (relay supply). The other terminal has continuity to socket terminals 1, 3 and 10. **Single-stroke: closed. Continuous: 140–180 Ω.** So this contact switches, and in single-stroke it lets the pedal feed the relay. The 140–180 Ω is most likely a coil or lamp elsewhere in the circuit measured in parallel, not a leaking switch; lift one wire off the contact to confirm OL.
 
-*Next: test the selector's second contact block the same way (lift a wire, both positions), and record where its wires go. Then find the top-of-stroke switch.*
+**Top-of-stroke switch found:** a **Bernstein "classic" roller-lever limit switch** (10 A, 500 V AC, IP65), mounted above the main shaft so that a cam on the shaft can press the roller once per revolution. Its two wires are marked **1** and **4**: wire 1 goes to socket terminal **3** (the relay's NO output), and wire 4 goes to the **second contact block of the mode selector**. So the switch and the selector contact form a path in parallel with the relay contact: once the relay's 0.5 s pulse has started the stroke, this path keeps the motor running until the cam opens the switch at the top. If the switch never opens, the knife never stops.
+
+![Figure 15: the top-of-stroke switch](images/15-top-of-stroke-switch.jpg)
+
+*Figure 15. The top-of-stroke switch (Bernstein classic, roller lever) above the main shaft.*
+
+*Next (power off and locked, flywheel stopped): (1) press the roller lever by hand and check that the contact between wires 1 and 4 changes state; (2) check that the cam on the shaft actually presses the roller when the knife is at the top, and that the cam is tight on the shaft.*
 
 ### 5.3 How to test the one-shot relay
 
