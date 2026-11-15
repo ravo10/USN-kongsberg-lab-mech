@@ -154,7 +154,6 @@ Mulige årsaker, billigste kontroll først:
 2. **Tidsdelen av kretsen**: de to små elektrolyttkondensatorene (like gamle som de store) eller en transistor.
 3. Hjelper ingen av delene: bytt hele SC210 med et moderne 11-polet tidsrelé (se [5.4](#54-reservedeler)).
 
-Mens enkeltslag var ute av drift, var det merket med et skilt ved velgerbryteren.
 
 **14. november 2026, komponenttester på SC210-kortet** (multimeter; kondensatorer og transistorer målt utenfor kortet, motstander på kortet):
 

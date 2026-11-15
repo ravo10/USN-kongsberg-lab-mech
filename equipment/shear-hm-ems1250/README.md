@@ -154,7 +154,6 @@ Possible causes, cheapest check first:
 2. The **timing part of the circuit**: the two small electrolytic capacitors (same age as the big ones) or a transistor.
 3. If neither helps: replace the whole SC210 with a modern 11-pin timer (see [5.4](#54-spare-parts)).
 
-While single-stroke mode was out of order, it was marked with a sign on the mode selector.
 
 **14 November 2026, component tests on the SC210 board** (multimeter; capacitors and transistors measured out of the board, resistors on the board):
 
