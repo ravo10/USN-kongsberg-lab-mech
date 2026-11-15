@@ -244,6 +244,8 @@ Only if the direction is correct should the switch be turned around or the actua
 
 **Power terminals in the electrical box** (terminal strip, top to bottom): **R, S, T** (incoming three-phase supply) · earth bar · **R1, S1, T1** · **J** (earth; "jord" in Danish/Norwegian = protective earth, PE) · **U, V, W** (motor) · **J** (motor earth) · SF, 0, F24, 024, 1 … (control circuit; 024/F24 are probably the 24 V control voltage). The motor leads run through contactor 1 and the CT3-23 overload relay (scale 16–23 A) to U, V, W. The terminals do not show which way the motor turns: that is set by the phase sequence of the supply at R, S, T. Swapping any two motor leads, or any two supply phases, reverses the motor. This is 400 V work for an electrician only.
 
+**Direction check (15 November 2026):** in one stroke the **hold-downs clamp first, then the knife cuts**, so the motor most likely runs in the right direction. (If the hold-downs are spring-loaded and pushed by the knife beam itself, they clamp first in either direction; a rotation arrow on the motor or gearbox would confirm it.) Conclusion: the switch or its actuator was fitted for the wrong direction. Fix: turn the switch around or remake the actuator, then test as below.
+
 **Test after fitting** (with no sheet, hands clear): 20 or more single strokes with the pedal held. The knife must stop at the top **every time**, and must never make a second stroke while the pedal is held. Check that the cam is still tight afterwards. Single-stroke is a safety function on a guillotine, so the new cam should be checked by the person responsible for the machine before it is used again.
 
 ### 5.3 How to test the one-shot relay
